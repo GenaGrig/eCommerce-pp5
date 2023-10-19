@@ -1,3 +1,9 @@
+.main-logo {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 3rem;
+    color: blueviolet;
+}
+
 .search-btn:hover {
     background-color: #363636 !important;
 }
