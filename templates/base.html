@@ -22,6 +22,9 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
 
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/fa2786a92a.js" crossorigin="anonymous"></script>
+
     <!-- Bootstrap CSS -->
     {% block corecss %}
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -44,19 +47,115 @@
 </head>
 <body>
     <header class="container-fluid fixed-top">
-
-    </header>
-    
-{% if messages %}
-    <div class="col-md-8 offset-md-2">
-        {% for message in messages %}
-        <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-            {{ message | safe }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <a href="{% url 'index' %}" class="nav-link main-logo-link">
+                    <h2 class="logo-font my-0" style="color: blueviolet;"><strong>Genstar Music Store</strong></h2>
+                </a>
+            </div>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <form action="" method="GET" class="form-inline justify-content-center">
+                    <div class="input-group w-100">
+                        <input type="text" name="q" class="form-control border border-darkgrey rounded-2 search-input"
+                            placeholder="Search your musical instrument...">
+                        <div class="input-group-append">
+                            <button type="submit" class="form-control btn border border-darkgrey rounded-2 search-btn"
+                                style="background: darkgrey;">
+                                <span class="icon">
+                                    <i class="fa-solid fa-magnifying-glass" style="color: white"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <ul class="list-inline list-unstyled text-center text-lg-right my-0"">
+                    <li class="list-inline-item dropdown">
+                        <a class="nav-link dropdown" data-bs-toggle="dropdown" href="#" id="user-options" role="button"
+                            aria-expanded="false">
+                            <div class="text-center">
+                                <div><i class="fas fa-user fa-lg"></i></div>
+                                <p class="my-0">My Account</p>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu border" aria-labelledby="user-options">
+                            {% if request.user.is_authenticated %}
+                            {% if request.user.is_superuser %}
+                            <li><a class="dropdown-item" href="#">Product Management</a></li>
+                            {% endif %}
+                            <li><a class="dropdown-item" href="#">My Profile</a></li>
+                            <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+                            {% else %}
+                            <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
+                            <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
+                            {% endif %}
+                        </ul>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                            href="">
+                            <div class="text-center">
+                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                <p class="my-0">
+                                    {% if grand_total %}
+                                    <i class="fa-solid fa-euro-sign"></i> {{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                    <i class="fa-solid fa-euro-sign"></i> 0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        {% endfor %}
-    </div>
-{% endif %}
+        <div class="row bg-white">
+            <nav class="navbar navbar-expand-lg navbar-light w-100">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                    aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+        </div>
+        <div id="delivery-banner" class="row text-center">
+            <div class="col text-white" style="background-color:blueviolet;">
+                <h4 class="logo-font my-1">Free delivery on orders over <i class="fa-solid fa-euro-sign"></i>
+                    {{free_delivery_threshold }}!
+                </h4>
+            </div>
+        </div>
+    </header>
+
+    {% if messages %}
+        <div class="message-container fixed-top text-center" id="msg" role="alert">
+            {% for message in messages %}
+                {% if message.tags == 'error' %}
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>Error!</strong> {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% elif message.tags == 'success' %}
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>Success!</strong> {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% elif message.tags == 'info' %}
+                    <div class="alert alert-info alert-dismissible fade show" role="alert">
+                        <strong>Info!</strong> {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% elif message.tags == 'warning' %}
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>Warning!</strong> {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    
 
 {% block page_header %}
 {% endblock %}

@@ -1,0 +1,23 @@
+.search-btn:hover {
+  background-color: #363636 !important;
+}
+
+.fas {
+  color: blueviolet;
+}
+
+.border-darkgrey:hover {
+  border: 1px solid #363636 !important;
+}
+
+.text-black {
+  color: black !important;
+}
+
+.border-black {
+  border: 1px solid black !important;
+}
+
+.message-container {
+    z-index: 9999 !important;
+}
