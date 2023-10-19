@@ -48,11 +48,14 @@
     </header>
     
 {% if messages %}
-    {% for message in messages %}
-        <div class="message-container alert alert-{{ message.tags }}">
-            {{ message }}
+    <div class="col-md-8 offset-md-2">
+        {% for message in messages %}
+        <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+            {{ message | safe }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
 {% endif %}
 
 {% block page_header %}
@@ -66,6 +69,17 @@
 
 {% block footer %}
 {% endblock %}
+
+
+{% comment %} # Messages script {% endcomment %}
+
+<script>
+  setTimeout(function () {
+    let messages = document.getElementById('msg');
+    let alert = new bootstrap.Alert(messages);
+    alert.close();
+  }, 5000);
+</script>
 
 </body>
 </html>
