@@ -114,14 +114,210 @@
                 </ul>
             </div>
         </div>
+
         <div class="row bg-white">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
-                    aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                {% include 'includes/main-nav.html' %}
+                {% include 'includes/mobile-top-header.html' %}
             </nav>
         </div>
+
+        <!-- Dropdown Mega Menu -->   
+        <div class="navbar-dropdown rounded-2">
+            <div class="dropdown-low">
+                <button class="dropbtn rounded-1">Guitars & Basses
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="row">
+                        <div class="column">
+                            <h3>Acoustic Guitars</h3>
+                            <a href="#">Guitars</a>
+                            <a href="#">Amplifiers</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                        <div class="column">
+                            <h3>Electric Guitars</h3>
+                            <a href="#">Guitars</a>
+                            <a href="#">Amplifiers</a>
+                            <a href="#">Pedals</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                        <div class="column">
+                            <h3>Bass Guitars</h3>
+                            <a href="#">Guitars</a>
+                            <a href="#">Amplifiers</a>
+                            <a href="#">Pedals</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-low">
+                <button class="dropbtn rounded-1">Drums & Percussion
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="row">
+                        <div class="column">
+                            <h3>Acoustic Drums</h3>
+                            <a href="#">Drum Kits</a>
+                            <a href="#">Individual Drums</a>
+                            <a href="#">Cymbals</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                        <div class="column">
+                            <h3>Electronic Drums</h3>
+                            <a href="#">Drum Kits</a>
+                            <a href="#">Accessories</a>
+                            <a href="#">Drum Pads</a>
+                        </div>
+                        <div class="column">
+                            <h3>Percussion</h3>
+                            <a href="#">Classic Percussion</a>
+                            <a href="#">World Percussion</a>
+                            <a href="#">Other Percussion</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-low">
+                <button class="dropbtn rounded-1">Pianos & Keyboards
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="row">
+                        <div class="column">
+                            <h3>Digital Pianos</h3>
+                            <a href="#">Upright Pianos</a>
+                            <a href="#">Stage Pianos</a>
+                            <a href="#">Grand Pianos</a>
+                            <a href="#">Piano Packages</a>
+                        </div>
+                        <div class="column">
+                            <h3>Keyboards</h3>
+                            <a href="#">Portable</a>
+                            <a href="#">Workstations</a>
+                            <a href="#">Kids Keyboards</a>
+                        </div>
+                        <div class="column">
+                            <h3>Midi Keyboards</h3>
+                            <a href="#">Midi Keyboards</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-low">
+                <button class="dropbtn rounded-1">Orchestral Instruments
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="row">
+                        <div class="column">
+                            <h3>Woodwinds</h3>
+                            <a href="#">Saxophones</a>
+                            <a href="#">Clarinets</a>
+                            <a href="#">Flutes</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                        <div class="column">
+                            <h3>Strings</h3>
+                            <a href="#">Violins</a>
+                            <a href="#">Cellos</a>
+                            <a href="#">Double Bass</a>
+                            <a href="#">Violas</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                        <div class="column">
+                            <h3>Brasses</h3>
+                            <a href="#">Trombones</a>
+                            <a href="#">Trumpets</a>
+                            <a href="#">Cornets</a>
+                            <a href="#">French Hornes</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                        <div class="column">
+                            <h3>Percussion</h3>
+                            <a href="#">Xylophones</a>
+                            <a href="#">Gongs</a>
+                            <a href="#">Tambourines</a>
+                            <a href="#">Cymbals</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-low">
+                <button class="dropbtn rounded-1">Live sound & Lighting
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="row">
+                        <div class="column">
+                            <h3>PA Systems</h3>
+                            <a href="#">Complete</a>
+                            <a href="#">Portable</a>
+                            <a href="#">Column</a>
+                        </div>
+                        <div class="column">
+                            <h3>PA Mixers</h3>
+                            <a href="#">Analog</a>
+                            <a href="#">Digital</a>
+                            <a href="#">Rack</a>
+                        </div>
+                        <div class="column">
+                            <h3>Microphones</h3>
+                            <a href="#">Vocal</a>
+                            <a href="#">Wireless</a>
+                            <a href="#">Instrument</a>
+                            <a href="#">Packages</a>
+                        </div>
+                        <div class="column">
+                            <h3>Lighting Systems</h3>
+                            <a href="#">Lights</a>
+                            <a href="#">Lighting Effects</a>
+                            <a href="#">Effect Machines</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-low">
+                <button class="dropbtn rounded-1">Studio & Recording
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="row">
+                        <div class="column">
+                            <h3>Audio Interfaces</h3>
+                            <a href="#">USB</a>
+                            <a href="#">Firewire</a>
+                            <a href="#">Thunderbolt</a>
+                        </div>
+                        <div class="column">
+                            <h3>Audio Mixers</h3>
+                            <a href="#">Analog</a>
+                            <a href="#">Digital</a>
+                            <a href="#">USB</a>
+                            <a href="#">Rack</a>
+                        </div>
+                        <div class="column">
+                            <h3>Studio Monitors</h3>
+                            <a href="#">Active</a>
+                            <a href="#">Passive</a>
+                            <a href="#">Monitor Controls</a>
+                        </div>
+                        <div class="column">
+                            <h3>Microphones</h3>
+                            <a href="#">Condenser</a>
+                            <a href="#">Dynamic</a>
+                            <a href="#">USB</a>
+                            <a href="#">Packages</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
         <div id="delivery-banner" class="row text-center">
             <div class="col text-white" style="background-color:blueviolet;">
                 <h4 class="logo-font my-1">Free delivery on orders over <i class="fa-solid fa-euro-sign"></i>
