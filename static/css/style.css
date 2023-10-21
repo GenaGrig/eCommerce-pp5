@@ -145,6 +145,8 @@ ul.nav-item.dropdown {
     padding-left: 15px;
 }
 
+/* Footer */
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -203,6 +205,10 @@ ul.nav-item.dropdown {
     .navbar-dropdown {
         display: none;
     }
+
+    .basket {
+        margin-right: 20px;
+    }
 }
 
 /* Responsive layout - makes columns stack on top of each other instead of next to each other */
@@ -212,4 +218,11 @@ ul.nav-item.dropdown {
         height: auto;
         overflow-x: auto;
     }
+}
+
+@media screen and (max-width: 450px) {
+    .main-logo {
+        font-size: clamp( .5rem, 3.5vw, 2rem);
+    }
+    
 }

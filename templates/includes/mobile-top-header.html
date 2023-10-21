@@ -4,10 +4,21 @@
     </a>
 </div>
 
-<li class="list-inline-item">
+<!-- Wishlist -->
+<li class="list-inline-item dropdown d-block d-lg-none">
+    <a class="nav-link dropdown" data-bs-toggle="dropdown" href="#" id="user-options" role="button"
+        aria-expanded="false">
+        <div class="text-center">
+            <div><i class="fas fa-solid fa-heart"></i></div>
+            <p class="my-0">Wishlist</p>
+        </div>
+    </a>
+</li>
+
+<li class="list-inline-item basket">
     <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="">
         <div class="text-center">
-            <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+            <div><i class="fas fa-shopping-bag"></i></div>
             <p class="my-0">
                 {% if grand_total %}
                     <i class="fa-solid fa-euro-sign"></i> {{ grand_total|floatformat:2 }}
