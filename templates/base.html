@@ -60,6 +60,7 @@
                     <h2 class="logo-font my-0 main-logo"><strong><i class="fa-solid fa-music" style="color: #9d00e6;"></i> Genstar Music Store</strong></h2>
                 </a>
             </div>
+            <!-- Search -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form action="" method="GET" class="form-inline justify-content-center">
                     <div class="input-group w-100">
@@ -101,9 +102,8 @@
                         </ul>
                     </li>
                     <!-- Wishlist -->
-                    <li class="list-inline-item dropdown">
-                        <a class="nav-link dropdown" data-bs-toggle="dropdown" href="#" id="user-options" role="button"
-                            aria-expanded="false">
+                    <li class="list-inline-item">
+                        <a class="nav-link" href="#" role="button" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-solid fa-heart fa-lg"></i></div>
                                 <p class="my-0">Wishlist</p>
@@ -111,8 +111,8 @@
                         </a>
                     </li>
                     <!-- Basket -->
-                    <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                    <li class="list-inline-item" style="margin-left: 5px;">
+                        <a class="{% if grand_total %} text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                             href="">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
