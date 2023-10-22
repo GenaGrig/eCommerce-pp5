@@ -155,6 +155,10 @@ ul.nav-item.dropdown {
     float: right;
 }
 
+.details-font {
+    font-size: 2rem;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

@@ -26,6 +26,7 @@ class Product(models.Model):
     category_id = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=255, blank=True, null=True)
     name = models.CharField(max_length=255)
+    short_description = models.TextField(blank=True, null=True)
     description = models.TextField()
     price = models.DecimalField(max_digits=8, decimal_places=2)
     quantity_in_stock = models.IntegerField(blank=True, null=True)
