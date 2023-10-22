@@ -1,4 +1,5 @@
-.main-logo {
+.main-logo,
+.page-headers {
     font-family: 'Playfair Display', sans-serif;
     font-size: clamp(1rem, 5vw, 3rem);
     color: blueviolet;
@@ -146,6 +147,13 @@ ul.nav-item.dropdown {
 }
 
 /* Footer */
+
+/* Products */
+
+.in-stock-text,
+.out-of-stock-text {
+    float: right;
+}
 
 /* -------------------------------- Media Queries */
 

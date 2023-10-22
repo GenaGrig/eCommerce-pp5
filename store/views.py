@@ -1,9 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
 
 
 def index(request):
-    '''A view to return the index page'''
+    '''A view to redirect from the index page to the products page'''
     
-    return render(request, 'store/index.html')
+    return redirect('all_products')
