@@ -27,9 +27,9 @@ class Product(models.Model):
     sku = models.CharField(max_length=255, blank=True, null=True)
     name = models.CharField(max_length=255)
     description = models.TextField()
-    price = models.DecimalField(max_digits=6, decimal_places=2)
+    price = models.DecimalField(max_digits=8, decimal_places=2)
     quantity_in_stock = models.IntegerField(blank=True, null=True)
-    rating = models.DecimalField(max_digits=2, decimal_places=2, blank=True, null=True)
+    rating = models.DecimalField(max_digits=3, decimal_places=2, blank=True, null=True)
     image_url = models.URLField(max_length=1024, blank=True, null=True)
     image = models.ImageField(blank=True, null=True)
 
