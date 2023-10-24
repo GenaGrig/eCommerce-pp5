@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load breadcrumb %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -10,11 +11,23 @@
 {% endblock %}
 
 {% block content %}
+    <div>
+        {% if category %}
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                {% breadcrumb category as breadcrumbs %}
+                {% for crumb in breadcrumbs %}
+                <li class="breadcrumb-item"><a href="{{ crumb.url }}">{{ crumb.name }}</a></li>
+                {% endfor %}
+            </ol>
+        </nav>
+        {% endif %}
+    </div>
+
     <div class="container-fluid">
-        {% include "includes/carousel.html" %}
         <div class="row">
             <div class="col text-center mt-3">
-                <h2 class="logo-font page-headers">All Products</h2>
+                <h2 class="logo-font page-headers">{{ category.friendly_name }}</h2>
                 <hr class="w-100 mb-1">
             </div>
         </div>

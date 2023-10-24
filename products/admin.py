@@ -24,6 +24,7 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
         'category_name',
+        'id',
     )
 
     ordering = ('category_name',)

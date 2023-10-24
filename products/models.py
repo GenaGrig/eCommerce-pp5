@@ -10,8 +10,8 @@ class Category(models.Model):
 
     class Meta:
         ordering = ('category_name',)
-        verbose_name = 'category'
-        verbose_name_plural = 'categories'
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'
 
     def __str__(self):
         return self.category_name
@@ -23,7 +23,7 @@ class Category(models.Model):
 class Product(models.Model):
     ''' Model for products'''
     id = models.AutoField(primary_key=True)
-    category_id = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=255, blank=True, null=True)
     name = models.CharField(max_length=255)
     product_type = models.CharField(max_length=255, blank=True, null=True)
