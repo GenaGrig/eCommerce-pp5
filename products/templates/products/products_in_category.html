@@ -14,7 +14,7 @@
     <div class="breadcrumb" id="breadcrumb">
         {% if category %}
         <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
+            <ol class="breadcrumb" style="margin-top: 15px;">
                 {% breadcrumb category as breadcrumbs %}
                 {% for crumb in breadcrumbs %}
                 <li class="breadcrumb-item"><a href="{{ crumb.url }}">{{ crumb.name }}</a></li>

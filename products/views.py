@@ -27,6 +27,7 @@ def all_products(request):
         'quantity_in_stock': quantity_in_stock,
         'search_term': query,
         "current_categories": category,
+        'show_delivery_banner': True,
     }
 
     return render(request, 'products/products.html', context)
@@ -39,25 +40,10 @@ def product_detail(request, product_id):
 
     context = {
         'product': product,
+        'show_delivery_banner': True,
     }
 
     return render(request, 'products/product_detail.html', context)
-
-
-# def products_in_category(request, category_id):
-#     ''' A view to show products in a specific category'''
-#     # Retrieve the category based on category_id
-#     category = Category.objects.get(id=category_id)
-
-#     # Filter products based on the category
-#     products_in_category = Product.objects.filter(category=category)
-    
-#     context = {
-#         'category': category,
-#         'products': products_in_category,
-#     }
-
-#     return render(request, 'products/products_in_category.html', context)
 
 
 def get_descendant_categories(category):
@@ -81,6 +67,7 @@ def products_in_category(request, category_id):
     context = {
         'category': category,
         'products': products_in_category,
+        'show_delivery_banner': True,
     }
 
     return render(request, 'products/products_in_category.html', context)
