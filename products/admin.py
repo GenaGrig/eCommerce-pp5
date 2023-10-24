@@ -17,10 +17,17 @@ class ProductAdmin(SummernoteModelAdmin):
 
     ordering = ('sku',)
     summernote_fields = ('short_description', 'description',)
+    
+
+class ProductInline(admin.TabularInline):
+    ''' Admin view for products in categories'''
+    model = Product
+    extra = 0
 
 
 class CategoryAdmin(admin.ModelAdmin):
     ''' Admin view for categories'''
+    inlines = [ProductInline]
     list_display = (
         'friendly_name',
         'category_name',
