@@ -44,13 +44,39 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
+# def products_in_category(request, category_id):
+#     ''' A view to show products in a specific category'''
+#     # Retrieve the category based on category_id
+#     category = Category.objects.get(id=category_id)
+
+#     # Filter products based on the category
+#     products_in_category = Product.objects.filter(category=category)
+    
+#     context = {
+#         'category': category,
+#         'products': products_in_category,
+#     }
+
+#     return render(request, 'products/products_in_category.html', context)
+
+
+def get_descendant_categories(category):
+    ''' Returns a list of all descendant categories of a given category'''
+    descendants = [category]
+    for child_category in category.category_set.all():
+        descendants += get_descendant_categories(child_category)
+    return descendants
+
+
 def products_in_category(request, category_id):
     ''' A view to show products in a specific category'''
-    # Retrieve the category based on category_id
-    category = Category.objects.get(id=category_id)
+    category = get_object_or_404(Category, id=category_id)
 
-    # Filter products based on the category
-    products_in_category = Product.objects.filter(category=category)
+    # Get all descendant categories (including the current category)
+    descendant_categories = get_descendant_categories(category)
+
+    # Retrieve products from the descendant categories
+    products_in_category = Product.objects.filter(category__in=descendant_categories)
     
     context = {
         'category': category,
