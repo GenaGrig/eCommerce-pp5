@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load breadcrumb %}
 
 {% block page_header %}
 <div class="container header-container">
@@ -10,21 +11,17 @@
 {% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
-<!-- Breadcrumb -->
-<!-- <div class="btn-primary" style="background-color: blueviolet;">
-    <div class="container py-2">
-        <nav class="d-flex">
-            <h6 class="mb-0">
-                <a href="{% url 'products' %}" class="text-white-50">Home</a>
-                <span class="text-white-50 mx-2"> > </span>
-                <a href="" class="text-white-50">Guitars & Basses</a>
-                <span class="text-white-50 mx-2"> > </span>
-                <a href="" class="text-white"><u>{{ product.category_id }}</u></a>
-            </h6>
-        </nav>
-    </div>
-</div> -->
+<div class="breadcrumb" id="breadcrumb">
+{% product_breadcrumb product as breadcrumbs %}
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            {% for crumb in breadcrumbs %}
+                <li class="breadcrumb-item"><a href="{{ crumb.url }}">{{ crumb.name }}</a></li>
+            {% endfor %}
+        </ol>
+    </nav>
+</div>
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
