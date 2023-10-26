@@ -18,6 +18,15 @@
                 <hr class="w-100 mb-1">
             </div>
         </div>
+        <select id="sortSelect" onchange="window.location.href=this.value">
+            <option value="" selected disabled>Sort by</option>
+            <option value="{% url 'products' %}?sort=price&direction=asc">Price: Low to High</option>
+            <option value="{% url 'products' %}?sort=price&direction=desc">Price: High to Low</option>
+            <option value="{% url 'products' %}?sort=rating&direction=desc">Rating: High to Low</option>
+            <option value="{% url 'products' %}?sort=rating&direction=asc">Rating: Low to High</option>
+            <option value="{% url 'products' %}?sort=name&direction=asc">Name: A to Z</option>
+            <option value="{% url 'products' %}?sort=name&direction=desc">Name: Z to A</option>
+        </select>
         <div class="row">
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2"></div>
