@@ -33,7 +33,17 @@
         </div>
         <div class="row">
             <div class="product-container col-10 offset-1">
-                <div class="row mt-1 mb-2"></div>
+                <div class="mt-2 mb-4">
+                    <select id="sortSelect" onchange="window.location.href=this.value">
+                        <option value="" selected disabled>Sort by </option>
+                        <option value="?sort=price&direction=asc">Price: Low to High</option>
+                        <option value="?sort=price&direction=desc">Price: High to Low</option>
+                        <option value="?sort=rating&direction=desc">Rating: High to Low</option>
+                        <option value="?sort=rating&direction=asc">Rating: Low to High</option>
+                        <option value="?sort=name&direction=asc">Name: A to Z</option>
+                        <option value="?sort=name&direction=desc">Name: Z to A</option>
+                    </select>
+                </div>
                 <div class="row">
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">

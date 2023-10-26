@@ -89,9 +89,28 @@ def products_in_category(request, category_id):
     # Retrieve products from the descendant categories
     products_in_category = Product.objects.filter(category__in=descendant_categories)
     
+    # Sorting logic
+    sort = request.GET.get('sort', 'name')
+    direction = request.GET.get('direction', 'asc')
+
+    if sort == 'name':
+        sort_field = 'name'
+    elif sort == 'price':
+        sort_field = 'price'
+    elif sort == 'rating':
+        sort_field = 'rating'
+    else:
+        sort_field = 'name'
+
+    if direction == 'desc':
+        sort_field = f'-{sort_field}'
+
+    products_in_category = products_in_category.order_by(sort_field)
+    
     context = {
         'category': category,
         'products': products_in_category,
+        'current_sorting': f'{sort}_{direction}',
         'show_delivery_banner': True,
     }
 
