@@ -159,6 +159,13 @@ ul.nav-item.dropdown {
     font-size: 2rem;
 }
 
+/* Category Badges */
+
+a.category-badge > span.badge:hover {
+    background: blueviolet !important;
+    color: white !important;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

@@ -10,8 +10,9 @@ def all_products(request):
 
     products = Product.objects.all()
     quantity_in_stock = Product.objects.filter(quantity_in_stock__gt=0).count()
+    parent_categories = Category.objects.filter(parent_category_id__isnull=True)
     query = None
-    category = None
+    categories = None
     sort = None
     direction = None
 
@@ -35,6 +36,8 @@ def all_products(request):
                 sortkey = 'price'
             elif sortkey == 'rating':
                 sortkey = 'rating'
+            elif sortkey == 'category':
+                sortkey = 'category'
             else:
                 sortkey = 'name'  # Set a default sort field if 'sort' is not recognized
 
@@ -50,7 +53,7 @@ def all_products(request):
         'products': products,
         'quantity_in_stock': quantity_in_stock,
         'search_term': query,
-        "current_categories": category,
+        "current_categories": parent_categories,
         'show_delivery_banner': True,
         'current_sorting': current_sorting,
     }
