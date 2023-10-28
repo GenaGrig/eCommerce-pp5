@@ -1,6 +1,7 @@
 from django.shortcuts import get_object_or_404
 from products.models import Product
 from django.conf import settings
+from decimal import Decimal
 
 
 def cart_contents(request):
@@ -9,29 +10,29 @@ def cart_contents(request):
     cart = request.session.get('cart', {})
 
     cart_items = []
-    total = 0
+    total = Decimal('0.00')
     product_count = 0
-    
+
+    for item_id, quantity in cart.items():
+        product = get_object_or_404(Product, pk=item_id)
+        total += Decimal(quantity) * product.price
+        product_count += quantity
+        cart_items.append({
+            'item_id': item_id,
+            'quantity': quantity,
+            'product': product,
+        })
+
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total + settings.STANDARD_DELIVERY_COST
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
     else:
-        delivery = 0
-        free_delivery_delta = 0
-        
-    tax = total * 0.2
-        
-    grand_total = delivery + total
+        delivery = Decimal('0.00')
+        free_delivery_delta = Decimal('0.00')
 
-    for id, quantity in cart.items():
-        product = get_object_or_404(Product, pk=id)
-        total += quantity * product.price
-        product_count += quantity
-        cart_items.append({
-            'id': id,
-            'quantity': quantity,
-            'product': product,
-        })
+    tax = total * settings.TAX_RATE / 100
+
+    grand_total = delivery + total
 
     context = {
         'cart_items': cart_items,
@@ -44,4 +45,4 @@ def cart_contents(request):
         'tax': tax,
     }
 
-    return (context)
+    return context

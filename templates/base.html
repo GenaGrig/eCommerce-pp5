@@ -118,9 +118,9 @@
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">
                                     {% if grand_total %}
-                                    <i class="fa-solid fa-euro-sign"></i> {{ grand_total|floatformat:2 }}
+                                    {{ grand_total|floatformat:2 }} <i class="fa-solid fa-euro-sign"></i>
                                     {% else %}
-                                    <i class="fa-solid fa-euro-sign"></i> 0.00
+                                    0.00 <i class="fa-solid fa-euro-sign"></i>
                                     {% endif %}
                                 </p>
                             </div>
