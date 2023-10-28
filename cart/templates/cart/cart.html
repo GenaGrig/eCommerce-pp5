@@ -13,7 +13,7 @@
 <div class="row text-center mt-0 mb-0">
     <h2 class="logo-font page-headers">Shopping cart</h2>
 </div>
-    <!-- cart + summary -->
+    <!-- Cart products list -->
 <section class="bg-light my-5 mt-2">
     <div class="container">
     <div class="row">
@@ -142,7 +142,7 @@
                 <div class="border-top pt-4 mx-4 mb-4">
                     <p><i class="fas fa-truck text-muted fa-lg"></i> Fast Delivery within 3-5 days</p>
                     <p class="text-muted">
-                        Fast delivery in 3-5 working days after payment confirmation. If the product is not in stock the delivery time is 7-15 days*. You will be informed about this via email. 
+                        Fast delivery within 3-5 days after payment confirmation. If the product is not in stock the delivery time is 7-15 days*. You will be informed about this via email. 
                         Free return of goods within 14 days of delivery.
                         <br />
                         *The delivery time may change depending on the product availability at our suppliers. 
@@ -150,8 +150,8 @@
                 </div>
             </div>
         </div>
-        <!-- cart -->
-        <!-- summary -->
+        <!-- Cart -->
+        <!-- Coupons and price -->
         <div class="col-lg-3">
             <div class="card mb-3 border shadow-0">
                 <div class="card-body">
@@ -170,25 +170,29 @@
                 <div class="card-body">
                     <div class="d-flex justify-content-between">
                         <p class="mb-2">Total price:</p>
-                        <p class="mb-2">$329.00</p>
+                        <p class="mb-2">329.00 <i class="fa-solid fa-euro-sign fa-sm"></i></p>
                     </div>
                     <div class="d-flex justify-content-between">
                         <p class="mb-2">Discount:</p>
-                        <p class="mb-2 text-success">-$60.00</p>
+                        <p class="mb-2 text-success">-60.00 <i class="fa-solid fa-euro-sign fa-sm"></i></p>
                     </div>
                     <div class="d-flex justify-content-between">
                         <p class="mb-2">TAX:</p>
-                        <p class="mb-2">$14.00</p>
+                        <p class="mb-2">14.00 <i class="fa-solid fa-euro-sign fa-sm"></i></p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <p class="mb-2">Delivery cost:</p>
+                        <p class="mb-2">0.00 <i class="fa-solid fa-euro-sign fa-sm"></i></p>
                     </div>
                     <hr />
                     <div class="d-flex justify-content-between">
                         <p class="mb-2">Total price:</p>
-                        <p class="mb-2 fw-bold">$283.00</p>
+                        <p class="mb-2 fw-bold">283.00 <i class="fa-solid fa-euro-sign fa-sm"></i></p>
                     </div>
     
                     <div class="mt-3">
                         <a href="#" class="btn btn-success w-100 shadow-0 mb-2"> Make Purchase </a>
-                        <a href="#" class="btn btn-light w-100 border mt-2"> Back to shop </a>
+                        <a href="{% url 'products' %}" class="btn btn-secondary shadow-0 w-100" style="background-color: blueviolet;"><i class="fa-solid fa-angles-left" style="color: #ffffff;"></i> Back to Products </a>
                     </div>
                 </div>
             </div>

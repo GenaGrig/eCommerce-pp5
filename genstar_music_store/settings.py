@@ -79,6 +79,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'cart.contexts.cart_contents',
             ],
         },
     },
@@ -168,5 +169,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Stripe
 
-FREE_DELIVERY_THRESHOLD = 200
+FREE_DELIVERY_THRESHOLD = 50
+STANDARD_DELIVERY_COST = 7
 STRIPE_CURRENCY = 'eur'
