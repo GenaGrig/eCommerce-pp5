@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'store',
     'products',
+    'cart',
 ]
 
 SUMMERNOTE_THEME = 'bs4'

@@ -25,4 +25,5 @@ urlpatterns = [
     path("", include('store.urls')),
     path("products/", include('products.urls')),
     path('summernote/', include('django_summernote.urls')),
+    path('cart/', include('cart.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
