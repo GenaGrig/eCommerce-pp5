@@ -90,38 +90,7 @@
                 </div>
 
                 <hr />
-                <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
-                    {% csrf_token %}
-                    <div class="row mb-4">
-                        <!-- Quantity -->
-                        <div class="col-md-4 col-6 mb-3">
-                            <label class="mb-2 d-block">Quantity</label>
-                            <div class="input-group mb-3" style="width: 170px;">
-                                <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon1"
-                                    data-mdb-ripple-color="dark">
-                                    <i class="fas fa-minus"></i>
-                                </button>
-                                <input type="number" class="form-control text-center border border-secondary" name="quantity" placeholder="1"
-                                    value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}" 
-                                    aria-label="Quantity control buttons" aria-describedby="button-addon1" />
-                                <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon2"
-                                    data-mdb-ripple-color="dark">
-                                    <i class="fas fa-plus"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                        <div class="col-12">
-                            <a href="{% url 'products' %}" class="btn btn-secondary shadow-0 border border-secondary py-2 icon-hover px-3" style="background-color: blueviolet;"><i
-                                    class="fa-solid fa-angles-left" style="color: #ffffff;"></i> Continue Shopping </a>
-                            <button class="btn btn-primary shadow-0 border icon-hover border border-secondary py-2 icon-hover px-3" type="submit">
-                                <i class="me-1 fa fa-shopping-cart fa-lg"></i> Add to Cart
-                            </button>
-                            <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i
-                                    class="me-1 fa fa-heart fa-lg"></i> Save </a>
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}" />
-                        </div>
-                </form>
+                {% include 'products/quantity-form-products.html' %}
             </div>
         </main>
     </div>
@@ -133,4 +102,9 @@
 </div>
 </section>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {% include 'includes/quantity-input-script.html' %}
 {% endblock %}
