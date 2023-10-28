@@ -38,6 +38,9 @@
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
     {% endblock %}
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
     <!-- Bootstrap JS -->
     {% block corejs %}
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
@@ -47,9 +50,6 @@
     {% block custom_js %}
         <script src="{% static 'js/script.js' %}"></script>
     {% endblock %}
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -112,16 +112,17 @@
                     </li>
                     <!-- Cart -->
                     <li class="list-inline-item" style="margin-left: 5px;">
-                        <a class="{% if grand_total %} text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                        <a class="{% if grand_total %} text-black font-weight-bold{% else %}text-black{% endif %} nav-link"
                             href="{% url 'view_cart' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                <p class="my-0">
+                                <p id="new-grand-total" class="my-0">
                                     {% if grand_total %}
-                                    {{ grand_total|floatformat:2 }} <i class="fa-solid fa-euro-sign"></i>
+                                    {{ grand_total|floatformat:2 }} 
                                     {% else %}
-                                    0.00 <i class="fa-solid fa-euro-sign"></i>
+                                    0.00
                                     {% endif %}
+                                    <i class="fa-solid fa-euro-sign"></i>
                                 </p>
                             </div>
                         </a>
