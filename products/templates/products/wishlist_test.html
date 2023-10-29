@@ -58,13 +58,13 @@
                                                 class="fa-solid fa-euro-sign fa-sm"></i> / per item </small>
                                     </div>
                                     <div class="col-lg col-sm-6 mb-2">
-                                        <button class="btn btn-success border border-solid text-white icon-hover-info"
-                                            type="submit">
+                                        <a href="{% url 'add_to_cart' product.id %}"
+                                            class="btn btn-success border border-solid text-white icon-hover-info">
                                             <i class="me-1 fa fa-shopping-cart fa-lg"></i> Add to Cart
-                                        </button>
+                                        </a>
                                         <a href="{% url 'remove_from_wishlist' product.id %}"
-                                            class="btn btn-danger border border-solid text-white icon-hover-danger"><i
-                                                class="fa-solid fa-trash"></i> Remove</a>
+                                            class="btn btn-danger border border-solid text-white icon-hover-danger">
+                                            <i class="fa-solid fa-trash"></i> Remove</a>
                                         <div class="float-md-start">
                                             <h6>Date Added: {{ product.date_added }}</h6>
                                         </div>

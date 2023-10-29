@@ -40,13 +40,15 @@
                     <div class="col-12 col-md-6 my-auto order-md-last">
                         <div class="sort-select-wrapper w-50">
                             <select id="sortSelect" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}secondary{% else %}black{% endif %}" onchange="window.location.href=this.value">
-                                <option value="" selected disabled>Sort by </option>
-                                <option value="?sort=price&direction=asc">Price: Low to High</option>
-                                <option value="?sort=price&direction=desc">Price: High to Low</option>
-                                <option value="?sort=rating&direction=desc">Rating: High to Low</option>
-                                <option value="?sort=rating&direction=asc">Rating: Low to High</option>
-                                <option value="?sort=name&direction=asc">Name: A to Z</option>
-                                <option value="?sort=name&direction=desc">Name: Z to A</option>
+                                <option value="{% url 'products_in_category' category.id %}" {% if not current_sorting %}selected{% endif %} selected>Sort by </option>
+                                <option value="{% url 'products_in_category' category.id %}?sort=price&direction=asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price: Low to High</option>
+                                <option value="{% url 'products_in_category' category.id %}?sort=price&direction=desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price: High to Low</option>
+                                <option value="{% url 'products_in_category' category.id %}?sort=rating&direction=asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating: Low to High</option>
+                                <option value="{% url 'products_in_category' category.id %}?sort=rating&direction=desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating: High to Low</option>
+                                <option value="{% url 'products_in_category' category.id %}?sort=name&direction=asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name: A to Z</option>
+                                <option value="{% url 'products_in_category' category.id %}?sort=name&direction=desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name: Z to A</option>
+                                <option value="{% url 'products_in_category' category.id %}?sort=category&direction=asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category: A to Z</option>
+                                <option value="{% url 'products_in_category' category.id %}?sort=category&direction=desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category: Z to A</option>
                             </select>
                         </div>
                     </div>
