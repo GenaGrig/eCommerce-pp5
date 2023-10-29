@@ -91,12 +91,6 @@
 
                 <hr />
                 {% include 'products/quantity-form-products.html' %}
-                {% if user.is_authenticated %}
-                    <form action="{% url 'add_to_wishlist' product.id %}" method="post">
-                        {% csrf_token %}
-                        <button type="submit">Add to Wishlist</button>
-                    </form>
-                {% endif %}
             </div>
         </main>
     </div>

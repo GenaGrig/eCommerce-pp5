@@ -124,30 +124,30 @@ def products_in_category(request, category_id):
 
 def wishlist_test(request):
     ''' A view to show the wishlist '''
-    wishlist_instance = Wishlist.objects.get(user=request.user)
-    products = wishlist_instance.products.all()
+    wishlist_items = Wishlist.objects.get(user=request.user)
+    products = wishlist_items.products.all()
+    date_added = wishlist_items.date_added
     context = {
-        'wishlist': wishlist_instance,
+        'wishlist_items': wishlist_items,
         'show_delivery_banner': True,
         'products': products,
+        'date_added': date_added,
     }
+
     return render(request, 'products/wishlist_test.html', context)
-
-
-logger = logging.getLogger(__name__)
 
 
 @login_required
 def add_to_wishlist(request, product_id):
     ''' A view to add a product to the wishlist '''
-    product = Product.objects.get(id=product_id)
+    product = get_object_or_404(Product, id=product_id)
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
     wishlist.products.add(product)
     
-    # Log a message
-    logger.info(f"Product '{product.name}' added to wishlist for user '{request.user}'")
+    print(wishlist.date_added)
     
-    return redirect('wishlist_test')
+    messages.success(request, f'Added {product.name} to your wishlist')
+    return redirect('products')
 
 
 @login_required
@@ -156,5 +156,7 @@ def remove_from_wishlist(request, product_id):
     product = Product.objects.get(id=product_id)
     wishlist = Wishlist.objects.get(user=request.user)
     wishlist.products.remove(product)
+    
+    messages.warning(request, f'Removed {product.name} from your wishlist')
     return redirect('wishlist_test')
     

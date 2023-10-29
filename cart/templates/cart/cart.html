@@ -22,7 +22,11 @@
         <div class="col-lg-9">
             <div class="card border shadow-0">
                 <div class="m-4">
-                    <h4 class="card-title mb-4">Your shopping cart</h4>
+                    {% if cart_contents|length == 0 %}
+                        <h4 class="card-title mb-4">{{ user.username }}, You have 0 item(s) in your shopping cart.</h4>
+                    {% else %}
+                        <h4 class="card-title mb-4">{{ user.username }}, You have {{ cart_contents|length }} item(s) in your shopping cart.</h4>
+                    {% endif %}
                     {% if cart_items %}
                         {% for item in cart_items %}
                         <div class="row gy-3 mb-4"">
