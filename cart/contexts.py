@@ -32,7 +32,7 @@ def cart_contents(request):
 
     tax = total * settings.TAX_RATE / 100
 
-    grand_total = delivery + total
+    grand_total = float(total) + float(delivery)
 
     context = {
         'cart_items': cart_items,
