@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Category(models.Model):
@@ -45,3 +46,13 @@ class Product(models.Model):
         
     def __str__(self):
         return self.name
+
+
+class Wishlist(models.Model):
+    ''' Model for wishlist'''
+    user = models.ForeignKey(User, null=True, blank=True, on_delete=models.SET_NULL)
+    products = models.ManyToManyField(Product)
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.product.name

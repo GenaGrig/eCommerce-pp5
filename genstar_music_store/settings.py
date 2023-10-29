@@ -26,7 +26,14 @@ SECRET_KEY = 'django-insecure-7%efit@_-^htn)j3dhmhjo@h!!113$zzi(4@37!wj0vdoxwgyu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "8000-genagrig-ecommercepp5-ffpiw04d4zh.ws-eu105.gitpod.io",
+    "localhost",
+]
+
+CSRF_TRUSTED_HOSTS = [
+    "https://8000-genagrig-ecommercepp5-ffpiw04d4zh.ws-eu105.gitpod.io",
+]
 
 
 # Application definition

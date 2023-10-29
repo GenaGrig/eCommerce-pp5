@@ -1,8 +1,10 @@
+import logging
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Product, Category
+from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
+from .models import Product, Category, Wishlist
 
 
 def all_products(request):
@@ -118,3 +120,41 @@ def products_in_category(request, category_id):
     }
 
     return render(request, 'products/products_in_category.html', context)
+
+
+def wishlist_test(request):
+    ''' A view to show the wishlist '''
+    wishlist_instance = Wishlist.objects.get(user=request.user)
+    products = wishlist_instance.products.all()
+    context = {
+        'wishlist': wishlist_instance,
+        'show_delivery_banner': True,
+        'products': products,
+    }
+    return render(request, 'products/wishlist_test.html', context)
+
+
+logger = logging.getLogger(__name__)
+
+
+@login_required
+def add_to_wishlist(request, product_id):
+    ''' A view to add a product to the wishlist '''
+    product = Product.objects.get(id=product_id)
+    wishlist, created = Wishlist.objects.get_or_create(user=request.user)
+    wishlist.products.add(product)
+    
+    # Log a message
+    logger.info(f"Product '{product.name}' added to wishlist for user '{request.user}'")
+    
+    return redirect('wishlist_test')
+
+
+@login_required
+def remove_from_wishlist(request, product_id):
+    ''' A view to remove a product from the wishlist '''
+    product = Product.objects.get(id=product_id)
+    wishlist = Wishlist.objects.get(user=request.user)
+    wishlist.products.remove(product)
+    return redirect('wishlist_test')
+    
