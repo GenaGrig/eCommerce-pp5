@@ -63,7 +63,7 @@
                 </div>
                 <div>
                     <h6 class="title text-dark fw-bold">
-                        Features
+                        Features:
                     </h6>
                     <p>
                         {{ product.short_description|safe }}
@@ -74,18 +74,18 @@
                     <dt class="col-3">Type:</dt>
                     <dd class="col-9">{{ product.product_type }}</dd>
 
-                    <dt class="col-3">Color</dt>
+                    <dt class="col-3">Color:</dt>
                     <dd class="col-9">{{ product.product_color }}</dd>
 
                     {% if product.product_material %}
-                    <dt class="col-3">Material</dt>
+                    <dt class="col-3">Material:</dt>
                     <dd class="col-9">{{ product.product_material }}</dd>
                     {% else %}
-                    <dt class="col-3">Material</dt>
+                    <dt class="col-3">Material:</dt>
                     <dd class="col-9"> N/A </dd>
                     {% endif %}
 
-                    <dt class="col-3">Brand</dt>
+                    <dt class="col-3">Brand:</dt>
                     <dd class="col-9">{{ product.product_brand }}</dd>
                 </div>
 

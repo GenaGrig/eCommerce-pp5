@@ -22,10 +22,10 @@
         <div class="col-lg-9">
             <div class="card border shadow-0">
                 <div class="m-4">
-                    {% if cart_contents|length == 0 %}
-                        <h4 class="card-title mb-4">{{ user.username }}, You have 0 item(s) in your shopping cart.</h4>
+                    {% if cart_items|length == 0 %}
+                        <h4 class="card-title mb-4">{{ user.username }} You have 0 item(s) in your shopping cart.</h4>
                     {% else %}
-                        <h4 class="card-title mb-4">{{ user.username }}, You have {{ cart_contents|length }} item(s) in your shopping cart.</h4>
+                        <h4 class="card-title mb-4">{{ user.username }} You have {{ cart_items|length }} item(s) in your shopping cart.</h4>
                     {% endif %}
                     {% if cart_items %}
                         {% for item in cart_items %}
@@ -102,7 +102,7 @@
             <div class="card shadow-0 border">
                 <div class="card-body">
                     <div class="d-flex justify-content-between" id="products-price-row">
-                        <p class="mb-2">Products price:</p>
+                        <p class="mb-2">Cart Total:</p>
                         <p class="mb-2">{{ total }} <i class="fa-solid fa-euro-sign fa-sm"></i></p>
                     </div>
                     <div class="d-flex justify-content-between" id="discount-row">
@@ -117,12 +117,12 @@
                         <p class="mb-2">{{ tax|floatformat:2 }} <i class="fa-solid fa-euro-sign fa-sm"></i></p>
                     </div>
                     <div class="d-flex justify-content-between" id="delivery-cost-row">
-                        <p class="mb-2">Delivery cost:</p>
+                        <p class="mb-2">Delivery Cost:</p>
                         <p class="mb-2">{{ delivery }} <i class="fa-solid fa-euro-sign fa-sm"></i></p>
                     </div>
                     <hr />
                     <div class="d-flex justify-content-between" id="total-price-row">
-                        <p class="mb-2">Total price:</p>
+                        <p class="mb-2"><strong>Grand Total:</strong></p>
                         <p class="mb-2 fw-bold">{{ grand_total|floatformat:2}} <i class="fa-solid fa-euro-sign fa-sm"></i></p>
                     </div>
     

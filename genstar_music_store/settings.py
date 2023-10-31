@@ -31,7 +31,7 @@ ALLOWED_HOSTS = [
     "localhost",
 ]
 
-CSRF_TRUSTED_HOSTS = [
+CSRF_TRUSTED_ORIGINS = [
     "https://8000-genagrig-ecommercepp5-ffpiw04d4zh.ws-eu105.gitpod.io",
 ]
 
