@@ -145,8 +145,8 @@ def add_to_wishlist(request, product_id):
     wishlist.products.add(product)
     
     print(wishlist.date_added)
-    
-    messages.success(request, f'Added {product.name} to your wishlist')
+
+    messages.warning(request, f'Added {product.name} to your wishlist')
     return redirect('products')
 
 
