@@ -1,11 +1,8 @@
-from decimal import Decimal, InvalidOperation
-from django.utils import timezone
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from products.models import Product
 from .models import Coupon
-from django.http import JsonResponse
 
 
 def view_cart(request):
@@ -28,6 +25,7 @@ def add_to_cart(request, item_id):
             cart[item_id] += quantity
         else:
             cart[item_id] = quantity
+            messages.success(request, f'Added {product.name} to your cart')
 
         # Update the session with the new cart
         request.session['cart'] = cart
@@ -36,7 +34,7 @@ def add_to_cart(request, item_id):
         return redirect('view_cart')
     
     except Exception as e:
-        # Handle any exceptions and return an error response if needed
+        messages.error(request, f'Error adding item: {e}')
         return redirect('view_cart')
 
 
@@ -52,6 +50,8 @@ def update_cart(request, item_id):
     # For simplicity, let's assume you're updating a session variable named 'cart'
     cart = request.session.get('cart', {})
     cart[item_id] = quantity
+    messages.info(request, f'Updated {product.name} quantity to {cart[item_id]}')
+
     request.session['cart'] = cart
 
     return redirect('view_cart')
@@ -59,11 +59,19 @@ def update_cart(request, item_id):
 
 def remove_from_cart(request, item_id):
     '''Remove the item from the shopping cart'''
+    
+    try:
+        product = get_object_or_404(Product, pk=item_id)
 
-    cart = request.session.get('cart', {})
+        cart = request.session.get('cart', {})
 
-    if item_id in cart:
-        del cart[item_id]
+        if item_id in cart:
+            del cart[item_id]
+            messages.warning(request, f'Item {product.name} removed from your cart')
 
-    request.session['cart'] = cart
-    return redirect(reverse('view_cart'))
+        request.session['cart'] = cart
+        return redirect(reverse('view_cart'))
+    
+    except Exception as e:
+        messages.error(request, f'Error removing item: {e}')
+        return redirect(reverse('view_cart'))

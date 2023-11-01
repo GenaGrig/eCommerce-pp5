@@ -157,30 +157,21 @@
     </header>
 
     <!-- Messages -->
+    <!-- Toasts -->
     {% if messages %}
-        <div class="message-container fixed-top text-center" id="msg" role="alert">
+        <div class="message-container" id="msg">
             {% for message in messages %}
-                {% if message.tags == 'error' %}
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        <strong>Error!</strong> {{ message }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                {% elif message.tags == 'success' %}
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <strong>Success!</strong> {{ message }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                {% elif message.tags == 'info' %}
-                    <div class="alert alert-info alert-dismissible fade show" role="alert">
-                        <strong>Info!</strong> {{ message }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                {% elif message.tags == 'warning' %}
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                        <strong>Warning!</strong> {{ message }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                {% endif %}
+                {% with message.level as level %}
+                    {% if level == 40 %}
+                        {% include 'includes/toasts/toast_error.html' %}
+                    {% elif level == 30 %}
+                        {% include 'includes/toasts/toast_warning.html' %}
+                    {% elif level == 25 %}
+                        {% include 'includes/toasts/toast_success.html' %}
+                    {% else %}
+                        {% include 'includes/toasts/toast_info.html' %}
+                    {% endif %}
+                {% endwith %}
             {% endfor %}
         </div>
     {% endif %}
@@ -194,6 +185,9 @@
 {% endblock %}
 
 {% block postloadjs %}
+<script type="text/javascript">
+    $('.toast').toast('show');
+</script>
 {% endblock %}
 
 {% block footer %}
@@ -383,11 +377,11 @@
 {% comment %} # Messages script {% endcomment %}
 
 <script>
-  setTimeout(function () {
+setTimeout(function () {
     let messages = document.getElementById('msg');
     let alert = new bootstrap.Alert(messages);
     alert.close();
-  }, 5000);
+}, 10000);
 </script>
 
 </body>
