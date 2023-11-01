@@ -24,7 +24,7 @@ def cart_contents(request):
         })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
-        delivery = total + settings.STANDARD_DELIVERY_COST
+        delivery = settings.STANDARD_DELIVERY_COST
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
     else:
         delivery = Decimal('0.00')
@@ -32,7 +32,10 @@ def cart_contents(request):
 
     tax = total * settings.TAX_RATE / 100
 
-    grand_total = float(total) + float(delivery)
+    if total > 0:
+        grand_total = float(total) + float(delivery)
+    else:
+        grand_total = 0
 
     context = {
         'cart_items': cart_items,

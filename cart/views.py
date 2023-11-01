@@ -23,6 +23,7 @@ def add_to_cart(request, item_id):
         # Update the quantity in the cart dictionary
         if item_id in cart:
             cart[item_id] += quantity
+            messages.info(request, f'Updated {product.name} quantity to {cart[item_id]}')
         else:
             cart[item_id] = quantity
             messages.success(request, f'Added {product.name} to your cart')
@@ -31,7 +32,7 @@ def add_to_cart(request, item_id):
         request.session['cart'] = cart
 
         # Redirect to the cart view
-        return redirect('view_cart')
+        return redirect('product_detail', product.id)
     
     except Exception as e:
         messages.error(request, f'Error adding item: {e}')
