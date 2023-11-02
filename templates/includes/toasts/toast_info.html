@@ -21,7 +21,9 @@
                 {% for item in cart_items %}
                     <div class="row">
                         <div class="col-9">
-                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                            <a class="nav-link fw-bold" href="{% url 'product_detail' item.item_id %}" style="text-decoration: none;">
+                                {{ item.product.name }}
+                            </a>
                             <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                             <p class="my-0"><strong>{{ item.product.price|multiply:item.quantity }} </strong><i class="fa-solid fa-euro-sign"></i></p>
                         </div>
