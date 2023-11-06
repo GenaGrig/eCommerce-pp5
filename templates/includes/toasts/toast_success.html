@@ -50,7 +50,7 @@
                     </p>
                     {% endif %}
                     <a href="{% url 'view_cart' %}" class="btn btn-info bg-dark text-white w-100 shadow-0 mb-2"><i class="fas fa-shopping-bag"></i> Show My Cart </a>
-                    <a href="#" class="btn btn-success w-100 shadow-0 mb-2"><i class="fa-solid fa-credit-card"></i> Proceed to Checkout </a>
+                    <a href="{% url 'checkout' %}" class="btn btn-success w-100 shadow-0 mb-2"><i class="fa-solid fa-credit-card"></i> Proceed to Checkout </a>
                 </div>
             </div>
         {% endif %}
