@@ -8,7 +8,8 @@ class OrderForm(forms.ModelForm):
         model = Order
         fields = (
             'first_name', 'last_name', 'email_address', 'phone_number',
-            'street_address1', 'street_address2', 'city', 'postal_code',
+            'street_address1', 'building_number1', 'street_address2',
+            'building_number2', 'city', 'postal_code',
             'country',
         )
 
@@ -22,7 +23,9 @@ class OrderForm(forms.ModelForm):
             'email_address': 'Email Address',
             'phone_number': 'Phone Number',
             'street_address1': 'Street Address 1',
+            'building_number1': 'Building Number 1',
             'street_address2': 'Street Address 2',
+            'building_number2': 'Building Number 2',
             'city': 'City',
             'postal_code': 'Postal Code',
         }
