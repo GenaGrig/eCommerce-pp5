@@ -197,9 +197,13 @@
                                 and our Billing Terms and Conditions <a href="#" alt="Opens Terms and Conditons page" target="_blank">here.</a></h6>
 
 
-                            <div class="float-end">
-                                <a href="{% url 'view_cart' %}" class="btn btn-secondary shadow-0" style="background-color: blueviolet;"><i class="fa-solid fa-angles-left" style="color: #ffffff;"></i> Back to Cart </a>
-                                <a href="{% url 'checkout' %}" class="btn btn-success shadow-0"><i class="fa-solid fa-credit-card"></i> Complete Order </a>
+                            <div class="float-end submit-button">
+                                <a href="{% url 'view_cart' %}" class="btn btn-secondary shadow-0" style="background-color: blueviolet;">
+                                    <i class="fa-solid fa-angles-left" style="color: #ffffff;"></i> Back to Cart </a>
+                                <button id="submit-button" class="btn btn-success shadow-0">
+                                    <i class="fa-solid fa-credit-card"></i> 
+                                    <span class="fw-bold">Complete Order</span>
+                                </button>
                             </div>
                         </div>
                     </div>

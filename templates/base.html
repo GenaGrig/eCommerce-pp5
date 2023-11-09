@@ -119,10 +119,11 @@
                         <a class="{% if grand_total %} text-black font-weight-bold{% else %}text-black{% endif %} nav-link"
                             href="{% url 'view_cart' %}">
                             <div class="text-center">
-                                <div class="shopping-cart-icon"><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                {% if product_count > 0 %}
-                                    <div class="cart-badge">{{ product_count }}</div>
-                                {% endif %}
+                                <div class="shopping-cart-icon"><i class="fas fa-shopping-bag fa-lg"></i>
+                                    {% if product_count > 0 %}
+                                        <div class="cart-badge">{{ product_count }}</div>
+                                    {% endif %}
+                                </div>
                                 <p id="new-grand-total" class="my-0">
                                     {% if grand_total %}
                                     {{ grand_total|floatformat:2 }} 

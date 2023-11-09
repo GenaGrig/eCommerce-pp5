@@ -29,12 +29,12 @@ SECRET_KEY = 'django-insecure-7%efit@_-^htn)j3dhmhjo@h!!113$zzi(4@37!wj0vdoxwgyu
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "8000-genagrig-ecommercepp5-ffpiw04d4zh.ws-eu105.gitpod.io",
+    "8000-genagrig-ecommercepp5-ffpiw04d4zh.ws-eu106.gitpod.io",
     "localhost",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-genagrig-ecommercepp5-ffpiw04d4zh.ws-eu105.gitpod.io",
+    "https://8000-genagrig-ecommercepp5-ffpiw04d4zh.ws-eu106.gitpod.io",
 ]
 
 
