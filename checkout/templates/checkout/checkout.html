@@ -2,6 +2,10 @@
 {% load static %}
 {% load custom_filters %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -177,16 +181,15 @@
 
                             <h5 class="card-title mb-3">Payment card details</h5>
                             <!-- Stripe Elements Placeholder -->
-                            <div class="row">
-                                <div class="col-6 mb-3">
-                                    
-                                </div>
-
-                            <!-- Form Errors -->
-                                <div class="col-6">
-                                    
-                                </div>
-                            </div>
+                            <fieldset class="stripe-style-input form-outline">
+                                <!-- A Stripe Element will be inserted here. -->
+                                <div class="mb-3 form-outline" id="card-element"></div>
+        
+                                <!-- Used to display form errors. -->
+                                <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                                <!-- Pass the client secret to the view so we can get the payment intent id -->
+                                <input type="hidden" value="{{ client_secret }}" name="client_secret">
+                            </fieldset>
 
                             <hr class="my-4" />
 
@@ -196,12 +199,12 @@
 
                             <div class="float-end">
                                 <a href="{% url 'view_cart' %}" class="btn btn-secondary shadow-0" style="background-color: blueviolet;"><i class="fa-solid fa-angles-left" style="color: #ffffff;"></i> Back to Cart </a>
-                                <a href="{% url 'checkout' %}" class="btn btn-success shadow-0"><i class="fa-solid fa-credit-card"></i> Proceed to Payment </a>
+                                <a href="{% url 'checkout' %}" class="btn btn-success shadow-0"><i class="fa-solid fa-credit-card"></i> Complete Order </a>
                             </div>
                         </div>
                     </div>
                 </form>
-                <!-- Checkout -->
+                <!-- Cart Summary -->
             </div>
             <div class="col-xl-4 col-lg-4 d-flex justify-content-center justify-content-lg-end">
                 <div class="ms-lg-4 mt-4 mt-lg-0" style="max-width: 320px;">
@@ -263,4 +266,11 @@
     </div>
 </section>
 
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}

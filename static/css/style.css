@@ -288,6 +288,23 @@ a.category-badge > span.badge:hover {
     padding-right: 0px;
 }
 
+.shopping-cart-icon {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-badge {
+    position: absolute;
+    top: 5px;
+    right: 200px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 12px;
+}
+
+
 
 
 /* Responsive layout - makes columns stack on top of each other instead of next to each other */
@@ -304,4 +321,17 @@ a.category-badge > span.badge:hover {
         font-size: clamp( .5rem, 3.5vw, 2rem);
     }
     
+}
+
+@media only screen and (max-width: 600px) {
+    .shopping-cart-icon {
+        display: block; /* On small screens, make it a block element */
+        text-align: center; /* Center the content */
+    }
+
+    .cart-badge {
+        position: relative; /* Remove absolute positioning for responsiveness */
+        display: inline-block; /* Ensure the badge doesn't take the full width */
+        margin-top: 5px; /* Add some space between the icon and the badge */
+    }
 }
