@@ -2,20 +2,35 @@
 
 {% load i18n %}
 
-{% block head_title %}{% trans "Sign Out" %}{% endblock head_title %}
+{% block head_title %}{% trans "Sign Out" %}{% endblock %}
 
 {% block content %}
-<h1>{% trans "Sign Out" %}</h1>
 
-<p>{% trans 'Are you sure you want to sign out?' %}</p>
+<div class="container">
+  <div class="col">
+    <div class="col-md-8 offset-md-2" style="margin-top: 5rem; margin-bottom: 4rem">
 
-<form method="post" action="{% url 'account_logout' %}">
-  {% csrf_token %}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
-  {% endif %}
-  <button type="submit">{% trans 'Sign Out' %}</button>
-</form>
+      <h3 class="text-center"><strong>{% trans 'Are you sure you want to sign out?' %}</strong></h3>
 
+    </div>
+  </div>
 
-{% endblock content %}
+  <div class="col">
+    <div class="col-md-8 mt-3 offset-md-2">
+
+      <form method="post" action="{% url 'account_logout' %}">
+        {% csrf_token %}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        <div class="text-center mb-5">
+          <a class="btn btn-secondary" href="{% url 'products' %}"><i class="fa-solid fa-xmark" style="color: #ffffff;"></i> Cancel</a>
+          <button type="submit" class="btn text-white" style="background-color: blueviolet;"><i class="fa-solid fa-right-from-bracket" style="color: #ffffff;"></i> {% trans 'Sign Out' %}</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
