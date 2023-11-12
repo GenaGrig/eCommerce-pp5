@@ -28,6 +28,7 @@ class Order(models.Model):
     delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
     order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+    tax = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
 
     def _generate_order_id(self):
         '''Generate a random, unique order id using UUID'''

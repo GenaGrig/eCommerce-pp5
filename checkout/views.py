@@ -96,6 +96,12 @@ def checkout_success(request, order_id):
 
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_id=order_id)
+    
+    tax_rate = settings.TAX_RATE
+    tax = order.order_total * tax_rate / 100
+    
+    order.tax = tax
+    order.save()
 
     messages.success(request, f'Order successfully processed! \
                 Your order number is {order.order_id}. \
