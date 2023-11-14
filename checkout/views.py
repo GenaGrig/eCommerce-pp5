@@ -94,10 +94,10 @@ def checkout(request):
         intent = stripe.PaymentIntent.create(
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
-            order_id=request.POST.get('order_id'),
             metadata={
                 'cart': json.dumps(request.session.get('cart', {})),
                 'username': request.user,
+                'save_info': 'save-info' in request.POST,
             }
         )
         
