@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
-from django.http import JsonResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -122,18 +121,19 @@ def checkout_success(request, order_id):
 
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_id=order_id)
-    
+
     tax_rate = settings.TAX_RATE
     tax = order.order_total * tax_rate / 100
-    
+
     order.tax = tax
     order.save()
 
     messages.success(request, f'Order successfully processed! \
                 Your order number is {order.order_id}. \
                 A confirmation email will be sent to {order.email_address}.')
-    
+
     if 'cart' in request.session:
+        update_product_quantities(request)
         del request.session['cart']
 
     template = 'checkout/checkout_success.html'
@@ -141,5 +141,22 @@ def checkout_success(request, order_id):
         'order': order,
         'save_info': save_info,
     }
-    
+
     return render(request, template, context)
+
+
+def update_product_quantities(request):
+    ''' A view to update product quantities after a successful checkout'''
+
+    cart = request.session.get('cart', {})
+    for item_id, item_data in cart.items():
+        try:
+            product = Product.objects.get(id=item_id)
+            product.quantity_in_stock -= item_data
+            product.save()
+        except Product.DoesNotExist:
+            messages.error(request, (
+                "One of the products in your bag wasn't found in our database. "
+                "Please call us for assistance!")
+            )
+            return redirect(reverse('view_cart'))
