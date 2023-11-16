@@ -208,10 +208,24 @@
                         </div>
                     </div>
                 </form>
-                <!-- Cart Summary -->
             </div>
+            <!-- Cart Summary -->
             <div class="col-xl-4 col-lg-4 d-flex justify-content-center justify-content-lg-end">
                 <div class="ms-lg-4 mt-4 mt-lg-0" style="max-width: 320px;">
+                    <div class="card mb-3 border shadow-0">
+                        <div class="card-body">
+                            <form class="form" method="post" action="{% url 'apply_gift_coupon' %}">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label class="form-label">Have Gift Coupon?</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control border" name="coupon_code" placeholder="Enter your coupon code" />
+                                        <button class="btn btn-light border" type="submit">Apply</button>
+                                    </div>
+                                </div>
+                            </form>                    
+                        </div>
+                    </div>
                     <div class="card mb-4 border border-2 shadow-0">
                         <div class="p-4">
                             <h5 class="mb-3">Cart Summary:</h5>
@@ -219,10 +233,14 @@
                                 <p class="mb-2">Cart Total:</p>
                                 <p class="mb-2">{{ total }} <i class="fa-solid fa-euro-sign fa-sm"></i></p>
                             </div>
-                            <div class="d-flex justify-content-between">
-                                <p class="mb-2">Discount:</p>
-                                <p class="mb-2 text-danger">- 0.00 <i class="fa-solid fa-euro-sign fa-sm"></i></p>
-                            </div>
+
+                            {% if order.coupon %}
+                                <div class="d-flex justify-content-between">
+                                    <p class="mb-2">Gift Coupon Discount:</p>
+                                    <p class="mb-2 text-danger">- {{ order.coupon.coupon_value }} <i class="fa-solid fa-euro-sign fa-sm"></i></p>
+                                </div>
+                            {% endif %}
+
                             <div class="d-flex justify-content-between" id="taxes-row">
                                 <p class="mb-2">TAX:</p>
                                 <p class="mb-2">{{ tax|floatformat:2 }} <i class="fa-solid fa-euro-sign fa-sm"></i></p>
@@ -235,11 +253,6 @@
                             <div class="d-flex justify-content-between">
                                 <p class="mb-2"><strong>Grand Total (incl. TAX):</strong></p>
                                 <p class="mb-2 fw-bold">{{ grand_total|floatformat:2}} <i class="fa-solid fa-euro-sign fa-sm"></i></p>
-                            </div>
-
-                            <div class="input-group mt-3 mb-4">
-                                <input type="text" class="form-control border" name="" placeholder="Promo code" />
-                                <button class="btn btn-light text-primary border">Apply</button>
                             </div>
 
                             <hr />

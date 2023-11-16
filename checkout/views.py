@@ -2,14 +2,15 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpR
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
+from django.utils import timezone
 
 import stripe
 import json
 
 from cart.contexts import cart_contents
 from products.models import Product
-from .forms import OrderForm
-from .models import Order, OrderLineItem
+from .forms import OrderForm, GiftCouponForm
+from .models import Order, OrderLineItem, GiftCoupon
 
 
 @require_POST
@@ -58,15 +59,13 @@ def checkout(request):
             for item_id, item_data in cart.items():
                 try:
                     product = Product.objects.get(id=item_id)
-                    if isinstance(item_data, int):
-                        order_line_item = OrderLineItem(
-                            order=order,
-                            product=product,
-                            quantity=item_data,
+                    print(f"Found product: {product}")
+                    order_line_item = OrderLineItem(
+                        order=order,
+                        product=product,
+                        quantity=item_data,
                         )
-                        order_line_item.save()
-                    else:
-                        order_line_item.save()
+                    order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag wasn't found in our database. "
@@ -90,6 +89,7 @@ def checkout(request):
         total = current_cart['grand_total']
         stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
+
         intent = stripe.PaymentIntent.create(
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
@@ -99,7 +99,7 @@ def checkout(request):
                 'save_info': 'save-info' in request.POST,
             }
         )
-        
+
         order_form = OrderForm()
 
     if not stripe_public_key:
@@ -160,3 +160,46 @@ def update_product_quantities(request):
                 "Please call us for assistance!")
             )
             return redirect(reverse('view_cart'))
+
+
+def get_coupon(request, code):
+    ''' A view to get a gift coupon'''
+    try:
+        coupon = GiftCoupon.objects.get(coupon_code__iexact=code)
+        return coupon
+    except GiftCoupon.DoesNotExist:
+        print(f"Coupon with code {code} does not exist.")
+        messages.error(request, "This coupon does not exist.")
+        return None
+
+
+def apply_gift_coupon(request):
+    ''' A view to apply a gift coupon to the order'''
+    if request.method == 'POST':
+        form = GiftCouponForm(request.POST or None)
+        
+        if form.is_valid():
+            code = form.cleaned_data.get('coupon_code')
+
+            coupon = get_coupon(request, code)
+
+            # Check if the coupon is valid
+            if coupon:
+                # Create an order instance (or use an existing order if applicable)
+                order = Order.objects.create(paid=False)  # Modify this based on your Order model
+
+                # Apply the coupon to the order
+                order.coupon = coupon
+                order.save()
+                print(f"Applied coupon: {order.coupon.coupon_code}")
+
+                # Update the order's total with the coupon discount
+                order.update_total()  # Modify this based on your Order model
+
+                messages.success(request, "Successfully added coupon")
+            else:
+                messages.error(request, "Invalid coupon code")
+
+            return redirect(reverse('checkout'))
+
+    return redirect(reverse('checkout'))

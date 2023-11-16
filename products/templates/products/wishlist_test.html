@@ -19,17 +19,17 @@
             <div class="col-lg-12">
                 <div class="card border shadow-0">
                     <div class="m-4">
-                        {% if wishlist_items|length == 0 %}
+                        <!-- {% if wishlist_items|length == 0 %}
                             <h4 class="card-title mb-4">{{ user.username }} You have 0 item(s) in your wishlist.</h4>
                         {% else %}
                             <h4 class="card-title mb-4">{{ user.username }} You have {{ wishlist_items|length }} item(s) in your wishlist.</h4>
-                        {% endif %}
+                        {% endif %} -->
                         {% if wishlist_items %}
                             {% for product in products %}
                             <div class="row gy-3 mb-4">
                                 <div class="col-lg-5">
                                     <div class="me-lg-5">
-                                        <div class="d-flex">
+                                        <div class="d-flex"> 
                                             <img src="{{ product.image.url }}" alt="{{ product.name }}"
                                                 class="border rounded me-3" style="width: 96px; height: 96px;" />
                                             <div class="">
@@ -66,7 +66,7 @@
                                             class="btn btn-danger border border-solid text-white icon-hover-danger">
                                             <i class="fa-solid fa-trash"></i> Remove</a>
                                         <div class="float-md-start">
-                                            <h6>Date Added: {{ product.date_added }}</h6>
+                                            <h6>Date Added: {{ item.date_added }}</h6>
                                         </div>
                                     </div>
                                 </div>

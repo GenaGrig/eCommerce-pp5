@@ -40,3 +40,16 @@ class OrderForm(forms.ModelForm):
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             self.fields[field].label = False
+
+
+class GiftCouponForm(forms.Form):
+    '''Create a form for the user to fill in their gift coupon code'''
+    coupon_code = forms.CharField(
+        label='Coupon Code',
+        max_length=20,
+        required=False,
+        widget=forms.TextInput(attrs={
+            'placeholder': 'Enter your coupon code',
+            'class': 'form-control',
+        })
+    )
