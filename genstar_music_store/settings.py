@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'products',
     'cart',
     'checkout',
+    'profiles',
 ]
 
 SUMMERNOTE_THEME = 'bs4'

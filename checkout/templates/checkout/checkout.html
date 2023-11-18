@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load custom_filters %}
+{% load crispy_forms_tags %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
@@ -214,7 +215,7 @@
                 <div class="ms-lg-4 mt-4 mt-lg-0" style="max-width: 320px;">
                     <div class="card mb-3 border shadow-0">
                         <div class="card-body">
-                            <form class="form" method="post" action="{% url 'apply_gift_coupon' %}">
+                            <form class="form" method="post" action="{% url 'apply_coupon' %}">
                                 {% csrf_token %}
                                 <div class="form-group">
                                     <label class="form-label">Have Gift Coupon?</label>
@@ -234,10 +235,10 @@
                                 <p class="mb-2">{{ total }} <i class="fa-solid fa-euro-sign fa-sm"></i></p>
                             </div>
 
-                            {% if order.coupon %}
+                            {% if order.coupon_code %}
                                 <div class="d-flex justify-content-between">
                                     <p class="mb-2">Gift Coupon Discount:</p>
-                                    <p class="mb-2 text-danger">- {{ order.coupon.coupon_value }} <i class="fa-solid fa-euro-sign fa-sm"></i></p>
+                                    <p class="mb-2 text-danger">- {{ coupon.coupon_value }} <i class="fa-solid fa-euro-sign fa-sm"></i></p>
                                 </div>
                             {% endif %}
 

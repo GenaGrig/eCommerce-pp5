@@ -2,15 +2,14 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpR
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
-from django.utils import timezone
 
 import stripe
 import json
 
 from cart.contexts import cart_contents
 from products.models import Product
-from .forms import OrderForm, GiftCouponForm
-from .models import Order, OrderLineItem, GiftCoupon
+from .forms import OrderForm
+from .models import Order, OrderLineItem, Coupon
 
 
 @require_POST
@@ -59,7 +58,6 @@ def checkout(request):
             for item_id, item_data in cart.items():
                 try:
                     product = Product.objects.get(id=item_id)
-                    print(f"Found product: {product}")
                     order_line_item = OrderLineItem(
                         order=order,
                         product=product,
@@ -162,44 +160,29 @@ def update_product_quantities(request):
             return redirect(reverse('view_cart'))
 
 
-def get_coupon(request, code):
-    ''' A view to get a gift coupon'''
-    try:
-        coupon = GiftCoupon.objects.get(coupon_code__iexact=code)
-        return coupon
-    except GiftCoupon.DoesNotExist:
-        print(f"Coupon with code {code} does not exist.")
-        messages.error(request, "This coupon does not exist.")
-        return None
-
-
-def apply_gift_coupon(request):
-    ''' A view to apply a gift coupon to the order'''
+def apply_coupon(request):
+    ''' A view to apply a coupon to the order'''
     if request.method == 'POST':
-        form = GiftCouponForm(request.POST or None)
-        
-        if form.is_valid():
-            code = form.cleaned_data.get('coupon_code')
+        coupon_code = request.POST.get('coupon_code')
+        if coupon_code:
+            try:
+                coupon = Coupon.objects.get(coupon_code=coupon_code, active=True)
+                order = get_or_create_order(request)  # Implement this function to get or create the order
+                order.apply_coupon(coupon)  # Implement a method in your Order model to apply the coupon
+                messages.success(request, f"Coupon '{coupon.coupon_code}' applied successfully! \
+                                Coupon value is {coupon.coupon_value} eur.")
+            except Coupon.DoesNotExist:
+                messages.error(request, "Invalid coupon code.")
 
-            coupon = get_coupon(request, code)
+    return redirect(reverse('checkout')) 
 
-            # Check if the coupon is valid
-            if coupon:
-                # Create an order instance (or use an existing order if applicable)
-                order = Order.objects.create(paid=False)  # Modify this based on your Order model
 
-                # Apply the coupon to the order
-                order.coupon = coupon
-                order.save()
-                print(f"Applied coupon: {order.coupon.coupon_code}")
-
-                # Update the order's total with the coupon discount
-                order.update_total()  # Modify this based on your Order model
-
-                messages.success(request, "Successfully added coupon")
-            else:
-                messages.error(request, "Invalid coupon code")
-
-            return redirect(reverse('checkout'))
-
-    return redirect(reverse('checkout'))
+def get_or_create_order(request):
+    ''' A view to get or create an order'''
+    order_id = request.session.get('order_id')
+    if order_id:
+        order = Order.objects.get(id=order_id)
+    else:
+        order = Order.objects.create()
+        request.session['order_id'] = order.id
+    return order

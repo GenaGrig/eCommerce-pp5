@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Order, OrderLineItem, GiftCoupon
+from .models import Order, OrderLineItem, Coupon
 
 
 class OrderLineItemAdminInline(admin.TabularInline):
@@ -46,7 +46,7 @@ class OrderAdmin(admin.ModelAdmin):
     ordering = ('-created',)
 
 
-class GiftCouponAdmin(admin.ModelAdmin):
+class CouponAdmin(admin.ModelAdmin):
     '''Customize the admin interface to display gift coupon details'''
     list_display = (
         'coupon_id',
@@ -60,4 +60,4 @@ class GiftCouponAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Order, OrderAdmin)
-admin.site.register(GiftCoupon, GiftCouponAdmin)
+admin.site.register(Coupon, CouponAdmin)

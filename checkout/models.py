@@ -7,17 +7,23 @@ from django.utils import timezone
 
 from django_countries.fields import CountryField
 from products.models import Product
+from profiles.models import UserProfile
 
 
 class Order(models.Model):
     '''Create an order model to store order details'''
     order_id = models.CharField(max_length=50, null=False, editable=False)
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
+                                     null=True, blank=True,
+                                     related_name='orders')
     first_name = models.CharField(max_length=50, null=False, blank=False)
     last_name = models.CharField(max_length=50, null=False, blank=False)
     email_address = models.EmailField(max_length=250, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
-    street_address1 = models.CharField(max_length=80, null=False, blank=False, default='')
-    building_number1 = models.CharField(max_length=80, null=False, blank=False, default='')
+    street_address1 = models.CharField(max_length=80, null=False, blank=False,
+                                       default='')
+    building_number1 = models.CharField(max_length=80, null=False, blank=False,
+                                        default='')
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
     building_number2 = models.CharField(max_length=80, null=True, blank=True)
     postal_code = models.CharField(max_length=20, null=True, blank=True)
@@ -26,49 +32,59 @@ class Order(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     paid = models.BooleanField(default=False)
-    delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
-    order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
-    grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
-    tax = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
-    coupon = models.ForeignKey('GiftCoupon', null=True, blank=True, on_delete=models.SET_NULL)
+    delivery_cost = models.DecimalField(max_digits=6, decimal_places=2,
+                                        null=False, default=0)
+    order_total = models.DecimalField(max_digits=10, decimal_places=2,
+                                      null=False, default=0)
+    grand_total = models.DecimalField(max_digits=10, decimal_places=2,
+                                      null=False, default=0)
+    tax = models.DecimalField(max_digits=10, decimal_places=2,
+                              null=False, default=0)
+    coupon = models.ForeignKey('Coupon', null=True, blank=True,
+                               on_delete=models.SET_NULL)
 
     def _generate_order_id(self):
         '''Generate a random, unique order id using UUID'''
         return uuid.uuid4().hex.upper()
-
-    def update_total(self):
-        '''Update grand total each time a line item is added, accounting
-        for delivery costs'''
-        line_item_totals = self.line_items.values_list('line_item_total', flat=True)
-        print(f"Line item totals: {line_item_totals}")  # Add this line for debugging
+    
+    def apply_coupon(self, coupon):
+        '''Apply a gift coupon to the order'''
+        self.discount = coupon.coupon_value
+        self.coupon = coupon
+        self.save()
+        print(f'Coupon value {coupon.coupon_value}')
+        print(f'Order total {self.order_total}')
         
+    def update_total(self):
+        """
+        Update grand total each time a line item is added,
+        accounting for delivery costs.
+        """
         self.order_total = self.line_items.aggregate(Sum('line_item_total'))['line_item_total__sum'] or 0
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
-            self.delivery_cost = self.order_total + settings.STANDARD_DELIVERY_COST
+            self.delivery_cost = settings.STANDARD_DELIVERY_COST
         else:
             self.delivery_cost = 0
         self.grand_total = self.order_total + self.delivery_cost
-        
-        # Check if a coupon is applied before subtracting its value
-        if self.coupon:
-            print(f"Order total before discount: {self.order_total}")  # Add this line for debugging
-            print(f"Coupon value: {self.coupon.coupon_value}")  # Add this line for debugging
-            self.grand_total -= self.coupon.coupon_value
         self.save()
 
-    def save(self, *args, **kwargs):
-        '''Override the original save method to set the order id if it
-        hasn't been set already'''
+        class Meta:
+            ordering = ('-created',)
+
+        def __str__(self):
+            return f'Order {self.id}'
         
+    def save(self, *args, **kwargs):
+        """
+        Override the original save method to set the order number
+        if it hasn't been set already.
+        """
         if not self.order_id:
             self.order_id = self._generate_order_id()
         super().save(*args, **kwargs)
 
-    class Meta:
-        ordering = ('-created',)
-
-    def __str__(self):
-        return f'Order {self.id}'
+        def __str__(self):
+            return self.order_id
 
 
 class OrderLineItem(models.Model):
@@ -88,7 +104,7 @@ class OrderLineItem(models.Model):
         return f'SKU {self.product.sku} on order {self.order.order_id}'
 
 
-class GiftCoupon(models.Model):
+class Coupon(models.Model):
     '''Create a gift coupon model to store gift coupon details'''
     coupon_id = models.CharField(max_length=50, null=False, editable=False)
     coupon_code = models.CharField(max_length=50, null=False, blank=False)
