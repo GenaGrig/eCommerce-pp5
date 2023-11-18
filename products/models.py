@@ -48,11 +48,27 @@ class Product(models.Model):
         return self.name
 
 
+# class Wishlist(models.Model):
+#     ''' Model for wishlist'''
+#     user = models.ForeignKey(User, null=True, blank=True, on_delete=models.SET_NULL)
+#     products = models.ManyToManyField('products.Product', blank=True)
+#     date_added = models.DateTimeField(auto_now_add=True)
+
+#     def __str__(self):
+#         return self.products.name
+
+
 class Wishlist(models.Model):
-    ''' Model for wishlist'''
-    user = models.ForeignKey(User, null=True, blank=True, on_delete=models.SET_NULL)
-    products = models.ManyToManyField(Product)
+    '''A user wishlist model for maintaining wishlist'''
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    products = models.ManyToManyField('products.Product', blank=True)
     date_added = models.DateTimeField(auto_now_add=True)
 
+    def add_to_wishlist(self, product):
+        self.products.add(product)
+
+    def remove_from_wishlist(self, product):
+        self.products.remove(product)
+        
     def __str__(self):
-        return self.product.name
+        return self.products.name

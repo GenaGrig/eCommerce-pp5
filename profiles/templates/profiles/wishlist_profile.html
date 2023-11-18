@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_filters %}
+{% load crispy_forms_tags %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static '' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+<!-- Profiles code -->
+{% block content %}
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-xl-3">
+                <nav class="nav flex-lg-column w-100 d-flex nav-pills mb-4">
+                    <a class="nav-link my-0 bg-light" href="{% url 'view_profile' %}">
+                        <p class="pb-0 mb-0" style="width: 100px">Profile main</p>
+                    </a>
+                    <a class="nav-link my-0 bg-light" href="#">
+                        <p class="pb-0 mb-0" style="width: 100px">New orders</p>
+                    </a>
+                    <a class="nav-link my-0 bg-light" href="#">
+                        <p class="pb-0 mb-0" style="width: 100px">Orders history</p>
+                    </a>
+                    <a class="nav-link my-0 active" style="background-color: blueviolet;" href="{% url 'view_wishlist' %}">
+                        <p class="pb-0 mb-0" style="width: 100px">My wishlist</p>
+                    </a>
+                    <a class="nav-link my-0 bg-light" href="#">
+                        <p class="pb-0 mb-0" style="width: 100px">Transactions</p>
+                    </a>
+                    <a class="nav-link my-0 bg-light" href="#">
+                        <p class="pb-0 mb-0" style="width: 100px">Profile setting</p>
+                    </a>
+                    <a class="nav-link my-0 bg-light" href="{% url 'account_logout' %}">
+                        <p class="pb-0 mb-0" style="width: 100px">Log out</p>
+                    </a>
+                </nav>
+            </div>
+            <main class="col-lg-9 col-xl-9">
+                <div class="card p-4 mb-0 shadow-0 border">
+                    <div class="content-body">
+                        <div class="card border border-secondary mb-4 shadow-0">
+                            <div class="card-body pb-0">
+                            {% if wishlist.products.all %}
+                                {% for product in wishlist.products.all %}
+                                <div class="row gy-3 mb-4">
+                                    <div class="col-lg-5">
+                                        <div class="me-lg-5">
+                                            <div class="d-flex"> 
+                                                <img src="{{ product.image.url }}" alt="{{ product.name }}"
+                                                    class="border rounded me-3" style="width: 96px; height: 96px;" />
+                                                <div class="">
+                                                    <a class="nav-link" href="{% url 'product_detail' product.id %}"
+                                                        style="text-decoration: none;">
+                                                        {{ product.name }}
+                                                    </a>
+                                                    <p>
+                                                        <a class="text-muted small"
+                                                            href="{% url 'products_in_category' category_id=product.category.id %}"
+                                                            style="text-decoration: none;">
+                                                            <i class="fas fa-tag mr-1"></i> 
+                                                            {{ product.category.friendly_name }}
+                                                        </a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-sm-6 col-6 d-flex flex-row flex-lg-column flex-xl-row text-nowrap">
+                                        <div class="mx-5">
+                                            <text class="h6 total-price" data-row-id="{{ product.id }}">
+                                                {{ product.price }}</text> <i class="fa-solid fa-euro-sign fa-sm"></i>
+                                            <br />
+                                            <small class="text-muted text-nowrap"> {{ product.price }} <i
+                                                    class="fa-solid fa-euro-sign fa-sm"></i> / per item </small>
+                                        </div>
+                                        <div class="col-lg col-sm-6 mb-2">
+                                            <a href="{% url 'add_to_cart' product.id %}"
+                                                class="btn btn-success border border-solid text-white icon-hover-info">
+                                                <i class="me-1 fa fa-shopping-cart fa-lg"></i> Add to Cart
+                                            </a>
+                                            <a href="{% url 'remove_from_wishlist' product.id %}"
+                                                class="btn btn-danger border border-solid text-white icon-hover-danger">
+                                                <i class="fa-solid fa-trash"></i> Remove</a>
+                                            <div class="float-md-start">
+                                                <h6>Date Added: {{ product.date_added }}</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr />
+                                {% endfor %}
+                            {% else %}
+                                <p class="lead fw-bold text-center">Your wishlist is empty</p>
+                                <a href="{% url 'products' %}" class="btn btn-secondary shadow-0"
+                                    style="background-color: blueviolet;"><i class="fa-solid fa-angles-left"
+                                        style="color: #ffffff;"></i> Continue Shopping </a>
+                            {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
