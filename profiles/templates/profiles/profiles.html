@@ -37,7 +37,7 @@
                     <a class="nav-link my-0 bg-light" href="#">
                         <p class="pb-0 mb-0" style="width: 100px">Transactions</p>
                     </a>
-                    <a class="nav-link my-0 bg-light" href="#">
+                    <a class="nav-link my-0 bg-light" href="{% url 'profile_settings' %}">
                         <p class="pb-0 mb-0" style="width: 100px">Profile setting</p>
                     </a>
                     <a class="nav-link my-0 bg-light" href="{% url 'account_logout' %}">
@@ -47,38 +47,47 @@
             </div>
             <main class="col-lg-9 col-xl-9">
                 <div class="card p-4 mb-0 shadow-0 border">
+                    <h4 class="mb-3">Welcome {{ user.username }}!</h4>
                     <div class="content-body">
-                        <div class="d-flex align-items-center">
+                        <div class="align-items-center">
                             <!-- <div class="me-3">
                                 <img src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/avatars/avatar.webp"
                                     class="rounded-circle" style="height: 60px; width: 60px;" />
                             </div> -->
-                            <div class="pt-2">
-                                <h6 class="pt-2">{{ user.username }}</h6>
-                                <p>
-                                    Email: {{ user.email_address }}, Phone: {{ user.phone_number }}
-                                    <a href="#" class="px-2"><i class="fa fa-pen"></i></a>
-                                </p>
+                            <div class="row g-2 mb-3">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="border p-3 rounded-3 bg-light">
+                                        {% if user_profile %}
+                                        <h6 class="mb-3 text-muted"> Here is your default profile information:</h6>
+                                            <p class="mb-0 text-muted">Phone number: {{ user_profile.default_phone_number }}</p>
+                                            <p class="mb-0 text-muted">Address 1: {{ user_profile.default_street_address1 }}</p>
+                                            <p class="mb-0 text-muted">Building number 1: {{ user_profile.default_building_number1 }}</p>
+                                            <p class="mb-0 text-muted">Address 2: {{ user_profile.default_street_address2 }}</p>
+                                            <p class="mb-0 text-muted">Building number 2: {{ user_profile.default_building_number2 }}</p>
+                                            <p class="mb-0 text-muted">City: {{ user_profile.default_city }}</p>
+                                            <p class="mb-0 text-muted">Country: {{ user_profile.default_country }}</p>
+                                            <p class="mb-0 text-muted">Postcode: {{ user_profile.default_postal_code }}</p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="border p-3 rounded-3 bg-light">
+                                        {% if user_profile %}
+                                        <h6 class="mb-3 text-muted"> Here is your alternative profile information:</h6>
+                                            <p class="mb-0 text-muted">Phone number: {{ user_profile.default_phone_number }}</p>
+                                            <p class="mb-0 text-muted">Address 1: {{ user_profile.default_street_address1 }}</p>
+                                            <p class="mb-0 text-muted">Building number 1: {{ user_profile.default_building_number1 }}</p>
+                                            <p class="mb-0 text-muted">Address 2: {{ user_profile.default_street_address2 }}</p>
+                                            <p class="mb-0 text-muted">Building number 2: {{ user_profile.default_building_number2 }}</p>
+                                            <p class="mb-0 text-muted">City: {{ user_profile.default_city }}</p>
+                                            <p class="mb-0 text-muted">Country: {{ user_profile.default_country }}</p>
+                                            <p class="mb-0 text-muted">Postcode: {{ user_profile.default_postal_code }}</p>
+                                        {% endif %}
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
                         <hr />
-
-                        <div class="row g-2 mb-3">
-                            <div class="col-md-6">
-                                <div class="border p-3 rounded-3 bg-light">
-                                    <b class="mx-2 text-muted"><i class="fa fa-map-marker-alt"></i></b>
-                                    United States, 3601 Old Capitol Trail, Unit A-7, Suite
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="border p-3 rounded-3 bg-light">
-                                    <b class="mx-2 text-muted"><i class="fa fa-map-marker-alt"></i></b>
-                                    Moscow city, Street name, Building lenin, House 77
-                                </div>
-                            </div>
-                        </div>
-
                         <a href="#" class="btn btn-light border"> <i class="me-2 fa fa-plus"></i> Add new address </a>
 
                         <hr class="my-4" />
@@ -88,6 +97,7 @@
                             <div class="card-body pb-0">
                                 <header class="d-lg-flex">
                                     <div class="flex-grow-1">
+                                        {{ orders }}
                                         <h6 class="mb-0">Order ID: 8924 <i class="dot"></i>
                                             <span class="text-success"> Shipped</span>
                                         </h6>

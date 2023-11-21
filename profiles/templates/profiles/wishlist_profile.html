@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load custom_filters %}
 {% load crispy_forms_tags %}
 
 {% block extra_css %}
@@ -37,7 +36,7 @@
                     <a class="nav-link my-0 bg-light" href="#">
                         <p class="pb-0 mb-0" style="width: 100px">Transactions</p>
                     </a>
-                    <a class="nav-link my-0 bg-light" href="#">
+                    <a class="nav-link my-0 bg-light" href="{% url 'profile_settings' %}">
                         <p class="pb-0 mb-0" style="width: 100px">Profile setting</p>
                     </a>
                     <a class="nav-link my-0 bg-light" href="{% url 'account_logout' %}">
@@ -50,6 +49,7 @@
                     <div class="content-body">
                         <div class="card border border-secondary mb-4 shadow-0">
                             <div class="card-body pb-0">
+                                <h5 class="mb-4">My Wishlist:</h5>
                             {% if wishlist.products.all %}
                                 {% for product in wishlist.products.all %}
                                 <div class="row gy-3 mb-4">
