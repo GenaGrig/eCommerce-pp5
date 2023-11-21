@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load custom_filters %}
 {% load crispy_forms_tags %}
 
 {% block extra_css %}
@@ -27,7 +28,7 @@
                     <a class="nav-link my-0 bg-light" href="#">
                         <p class="pb-0 mb-0" style="width: 100px">New orders</p>
                     </a>
-                    <a class="nav-link my-0 active" style="background-color: blueviolet;"" href="#">
+                    <a class="nav-link my-0 active" style="background-color: blueviolet;"" href="{% url 'orders_history' %}">
                         <p class="pb-0 mb-0" style="width: 100px">Orders history</p>
                     </a>
                     <a class="nav-link my-0 bg-light" href="{% url 'view_wishlist' %}">
@@ -49,8 +50,97 @@
                     <div class="content-body">
                         <div class="card border border-secondary mb-4 shadow-0">
                             <div class="card-body pb-0">
-                            <h5 class="mb-4">Orders History</h5>
-                            {{ orders }}
+                                <h5 class="mb-3">Your orders:</h5>
+                        <div class="card border border-primary mb-4 shadow-0">
+                            <div class="card-body pb-0">
+                                {% for order in orders %}
+                                    <header class="d-lg-flex">
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-0">
+                                                Order ID: <a href="{% url 'order_history' order.order_id %}" 
+                                                title="{{ order.order_id }}">
+                                                    {{ order.order_id }}
+                                                </a>
+                                            </h6>
+                                            <span class="text-muted">Date: {{ order.created }}</span>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="btn btn-sm btn-outline-danger">Cancel order</a>
+                                            <a href="#" class="btn btn-sm btn-primary shadow-0">Track order</a>
+                                        </div>
+                                    </header>
+                                    <hr />
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <p class="mb-0 text-muted">Contact</p>
+                                            <p class="m-0">
+                                                {{ order.first_name }} {{ order.last_name }} <br />
+                                                Phone: {{ order.phone_number }} <br />
+                                                Email: {{ order.email_address }}
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-4 border-start">
+                                            <p class="mb-0 text-muted">Shipping address</p>
+                                            <p class="m-0">
+                                                {{ order.country }} <br />
+                                                {{ order.street_address1 }} {{ order.building_number1 }}, <br />
+                                                {{ order.street_address2 }} {{ order.building_number2 }},
+                                                {{ order.city }}, {{ order.postal_code }}
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-4 border-start">
+                                            <p class="mb-0 text-muted">Payment</p>
+                                            <p class="m-0">
+                                                Order total: {{ order.order_total }} </span> <br />
+                                                Shipping fee: {{ order.delivery_cost }} <br />
+                                                Total paid: {{ order.grand_total }} <i class="fa-solid fa-euro-sign fa-sm"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <p>Number of Items in your order - {{ order.line_items.count }}</p>
+                                    {% for item in order.line_items.all %}
+                                        <div class="row gy-3 mb-4"">
+                                            <div class="col-lg-6">
+                                                <div class="me-lg-6">
+                                                    <div class="d-flex">
+                                                        <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="border rounded me-3"
+                                                            style="width: 96px; height: 96px;" />
+                                                        <div class="">
+                                                            <a class="nav-link" href="{% url 'product_detail' product_id=item.product.id %}" style="text-decoration: none;">
+                                                                {{ item.product.name }}
+                                                            </a>
+                                                            <p>
+                                                                <a class="text-muted small" href="{% url 'products_in_category' category_id=item.product.category.id %}" style="text-decoration: none;">
+                                                                    <i class="fas fa-tag mr-1"></i> {{ item.product.category.friendly_name }}
+                                                                </a>
+                                                            </p>
+                                                            <p>
+                                                                <small class="text-muted text-nowrap"> Ref.nr: {{ item.product.sku }} </small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6 col-6 d-flex flex-row flex-lg-column flex-xl-row text-nowrap">                                         
+                                                <div class="mx-5">
+                                                    Item Quantity: {{ item.quantity }}
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-sm-6 col-6 d-flex flex-row flex-lg-column flex-xl-row text-nowrap">                                         
+                                                <div class="mx-5">
+                                                    <text class="h6 total-price" data-row-id="{{ item.product.id }}">{{ item.product.price|multiply:item.quantity }}</text> <i class="fa-solid fa-euro-sign fa-sm"></i> <br />
+                                                    <small class="text-muted text-nowrap"> {{ item.product.price }} <i class="fa-solid fa-euro-sign fa-sm"></i> / per item </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                    <hr style="height: 4px; background: black;">
+                                {% endfor %}
+                            </div>
+                        </div>
+                            
+                            
                             </div>
                         </div>
                     </div>

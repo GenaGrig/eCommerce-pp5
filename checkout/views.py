@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpR
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
+from profiles.models import UserProfile
+from profiles.forms import UserProfileForm
 
 import stripe
 import json
@@ -98,6 +100,27 @@ def checkout(request):
             }
         )
 
+        if request.user.is_authenticated:
+            try:
+                user_profile = UserProfile.objects.get(user=request.user)
+                order_form = OrderForm(initial={
+                    'first_name': user_profile.default_first_name,
+                    'last_name': user_profile.default_last_name,
+                    'email_address': user_profile.default_email_address,
+                    'phone_number': user_profile.default_phone_number,
+                    'country': user_profile.default_country,
+                    'postal_code': user_profile.default_postal_code,
+                    'city': user_profile.default_city,
+                    'street_address1': user_profile.default_street_address1,
+                    'building_number1': user_profile.default_building_number1,
+                    'street_address2': user_profile.default_street_address2,
+                    'building_number2': user_profile.default_building_number2,
+                })
+            except UserProfile.DoesNotExist:
+                order_form = OrderForm()
+        else:
+            order_form = OrderForm()
+
         order_form = OrderForm()
 
     if not stripe_public_key:
@@ -119,6 +142,31 @@ def checkout_success(request, order_id):
 
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_id=order_id)
+    
+    if request.user.is_authenticated:
+        profile = UserProfile.objects.get(user=request.user)
+        # Attach the user's profile to the order
+        order.user_profile = profile
+        order.save()
+
+        # Save the user's info
+        if save_info:
+            profile_data = {
+                'default_first_name': order.first_name,
+                'default_last_name': order.last_name,
+                'default_email_address': order.email_address,
+                'default_phone_number': order.phone_number,
+                'default_street_address1': order.street_address1,
+                'default_building_number1': order.building_number1,
+                'default_street_address2': order.street_address2,
+                'default_building_number2': order.building_number2,
+                'default_city': order.city,
+                'default_postal_code': order.postal_code,
+                'default_country': order.country,
+            }
+            user_profile_form = UserProfileForm(profile_data, instance=profile)
+            if user_profile_form.is_valid():
+                user_profile_form.save()
 
     tax_rate = settings.TAX_RATE
     tax = order.order_total * tax_rate / 100
