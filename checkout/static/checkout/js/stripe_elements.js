@@ -73,3 +73,17 @@ form.addEventListener('submit', function(ev) {
         }
     });
 });
+
+function processPayment() {
+    // Show the modal
+    document.getElementById("paymentModal").style.display = "flex";
+
+    // Show the spinner
+    document.getElementById("paymentSpinner").style.display = "block";
+
+    // Simulate payment processing (replace this with your actual payment processing logic)
+    setTimeout(function () {
+        let modal = document.getElementById("paymentModal");
+        modal.close();
+    }, 6000);
+}
