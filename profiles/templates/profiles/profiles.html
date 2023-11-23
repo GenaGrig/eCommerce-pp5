@@ -108,9 +108,8 @@
                                             <h6>Date: {{ order.created|date:'Y-m-d, H:i:s' }}</h6>
                                         </div>
                                         <div>
-                                            <a href="#" class="btn btn-sm btn-outline-danger">Cancel order</a>
-                                            <a href="#" class="btn btn-sm btn-primary shadow-0">Track order</a>
-                                        </div>
+                                            <a href="{% url 'delete_order' order.order_id %}" class="btn btn-sm btn-outline-danger">Delete order</a>
+                                        </div> 
                                     </header>
                                     <hr />
                                     <div class="row">

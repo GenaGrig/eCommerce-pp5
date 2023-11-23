@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
@@ -133,7 +133,7 @@ def order_history(request, order_id):
         f'This is a past confirmation for order number {order_id}. '
         'A confirmation email was sent on the order date.'
     ))
-    
+
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
@@ -141,3 +141,12 @@ def order_history(request, order_id):
     }
 
     return render(request, template, context)
+
+
+def delete_order(request, order_id):
+    '''Delete the user's order'''
+    order_id = get_object_or_404(Order, order_id=order_id)
+    order_id.delete()
+    messages.success(request, 'Order deleted successfully')
+
+    return redirect(reverse('view_profile'))
