@@ -1,1 +1,1 @@
-Genstar Music Store Confirmation for Order No. {{ order.order_id }}
+Genstar Music Store Order Confirmation
