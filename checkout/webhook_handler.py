@@ -1,6 +1,15 @@
+import logging
+
 from django.http import HttpResponse
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.conf import settings
+
 import stripe
+
 from .models import Order
+
+logger = logging.getLogger(__name__)
 
 
 class StripeWH_Handler:
@@ -8,6 +17,7 @@ class StripeWH_Handler:
 
     def __init__(self, request):
         self.request = request
+
 
     def handle_event(self, event):
         """
@@ -23,12 +33,10 @@ class StripeWH_Handler:
         """
         intent = event.data.object
         pid = intent.id
-        
+        cart = intent.metadata.cart
+        save_info = intent.metadata.save_info
+
         try:
-            # Check if 'cart' is present in metadata
-            cart = intent.metadata.get('cart', {})
-            save_info = intent.metadata.get('save_info')
-        
             # Get the Charge object
             stripe_charge = stripe.Charge.retrieve(
                 intent.latest_charge
@@ -38,17 +46,15 @@ class StripeWH_Handler:
             shipping_details = intent.shipping
             grand_total = round(stripe_charge.amount / 100, 2)
             
-            order_id = self.request.POST.get('order_id')
+            order = self.request.POST.get('order.id')
+            print("Order ID:", order)
 
-            if order_id:
+            if order:
                 try:
-                    order = Order.objects.get(pk=order_id)
-                    print("Order Details:")
-                    print("Order ID:", order.id)
-                    print("Grand Total:", grand_total)
+                    order = Order.objects.get(pk=order.id)
 
                 except Order.DoesNotExist:
-                    print("Order not found for ID:", order_id)
+                    print("Order not found for ID:", order.id)
             else:
                 print("Order ID not found in metadata.")
                 

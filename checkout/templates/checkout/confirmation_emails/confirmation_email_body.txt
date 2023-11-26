@@ -1,0 +1,33 @@
+Hello {{ order.first_name }},
+
+Thank you for your order. We are currently processing your order and will send you a notification when it has shipped.
+
+Your order details are shown below for your reference:
+
+Order #: {{ order.order_id }}
+
+Order Total: {{ order.order_total }}
+Taxes: {{ order.tax|floatformat:2 }}
+Delivery: {{ order.delivery_cost }}
+Grand Total: {{ order.grand_total }}
+
+Order Date: {{ order.created }}
+
+Shipping Address:
+
+{{ order.street_address1 }} {{ order.building_number1 }}
+{{ order.city }},  {{ order.postal_code }}
+{{ order.country }}
+
+Items:
+
+{% for item in order.line_items.all %} 
+{{ item.product.name }} {{ item.quantity }} x {{ item.product.price }} 
+{% endfor %}
+
+If you have any questions, please feel free to contact us at any time.
+
+Thanks,
+
+Genstar Music Store
+

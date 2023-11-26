@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpR
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
+from django.template.loader import render_to_string
+from django.core.mail import send_mail
+
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 
@@ -24,6 +27,7 @@ def cache_checkout_data(request):
             'cart': json.dumps(request.session.get('cart', {})),
             'save_info': request.POST.get('save_info'),
             'username': request.user,
+            'order_id': request.POST.get('order_id'),
         })
         return HttpResponse(status=200)
     except Exception as e:
@@ -97,6 +101,7 @@ def checkout(request):
                 'cart': json.dumps(request.session.get('cart', {})),
                 'username': request.user,
                 'save_info': 'save-info' in request.POST,
+                'order_id': 'order.id',
             }
         )
 
@@ -174,6 +179,7 @@ def checkout_success(request, order_id):
     order.tax = tax
     order.save()
 
+    send_confirmation_email(request, order)
     messages.success(request, f'Order successfully processed! \
                 Your order number is {order.order_id}. \
                 A confirmation email will be sent to {order.email_address}.')
@@ -234,3 +240,21 @@ def get_or_create_order(request):
         order = Order.objects.create()
         request.session['order_id'] = order.id
     return order
+
+
+def send_confirmation_email(request, order):
+    ''' A view to send a confirmation email'''
+    cust_email = order.email_address
+    subject = render_to_string(
+        'checkout/confirmation_emails/confirmation_email_subject.txt',
+        {'order': order})
+    body = render_to_string(
+        'checkout/confirmation_emails/confirmation_email_body.txt',
+        {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+
+    send_mail(
+        subject,
+        body,
+        settings.DEFAULT_FROM_EMAIL,
+        [cust_email]
+    )
