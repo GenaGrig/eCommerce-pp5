@@ -65,3 +65,12 @@ class Wishlist(models.Model):
         
     def __str__(self):
         return self.products.name
+
+
+class Subscriber(models.Model):
+    ''' Model for newsletter subscribers '''
+    email = models.EmailField(max_length=254, unique=True)
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.email

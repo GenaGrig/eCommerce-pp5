@@ -215,16 +215,16 @@
                 <div class="row d-flex">
                     <!-- Left -->
                     <div class="col-md-6 col-sm-12 mb-2 mb-md-0 d-flex justify-content-center justify-content-md-start">
-                        <form method="post" action="{% url 'subscribe_to_newsletter' %}">
+                        <form method="post" id="subscribe-form" action="{% url 'subscribe_to_newsletter' %}">
                             {% csrf_token %}
                             <div class="input-group" style="max-width: 400px;">
                                 <input type="email" name="email" class="form-control border" placeholder="Email" aria-label="Email"
-                                    aria-describedby="button-addon2" />
+                                    aria-describedby="button-addon2" id="email" />
                                 <button class="btn btn-light border" type="submit" id="button-addon2" data-mdb-ripple-color="dark">
                                     Subscribe
                                 </button>
                             </div>
-                        </form>                        
+                        </form>
                     </div>
                     <!-- Left -->
 
@@ -301,7 +301,16 @@
                             Support
                         </h6>
                         <ul class="list-unstyled mb-4">
-                            <li><a class="text-muted" href="#">Help center</a></li>
+                            <li>
+                                <form method="post" id="subscribe-form" action="{% url 'unsubscribe_from_newsletter' %}">
+                                    {% csrf_token %}
+                                    <div class="input-group" style="max-width: 400px;">
+                                        <button class="btn btn-light border" type="submit" id="button-addon2" data-mdb-ripple-color="dark">
+                                            Unsubscribe
+                                        </button>
+                                    </div>
+                                </form>
+                            </li>
                             <li><a class="text-muted" href="#">Documents</a></li>
                             <li><a class="text-muted" href="#">Account restore</a></li>
                             <li><a class="text-muted" href="#">My orders</a></li>
@@ -384,6 +393,7 @@ setTimeout(function () {
     alert.close();
 }, 10000);
 </script>
+
 
 </body>
 </html>

@@ -12,4 +12,5 @@ urlpatterns = [
     path("edit/<int:product_id>/", views.edit_product, name="edit_product"),
     path("delete/<int:product_id>/", views.delete_product, name="delete_product"),
     path('subscribe/', views.subscribe_to_newsletter, name='subscribe_to_newsletter'),
+    path('unsubscribe/', views.unsubscribe_from_newsletter, name='unsubscribe_from_newsletter'),
 ]

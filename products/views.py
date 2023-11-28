@@ -5,8 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
-from django.http import JsonResponse
-from .models import Product, Category, Wishlist
+from .models import Product, Category, Wishlist, Subscriber
 from .forms import ProductForm
 
 
@@ -237,14 +236,44 @@ def subscribe_to_newsletter(request):
     if request.method == 'POST':
         email = request.POST.get('email')
 
-        # Send a welcome email
-        subject = 'Welcome to Our Newsletter'
-        message = render_to_string('products/subscribe_letter_template.txt')
-        from_email = 'genstarmusicstore@example.com'
-        recipient_list = [email]
+        if not Subscriber.objects.filter(email=email).exists():
+            subscriber = Subscriber(email=email)
+            subscriber.save()
 
-        send_mail(subject, message, from_email, recipient_list, fail_silently=False)
+            # Send a welcome email
+            subject = 'Welcome to Our Newsletter'
+            message = render_to_string('products/subscribe_letter_template.txt')
+            from_email = 'genstarmusicstore@example.com'
+            recipient_list = [email]
 
-        return redirect(reverse('subscribe_to_newsletter'))
-
+            send_mail(subject, message, from_email, recipient_list, fail_silently=False)
+        else:
+            messages.error(request, 'You are already subscribed to our newsletter!')
+            return redirect(reverse('products'))
+    messages.success(request, 'You have successfully subscribed to our newsletter!')
     return render(request, 'products/subscribe.html')
+
+
+def unsubscribe_from_newsletter(request):
+    ''' A view to unsubscribe from the mailing list '''
+    if request.method == 'POST':
+        # Check if the user is authenticated
+        if request.user.is_authenticated:
+            email = request.user.email
+            print(f"Authenticated user's email: {email}")
+        else:
+            # If the user is not authenticated, try to get the email from the POST data
+            email = request.POST.get('email')
+
+        # Check if the email exists in the Subscriber model
+        if Subscriber.objects.filter(email=email).exists():
+            subscriber = Subscriber.objects.get(email=email)
+            subscriber.delete()
+            messages.success(request, 'You have successfully unsubscribed from our newsletter!')
+        else:
+            messages.error(request, 'You are not subscribed to our newsletter!')
+
+        # Redirect to a relevant page (e.g., 'products' page)
+        return redirect(reverse('products'))
+
+    return render(request, 'products/unsubscribe.html')
