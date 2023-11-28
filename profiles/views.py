@@ -8,6 +8,7 @@ from .models import UserProfile
 from .forms import UserProfileForm
 
 
+@login_required
 def view_profile(request):
     '''Display the user's profile'''
     profile = get_object_or_404(UserProfile, user=request.user)
@@ -152,6 +153,7 @@ def order_history(request, order_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_order(request, order_id):
     '''Delete the user's order'''
     order_id = get_object_or_404(Order, order_id=order_id)
