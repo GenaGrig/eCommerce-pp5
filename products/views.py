@@ -3,6 +3,9 @@ from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.http import JsonResponse
 from .models import Product, Category, Wishlist
 from .forms import ProductForm
 
@@ -227,3 +230,21 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, f'{product.name} deleted!')
     return redirect(reverse('products'))
+
+
+def subscribe_to_newsletter(request):
+    ''' A view to subscribe to the mailing list '''
+    if request.method == 'POST':
+        email = request.POST.get('email')
+
+        # Send a welcome email
+        subject = 'Welcome to Our Newsletter'
+        message = render_to_string('products/subscribe_letter_template.txt')
+        from_email = 'genstarmusicstore@example.com'
+        recipient_list = [email]
+
+        send_mail(subject, message, from_email, recipient_list, fail_silently=False)
+
+        return redirect(reverse('subscribe_to_newsletter'))
+
+    return render(request, 'products/subscribe.html')

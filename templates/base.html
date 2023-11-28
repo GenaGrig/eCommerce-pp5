@@ -215,16 +215,16 @@
                 <div class="row d-flex">
                     <!-- Left -->
                     <div class="col-md-6 col-sm-12 mb-2 mb-md-0 d-flex justify-content-center justify-content-md-start">
-                        <div class="">
+                        <form method="post" action="{% url 'subscribe_to_newsletter' %}">
+                            {% csrf_token %}
                             <div class="input-group" style="max-width: 400px;">
-                                <input type="email" class="form-control border" placeholder="Email" aria-label="Email"
+                                <input type="email" name="email" class="form-control border" placeholder="Email" aria-label="Email"
                                     aria-describedby="button-addon2" />
-                                <button class="btn btn-light border" type="button" id="button-addon2"
-                                    data-mdb-ripple-color="dark">
+                                <button class="btn btn-light border" type="submit" id="button-addon2" data-mdb-ripple-color="dark">
                                     Subscribe
                                 </button>
                             </div>
-                        </div>
+                        </form>                        
                     </div>
                     <!-- Left -->
 
