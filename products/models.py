@@ -18,6 +18,7 @@ class Category(models.Model):
         return self.category_name
 
     def get_friendly_name(self):
+        ''' Return friendly name if available '''
         return self.friendly_name
 
 
@@ -43,19 +44,9 @@ class Product(models.Model):
         ordering = ('name',)
         verbose_name = 'product'
         verbose_name_plural = 'products'
-        
+
     def __str__(self):
         return self.name
-
-
-# class Wishlist(models.Model):
-#     ''' Model for wishlist'''
-#     user = models.ForeignKey(User, null=True, blank=True, on_delete=models.SET_NULL)
-#     products = models.ManyToManyField('products.Product', blank=True)
-#     date_added = models.DateTimeField(auto_now_add=True)
-
-#     def __str__(self):
-#         return self.products.name
 
 
 class Wishlist(models.Model):
@@ -65,9 +56,11 @@ class Wishlist(models.Model):
     date_added = models.DateTimeField(auto_now_add=True)
 
     def add_to_wishlist(self, product):
+        ''' Add a product to the wishlist '''
         self.products.add(product)
 
     def remove_from_wishlist(self, product):
+        ''' Remove a product from the wishlist '''
         self.products.remove(product)
         
     def __str__(self):

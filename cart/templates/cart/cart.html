@@ -33,8 +33,12 @@
                             <div class="col-lg-5">
                                 <div class="me-lg-5">
                                     <div class="d-flex">
+                                        {% if item.product.image %}
                                         <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="border rounded me-3"
                                             style="width: 96px; height: 96px;" />
+                                        {% else %}
+                                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}" class="border rounded me-3">
+                                        {% endif %}
                                         <div class="">
                                             <a class="nav-link" href="{% url 'product_detail' item.item_id %}" style="text-decoration: none;">
                                                 {{ item.product.name }}
