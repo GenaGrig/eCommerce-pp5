@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_filters %}
+{% load crispy_forms_tags %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="row text-center mt-0 mb-0">
+    <h2 class="logo-font page-headers">Edit Product</h2>
+</div>
+<!-- Add product form -->
+<section class="bg-light py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mb-4">
+                <div class="card mb-4 border border-2 shadow-0">
+                    <div class="p-4 d-flex justify-content-between" style="flex-direction: column;">
+                        <form action="{% url 'edit_product' product.id %}" method="POST" class="form mb-2"
+                            enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {% for field in form %}
+                                {% if field.name != 'image' %}
+                                    {{ field | as_crispy_field }}
+                                {% else %}
+                                    {{ field }}
+                                {% endif %}
+                            {% endfor %}
+                            <div class="text-right">
+                                <button type="submit" class="btn btn-primary btn-lg mt-2"
+                                    style="background-color: blueviolet;">Edit Product</button>
+                                <a href="{% url 'products' %}" class="btn btn-secondary btn-lg mt-2">Cancel</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
