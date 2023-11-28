@@ -14,9 +14,8 @@
 
       <h1 class="text-center">{% trans "Sign Up" %}</h1>
 
-      <h5 class="text-center">{% blocktrans %} Welcome to Genstar Music Store! Already have an account? Then please <a
-          href="{{ login_url }}">sign
-          in</a>.{% endblocktrans %}
+      <h5 class="text-center">{% blocktrans %} Welcome to Genstar Music Store! Already have an account? Then please 
+        <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}
       </h5>
 
     </div>
@@ -24,7 +23,7 @@
 
   <div class="col">
     <div class="col-md-8 mt-3 offset-md-2 d-flex justify-content-center">
-      <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+      <form class="signup mb-4" id="signup_form" method="post" action="{% url 'account_signup' %}">
         {% csrf_token %}
         {{ form|crispy }}
         <button type="submit" class="btn d-grid col-8 mt-5 mb-5 mx-auto text-white" style="background-color: blueviolet;"><i class="fa-solid fa-user-plus" style="color: #ffffff;"></i>{% trans "Register New Account" %} &raquo;</button>
