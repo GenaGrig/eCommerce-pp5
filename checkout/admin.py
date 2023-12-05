@@ -19,7 +19,9 @@ class OrderAdmin(admin.ModelAdmin):
 
     fields = ('order_id', 'user_profile', 'first_name', 'last_name',
               'email_address', 'phone_number', 'street_address1',
-              'street_address2', 'city', 'postal_code',
+              'building_number1',
+              'street_address2', 'building_number2',
+              'city', 'postal_code',
               'country', 'created', 'updated', 'tax', 'paid',
               'delivery_cost', 'order_total', 'grand_total',)
 
@@ -30,7 +32,9 @@ class OrderAdmin(admin.ModelAdmin):
         'email_address',
         'phone_number',
         'street_address1',
+        'building_number1',
         'street_address2',
+        'building_number2',
         'city',
         'postal_code',
         'country',
