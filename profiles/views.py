@@ -96,27 +96,6 @@ def profile_settings(request):
     return render(request, template, context)
 
 
-# def alternative_profile_settings(request):
-#     '''Display the user's alternative profile settings'''
-#     alternative_profile_settings = get_object_or_404(UserProfile, user=request.user)
-    
-#     if request.method == 'POST':
-#         form = AlternativeUserProfileForm(request.POST, instance=alternative_profile_settings)
-#         if form.is_valid():
-#             form.save()
-#             messages.success(request, 'Alternative profile settings updated successfully')
-    
-#     form = AlternativeUserProfileForm(instance=alternative_profile_settings)
-
-#     template = 'profiles/profile_settings.html'
-#     context = {
-#         'form': form,
-#         'on_profile_settings_page': True,
-#     }
-
-#     return render(request, template, context)
-
-
 def orders_history(request):
     '''Display the user's order history'''
     profile = get_object_or_404(UserProfile, user=request.user)
@@ -137,7 +116,7 @@ def orders_history(request):
 
 def order_history(request, order_id):
     '''Display the user's order history'''
-    order = Order.objects.filter(user_profile=request.user.user_profile).order_by('-created')[:3]
+    order = Order.objects.filter(user_profile=get_user_profile(request.user)).order_by('-created')[:3]
 
     messages.info(request, (
         f'This is a past confirmation for order number {order_id}. '

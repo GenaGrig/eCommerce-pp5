@@ -1927,5 +1927,41 @@
     "image_url": null,
     "image": "visionkey-200-digital-piano.jpg"
   }
+},
+{
+  "model": "profiles.userprofile",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "default_first_name": "Genadijs",
+    "default_last_name": "Grigorjevs",
+    "default_email_address": "gennadiuss@gmail.com",
+    "default_phone_number": "+46706098919",
+    "default_street_address1": "Björnvägen",
+    "default_building_number1": "408A",
+    "default_street_address2": null,
+    "default_building_number2": null,
+    "default_city": "Umeå",
+    "default_postal_code": "90643",
+    "default_country": "SE"
+  }
+},
+{
+  "model": "profiles.userprofile",
+  "pk": 2,
+  "fields": {
+    "user": 2,
+    "default_first_name": "Ekaterina",
+    "default_last_name": "Shibkova",
+    "default_email_address": "eshibkova86@gmail.com",
+    "default_phone_number": "0703335249",
+    "default_street_address1": "Björnvägen",
+    "default_building_number1": "408A",
+    "default_street_address2": null,
+    "default_building_number2": null,
+    "default_city": "Umeå",
+    "default_postal_code": "90643",
+    "default_country": "SE"
+  }
 }
 ]
