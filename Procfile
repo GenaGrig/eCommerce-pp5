@@ -1,0 +1,1 @@
+web: gunicorn genstar_music_store.wsgi:application
