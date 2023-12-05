@@ -36,8 +36,8 @@ ALLOWED_HOSTS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-genagrig-ecommercepp5-ffpiw04d4zh.ws-eu106.gitpod.io",
-    'https://genstar-music-store-3a732f4aac46.herokuapp.com',
+    "https://8000-genagrig-ecommercepp5-ffpiw04d4zh.ws-eu106.gitpod.io/",
+    'https://genstar-music-store-3a732f4aac46.herokuapp.com/',
 ]
 
 
