@@ -6,8 +6,7 @@
 
 <!-- Wishlist -->
 <li class="list-inline-item dropdown d-block d-lg-none">
-    <a class="nav-link dropdown" data-bs-toggle="dropdown" href="#" id="user-options" role="button"
-        aria-expanded="false">
+    <a class="nav-link d-block d-lg-none" href="{% url 'wishlist_test' %}">
         <div class="text-center">
             <div><i class="fas fa-solid fa-heart"></i></div>
             <p class="my-0">Wishlist</p>
@@ -16,7 +15,7 @@
 </li>
 
 <li class="list-inline-item basket">
-    <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="">
+    <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_cart' %}">
         <div class="text-center">
             <div><i class="fas fa-shopping-bag"></i></div>
             <p class="my-0">
