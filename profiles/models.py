@@ -23,8 +23,8 @@ class UserProfile(models.Model):
     default_country = CountryField(blank_label='Country', null=False, blank=False)
 
     def __str__(self):
-        return self.user.username
-    
+        return self.user.username if self.user else "No associated user"
+
 
 @receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):

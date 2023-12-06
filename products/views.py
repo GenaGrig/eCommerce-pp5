@@ -126,9 +126,15 @@ def products_in_category(request, category_id):
 
 def wishlist_test(request):
     ''' A view to show the wishlist '''
-    wishlist_items = Wishlist.objects.get(user=request.user)
-    products = wishlist_items.products.all()
-    date_added = wishlist_items.date_added
+    try:
+        wishlist_items = Wishlist.objects.get(user=request.user)
+        products = wishlist_items.products.all()
+        date_added = wishlist_items.date_added
+    except Wishlist.DoesNotExist:
+        messages.info(request, "You don't have an active wishlist")
+        wishlist = Wishlist.objects.create(user=request.user)
+        wishlist.save()
+        
     context = {
         'wishlist_items': wishlist_items,
         'show_delivery_banner': True,
