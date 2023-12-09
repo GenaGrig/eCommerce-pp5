@@ -13,5 +13,5 @@ urlpatterns = [
     path("delete/<int:product_id>/", views.delete_product, name="delete_product"),
     path('subscribe/', views.subscribe_to_newsletter, name='subscribe_to_newsletter'),
     path('unsubscribe/', views.unsubscribe_from_newsletter, name='unsubscribe_from_newsletter'),
-    path('', views.handler404, name='handler404'),
+    path('404', views.page_not_found, name='404'),
 ]

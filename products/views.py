@@ -285,6 +285,6 @@ def unsubscribe_from_newsletter(request):
     return render(request, 'products/unsubscribe.html')
 
 
-def handler404(request, exception):
+def page_not_found(request):
     ''' A view to handle 404 errors '''
     return render(request, '404.html', status=404)
