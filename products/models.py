@@ -74,3 +74,20 @@ class Subscriber(models.Model):
 
     def __str__(self):
         return self.email
+
+
+class Review(models.Model):
+    ''' Model for product reviews '''
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    product = models.ForeignKey('products.Product', on_delete=models.CASCADE)
+    rating = models.DecimalField(max_digits=3, decimal_places=2, blank=True, null=True)
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Review by {self.user.username} for {self.product.name}, Rating: {self.rating}"
+
+    class Meta:
+        ordering = ('-date_added',)
+        verbose_name = 'review'
+        verbose_name_plural = 'reviews'
+        unique_together = ('user', 'product')

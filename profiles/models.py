@@ -23,7 +23,7 @@ class UserProfile(models.Model):
     default_country = CountryField(blank_label='Country', null=False, blank=False)
 
     def __str__(self):
-        return self.user.username if self.user else "No associated user"
+        return f"Profile for {self.user.username}" if self.user else "Profile"
 
 
 @receiver(post_save, sender=User)

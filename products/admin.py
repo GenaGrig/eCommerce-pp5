@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
-from .models import Product, Category, Subscriber
+from .models import Product, Category, Subscriber, Review
 
 
 class ProductAdmin(SummernoteModelAdmin):
@@ -46,8 +46,21 @@ class SubscriberAdmin(admin.ModelAdmin):
     search_fields = ('email',)
 
     ordering = ('email',)
+    
+    
+class ReviewAdmin(admin.ModelAdmin):
+    ''' Admin view for reviews'''
+    list_display = (
+        'product',
+        'user',
+        'rating',
+        'date_added',
+    )
+
+    ordering = ('product',)
 
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Subscriber, SubscriberAdmin)
+admin.site.register(Review, ReviewAdmin)

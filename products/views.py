@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.db import IntegrityError
 from django.contrib import messages
-from django.db.models import Q
+from django.db.models import Q, Avg
 from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
-from .models import Product, Category, Wishlist, Subscriber
+from .models import Product, Category, Wishlist, Subscriber, Review
 from .forms import ProductForm
 
 
@@ -52,6 +53,11 @@ def all_products(request):
             products = products.order_by(sortkey)
 
     current_sorting = f'{sort}_{direction}'
+    
+    for product in products:
+        average_rating = Review.objects.filter(product=product).aggregate(Avg('rating'))['rating__avg']
+        product.rating = average_rating
+        product.save()
 
     context = {
         'products': products,
@@ -69,6 +75,9 @@ def product_detail(request, product_id):
     ''' A view to show individual product details '''
 
     product = get_object_or_404(Product, pk=product_id)
+
+    # Calculate the average rating for the product
+    product.average_rating = Review.objects.filter(product=product).aggregate(Avg('rating'))['rating__avg']
 
     context = {
         'product': product,
@@ -288,3 +297,26 @@ def unsubscribe_from_newsletter(request):
 def page_not_found(request):
     ''' A view to handle 404 errors '''
     return render(request, '404.html', status=404)
+
+
+@login_required
+def submit_review(request, product_id):
+    ''' A view to submit a rating for a product '''
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        rating = request.POST.get('rating')
+        product = product
+        
+        try:
+            # Attempt to create a new rating
+            Review.objects.create(
+                user=request.user,
+                product=product,
+                rating=rating)
+            messages.success(request, 'Your rating value has been submitted successfully.')
+        except IntegrityError:
+            # Handle the case where a rating already exists for the user and product
+            messages.error(request, 'You have already rated for this product.')
+            
+        return redirect(reverse('product_detail', args=[product.id]))
+    return render(request, 'products/product_detail.html', {'product': product})

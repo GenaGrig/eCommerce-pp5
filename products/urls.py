@@ -14,4 +14,5 @@ urlpatterns = [
     path('subscribe/', views.subscribe_to_newsletter, name='subscribe_to_newsletter'),
     path('unsubscribe/', views.unsubscribe_from_newsletter, name='unsubscribe_from_newsletter'),
     path('404', views.page_not_found, name='404'),
+    path('submit_review/<int:product_id>/', views.submit_review, name='submit_review'),
 ]
