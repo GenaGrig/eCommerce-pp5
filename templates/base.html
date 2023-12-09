@@ -5,8 +5,10 @@
 <head>
     <!-- Required meta tags -->
     {% block meta %}
-        <meta name="description" content="Genstar Music Store">
-        <meta name="keywords" content="Genstar Music Store">
+        <meta name="description" content="Genstar Music Store - your local music store with wide variety of instruments and tools for musicians">
+        <meta name="keywords" content="music store, acoustic guitar, electric guitar, bass guitar, pianos, drums, music accessories, amplifiers, orchestral instruments, 
+        mixers, microphones, studio and recording, guitars and basses, percussion, synths, midi keyboards, woodwinds,
+        strings, brasses, stage lighting systems, studio monitors, PA, umeå, sweden">
         <meta name="author" content="Genstar Music Store">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -232,13 +234,17 @@
                     <div class="col-md-6 col-sm-12 float-center">
                         <div class="float-md-end">
                             <a class="btn btn-icon btn-light text-secondary px-3 border" title="Facebook"
-                                target="_blank" href="#"><i class="fab fa-facebook-f fa-lg"></i></a>
+                                target="_blank" href="#" rel="noopener" aria-label="Visit our Facebook page (open in new window)">
+                                <i class="fab fa-facebook-f fa-lg"></i></a>
                             <a class="btn btn-icon btn-light text-secondary px-3 border" title="Instagram"
-                                target="_blank" href="#"><i class="fab fa-instagram fa-lg"></i></a>
+                                target="_blank" href="#" rel="noopener" aria-label="Visit our Instagram page (open in new window)">
+                                <i class="fab fa-instagram fa-lg"></i></a>
                             <a class="btn btn-icon btn-light text-secondary px-3 border" title="Youtube" target="_blank"
-                                href="#"><i class="fab fa-youtube fa-lg"></i></a>
-                            <a class="btn btn-icon btn-light text-secondary px-3 border" title="Twitter" target="_blank"
-                                href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                                href="#" rel="noopener" aria-label="Visit our Youtube account (open in new window)">
+                                <i class="fab fa-youtube fa-lg"></i></a>
+                            <a class="btn btn-icon btn-light text-secondary px-3 border" title="TwitterX" target="_blank"
+                                href="#" rel="noopener" aria-label="Visit our X page (open in new window)">
+                                <i class="fa-brands fa-x-twitter fa-lg"></i></a>
                         </div>
                     </div>
                     <!-- Right -->
@@ -268,7 +274,7 @@
                     <div class="col-6 col-sm-4 col-lg-2">
                         <!-- Links -->
                         <h6 class="text-uppercase text-dark fw-bold mb-2">
-                            Store
+                            Music Store
                         </h6>
                         <ul class="list-unstyled mb-4">
                             <li><a class="text-muted" href="#">About us</a></li>
@@ -306,14 +312,16 @@
                                     {% csrf_token %}
                                     <div class="input-group" style="max-width: 400px;">
                                         <button class="btn btn-light border" type="submit" id="button-addon2" data-mdb-ripple-color="dark">
-                                            Unsubscribe
+                                            Unsubscribe from newsletter
                                         </button>
                                     </div>
                                 </form>
                             </li>
                             <li><a class="text-muted" href="#">Documents</a></li>
                             <li><a class="text-muted" href="#">Account restore</a></li>
-                            <li><a class="text-muted" href="#">My orders</a></li>
+                            {% if request.user.is_authenticated %}
+                            <li><a class="text-muted" href="{% url 'orders_history' %}">My orders</a></li>
+                            {% endif %}
                         </ul>
                     </div>
 

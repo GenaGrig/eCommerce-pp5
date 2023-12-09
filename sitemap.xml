@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/products/?sort=price&amp;direction=asc</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/products/?sort=rating&amp;direction=desc</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/products/?sort=category&amp;direction=asc</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/products/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/category/7</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/category/8</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/category/9</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/category/10</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/category/11</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/category/13</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/category/28</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/category/29</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/category/30</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/category/31</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/category/32</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/category/33</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/category/34</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/category/35</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/category/36</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/category/39</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/category/41</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/category/43</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/category/1</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/category/2</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/category/3</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/category/4</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/category/5</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/category/6</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/43/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/25/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/26/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/29/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/3/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/38/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/11/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/4/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/28/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/7/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/14/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/21/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/33/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/24/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/23/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/35/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/5/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/20/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/19/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/8/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/37/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/18/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/10/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/9/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/22/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/42/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/41/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/39/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/49/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/46/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/48/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/44/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/40/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/27/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/34/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/54/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/13/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/47/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/1/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/2/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/17/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/15/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/6/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/32/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/16/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/30/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/12/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/55/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/45/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/36/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://genstar-music-store-3a732f4aac46.herokuapp.com/products/31/</loc>
+  <lastmod>2023-12-09T13:05:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>

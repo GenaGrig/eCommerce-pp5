@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /accounts/
+Sitemap: https://genstar-music-store-3a732f4aac46.herokuapp.com/products/sitemap.xml
