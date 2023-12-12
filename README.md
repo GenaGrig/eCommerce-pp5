@@ -304,6 +304,7 @@ Product details page has several elements that is worth to describe in details:
 * Short features of a product and some general information such as type of product, color, material, brand.
 * Rate the product is a working option, by which customers can leave their rating to products they purchased. Based on customer ratings average rating is calculated and shown below product name and on the main products page. 
 * Only when user is authenticated as a staff member or administrator two buttons - Edit Product and Delete Product is shown. If customer is not a member of this groups, this buttons are hidden and not accessible via address bar as well. So site users can not add, edit or delete products using address bar, they will get the error that just site owners can do that. 
+
 ![Screnshot of error of user trying to edit product](/media/screenshots/desktop/error-edit-product-by-not-access-user.png)
 * Quantity change element, by which customer can change quantity of a product and add it to cart then
 * Three buttons:
