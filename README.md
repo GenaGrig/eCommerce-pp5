@@ -27,16 +27,16 @@ GitHub repository you can find here - [GitHub repo](https://github.com/GenaGrig/
     1. [Main features](#main-features)
     2. [Products Page](#products-page)
     3. [Product Details Page](#product-details-page)
-    4. [Menu](#menu)
-    5. [Categories Page](#categories-page)
-    6. [Shopping Cart Page](#shopping-cart-page)
-    7. [Checkout Page](#checkout-page)
-    8. [Profile Pages](#profile-pages)
-    9. [Update Profile Page](#update-profile-page)
-    10. [Wishlist](#wishlist)
-    11. [Product Management Page](#product-management-page)
-    12. [Authentication Pages](#authentication-pages)
-    13. [Terms of Use and Privacy Policy Pages](#terms-of-use-and-privacy-policy-pages)
+    4. [Breadcrumbs and Categories Page](#breadcrumbs-and-categories-page)
+    5. [Shopping Cart Page](#shopping-cart-page)
+    6. [Checkout Page](#checkout-page)
+    7. [Order Confirmation Page](#order-confirmation-page)
+    7. [Profile Pages](#profile-pages)
+    8. [Update Profile Page](#update-profile-page)
+    9. [Wishlist](#wishlist)
+    10. [Product Management Page](#product-management-page)
+    11. [Authentication Pages](#authentication-pages)
+    12. [Terms of Use and Privacy Policy Pages](#terms-of-use-and-privacy-policy-pages)
 3. [Technologies Used](#technologies-used)
     1. [Languages Used](#languages-used)
     2. [Libraries and Frameworks](#languages-and-frameworks)
@@ -266,62 +266,109 @@ Menu without authentication | Menu with authentication |
 
 [Back to top ⇧](#genstar-music-store)
 
-### Home page
+### Products Page
 Desktop | Mobile |
 --- | --- |
-![Desktop Home Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Home Page image ](/media/screenshots/mobile/main-page-mobile-res.jpg) |
+![Desktop Products Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Products Page image ](/media/screenshots/mobile/main-page-mobile.jpg) |
 
-Main page has one major element that is carousel that contains three slides with photos and captions with informative text on them to give to users some basic information about fitness club. It does not scroll automatically, only when user scrolls for the first time, slides start to scroll. However, when the mouse is over the slide, automatic scroll stops. 
+Main page has first major element below the menu that is carousel that contains slides with photos that are an advertising of featured music products and campaings that is going on at the moment. Changing of slides is authomatic each 5 seconds, with stop when mouse is over slide.
 
-### Membership page
+Second element is a category list below the carousel. Theese are parent categories for products related to them. Clicking on a respective category, customer will see the page, containing all the products in the sub-categories related to parent category.
+
+Below category list customer will see all the product cards that are existing on a website. They are sorted by name by default, but customer can choose his own way of sorting with help of sort option element on the top left of products list. Sorting options are various and has both acscending and descending view. 
+
+Each product card contains general information about product such as product photo, product name, product price, add to wishlist icon (only if user is authenticated), product rating (based on customer ratings), realtime quantity in stock, product category and product sku number. 
+
 Desktop | Mobile |
 --- | --- |
-![Desktop Membership Page image](/media/screenshots/desktop/membership-page-desktop.png) | ![Mobile Membership Page image ](/media/screenshots/mobile/membership-page-mobile-res.jpg) |
+![Desktop sorting options image](/media/screenshots/desktop/sorting-options-desktop.png) | ![Mobile sorting options image ](/media/screenshots/mobile/sorting-options-mobile.jpg) |
 
-Membership page has information about different membership types and which preferences each type gives. There are three types of membership, such as Standard, Student and All Inclusive, each with its own benefits. The button "Buy membership" should link to checkout page, but for now it redirects to Contact Us page, as payment module is not necessary in this project and hard to implement. 
-* As a future option, membership role will affect booking opportunities, as some membership roles contains exclusive offers
-* As a future change, workouts can book only fitness club members (now it can do everyone, who has an active account) or those who have free pass or onetime payment
+### Product Details Page
 
-### Workouts page
+![Desktop Product Details screenshot](/media/screenshots/desktop/product-details-page-desktop.png)
+
+#### Mobile view of product details page
+
+Mobile view part 1 | Mobile view part 2 | Mobile view part 3 |
+--- | --- | --- |
+![Product details mobile screenshot 1](/media/screenshots/mobile/product-details-1-mobile.jpg) | ![Product details mobile screenshot 2 ](/media/screenshots/mobile/product-details-2-mobile.jpg) | ![Product details mobile screenshot 3](/media/screenshots/mobile/product-details-3-mobile.jpg) |
+
+Product details page has several elements that is worth to describe in details:
+
+* Big photo of product that enlarges and opens in new tab by clicking on it.
+    - As a future feature a gallery of photos can be made, to show to customer more angles of product and even featured videos about product. It is not implemented due to lack of knowledge on how to make it and shortage of time.
+* Product name
+* Average Rating that is calculated based on customer product rating. It shows "No Rating" in case there are no customer ratings on a product. 
+* Quantity in stock (right of average rating in green color) shows realtime quantity in stock. This number decreases if other customers make purchases of relative product and updates with page refresh. Product quantities can be changed manually by staff members and administrators both on front-end on product management page, clicking the "Edit Product" button on product details page or on back-end in admin panel. 
+* Price shows product price in euro.
+* Short features of a product and some general information such as type of product, color, material, brand.
+* Rate the product is a working option, by which customers can leave their rating to products they purchased. Based on customer ratings average rating is calculated and shown below product name and on the main products page. 
+* Only when user is authenticated as a staff member or administrator two buttons - Edit Product and Delete Product is shown. If customer is not a member of this groups, this buttons are hidden and not accessible via address bar as well. So site users can not add, edit or delete products using address bar, they will get the error that just site owners can do that. 
+![Screnshot of error of user trying to edit product](/media/screenshots/desktop/error-edit-product-by-not-access-user.png)
+* Quantity change element, by which customer can change quantity of a product and add it to cart then
+* Three buttons:
+    - Continue shopping - that return customer to main products page
+    - Add to cart - that adds desired quantity of products to cart
+    - Save button - adds product to whishlist, only when user is authenticated. Otherwise this button is hidden.
+* Full description of product features.
+
+### Breadcrumbs and Categories Page
+
+#### Breadcrumbs
+
 Desktop | Mobile |
 --- | --- |
-![Desktop Workouts Page image](/media/screenshots/desktop/workouts-page-desktop.png) | ![Mobile Workouts Page image ](/media/screenshots/mobile/workouts-page-mobile-res.jpg) |
+![Desktop breadcrumbs image](/media/screenshots/desktop/breadcrumbs-desktop.png) | ![Mobile breadcrumbs image ](/media/screenshots/mobile/breadcrumbs-mobile.jpg) |
 
-Workouts page contains all available at the moment workouts that can be booked after user is logged in. The main section is made with a Bootstrap component called 'Accordion'. Each workout in accordion list opens one at a time, closing the previously opened to save space on different screen sizes, especially phones and skip extra scrolling. As a future option, a small book active workout button can be added below each workout description.  
+Breadcrumbs are used to make both UI and UX more attractive and intuitive to customers. Instead of going through menu or main products page, customer can click on respective breadcrumb and see all the products in related category. 
 
-### PT page
+#### Categories
+
 Desktop | Mobile |
 --- | --- |
-![Desktop Personal Trainer Page image](/media/screenshots/desktop/personal-trainer-page-desktop.png) | ![Mobile Personal Trainer Page image ](/media/screenshots/mobile/personal-trainer-page-mobile-res.jpg) |
+![Desktop categories image](/media/screenshots/desktop/categories-desktop.png) | ![Mobile categories image ](/media/screenshots/mobile/categories-mobile.jpg) |
 
-Personal trainers' page has general information about who are personal trainers and with what questions they can help with. Page contains a contact form for the questions regarding personal training, where user can choose a category that suits to users question or leave it as general question. Right now submitting the personal trainers contact form leads to return of dump form page from Code Institute, to confirm that everything was done correctly and data was submitted to back-end. As a future feature, sending emails with submission of this form will be implemented.
+Categories has same function as breadcrumbs, combining all product of parent categories together. Customer can select just acoustic guitar category to see only acoustic guitars in it or select acoustic guitar products category, that contains all sub-categories in parent category Acoustic Guitars including amplifiers and accessories. This is of course a bonus option, but in my mind it is better for both UI and UX. 
 
-### Contact page
+### Shopping Cart Page
+Desktop | Mobile view 1 | Mobile view 2 |
+--- | --- | --- |
+![Screenshot of shopping cart page desktop](/media/screenshots/desktop/shopping-cart-desktop.png) | ![Screenshot of shopping cart page mobile view 1](/media/screenshots/mobile/shopping-cart-1-mobile.jpg) | ![Screenshot of shopping cart page mobile view 2](/media/screenshots/mobile/shpping-cart-2-mobile.jpg) |
+
+Shopping Cart Page displays list of products that customer added to it. It contains several elements that is worth to mention in details:
+- Product name and category as links, so customer can click them and watch again respective product or category
+- Quantity input field and Update Cart button. In case customer would change his mind and increase or decrease quantity of a product in cart, this field would help. Changing the quantity and clicking Update Cart button updates cart, cart total, tax and grand total values. Changing quantity of a product will change the total product price and shows price per item.
+![Screenshot of changing the quantity and price of product in shopping cart](/media/screenshots/desktop/changing-quantity-changes-total-price.png) |
+* Remove button - removes product from cart
+* Value display on the right with Cart Total (with taxes), taxes separately (25%), delivery cost (if the cart total less than 100 euros) and grand total, a sum of cart total and delivery cost.
+* One button to Proceed to Checkout that leads to Checkout Page and second button to Continue Shopping that redirects to main products page.
+
+### Checkout Page
+Desktop | Mobile view 1 | Mobile view 2 | Mobile view 3 |
+--- | --- | --- | --- |
+![Screenshot of shopping cart page desktop](/media/screenshots/desktop/checkout-page-desktop.png) | ![Screenshot of shopping cart page mobile view 1](/media/screenshots/mobile/checkout-page-1-mobile.jpg) | ![Screenshot of shopping cart page mobile view 2](/media/screenshots/mobile/checkout-page-2-mobile.jpg) | ![Screenshot of shopping cart page mobile view 2](/media/screenshots/mobile/checkout-page-3-mobile.jpg) |
+
+Checkout page contains form which customer must fill with personal details, shipping info and payment card information. Customer can check everything one more time and click Complete Order. This action completed order and if everything is filled correctly redirects to Order Confirmation page, otherwise page displays the error, what is missed and needs to be filled in or changed. 
+
+* Coupons is a future option. There were tries to implement this function, but they were unsuccessful and it was decided to leave this feature undone at this stage of website implementation. 
+
+#### Terms of Use
+
+This section is necessary, because e-commerce website needs to protect its rights on a website and information its contains. The first document 'Terms and Conditions' contains general rules and regulations for the use of Genstar Music Store website. By accessing the website user accepts terms and conditions automatically, otherwise user needs to leave website. Link to this section is located below Payment card details.
+
+Privacy Policy/GDPR is a document that secures visitors privacy. As the website collects and stores users information, this document provides description of which information is collected and how it is used. Link to this section is located below Payment card details.
+
+#### Terms and Conditions and Privacy Policy/GDPR
 Desktop | Mobile |
 --- | --- |
-![Desktop Contact Page image](/media/screenshots/desktop/contact-page-desktop.PNG) | ![Mobile Contact Page image ](/media/screenshots/mobile/contact-page-mobile-res.jpg) |
+![Desktop Terms and Conditions Page image](/media/screenshots/desktop/terms-and-conditions-gdpr-desktop.png) | ![Mobile Terms and Conditions Page image ](/media/screenshots/mobile/terms-of-use-gdpr-mobile.jpg) |
 
-Contact page contains two general elements, Google map and contact form. It contains also a general contact information, but as it duplicates with footer, it is made just for good-looking symmetry. 
+### Order Confirmation Page
+Desktop | Mobile view 1 | Mobile view 2 | Mobile view 3 |
+--- | --- | --- | --- |
+![Screenshot of order confirmation page desktop](/media/screenshots/desktop/order-confirmation-desktop.png) | ![Screenshot of shopping cart page mobile view 1](/media/screenshots/mobile/order-confirmation-1-mobile.jpg) | ![Screenshot of shopping cart page mobile view 2](/media/screenshots/mobile/order-confirmation-2-mobile.jpg) | ![Screenshot of shopping cart page mobile view 2](/media/screenshots/mobile/order-confirmation-3-mobile.jpg) |
 
-Google maps API is responsive and change its size according to screen size. Two containers with contact information and form are also responsive and all elements on a page has a column structure on small screen sizes. 
-
-Right now submitting the contact form leads to return of dump form page from Code Institute, to confirm that everything was done correctly and data was submitted to back-end. As a future feature, sending emails with submission of this form will be implemented.
-
-### Terms of Use pages
-
-This section is necessary, because fitness club needs to protect its rights on a website and information its contains. The first document 'Terms and Conditions' contains general rules and regulations for the use of Genstar Fitness's website. By accessing the website user accepts terms and conditions automatically, otherwise user needs to leave website.
-
-Privacy Policy/GDPR is a document that secures visitors privacy. As the website collects and stores users information, this document provides description of which information is collected and how it is used. 
-
-#### Terms and Conditions
-Desktop | Mobile |
---- | --- |
-![Desktop Terms and Conditions Page image](/media/screenshots/desktop/terms-and-conditions-desktop.png) | ![Mobile Terms and Conditions Page image ](/media/screenshots/mobile/terms-and-conditions-mobile-res.jpg) |
-
-#### Privacy Policy/GDPR
-Desktop | Mobile |
---- | --- |
-![Desktop Privacy Policy Page image](/media/screenshots/desktop/private-policy-desktop.png) | ![Mobile Privacy Policy Page image ](/media/screenshots/mobile/privacy-policy-mobile-res.jpg) |
+Order Confirmation Page contains all the information about the order, such as order number, order details with products ordered and customer information. An order confirmation email was sent to customer provided email. 
 
 ### Profile page
 Desktop | Mobile |
