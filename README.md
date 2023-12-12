@@ -1,6 +1,6 @@
 Desktop | Mobile |
 --- | --- |
-![Desktop Home Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Home Page image ](/media/screenshots/mobile/main-page-mobile-res.jpg) |
+![Desktop Home Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Home Page image ](/media/screenshots/mobile/main-page-mobile.jpg) |
 
 
 # Genstar Music Store
@@ -107,6 +107,24 @@ At the start of the project user stories looked like this:
 
 ![Screenshot of user stories at the start on GitHub](/media/screenshots/desktop/user-stories-project-start.png)
 
+### Week 1
+![Screenshot of user stories at the start on GitHub](/media/screenshots/desktop/user-stories-week-1.png)
+
+### Week 2
+![Screenshot of user stories at the start on GitHub](/media/screenshots/desktop/user-stories-week-2.png)
+
+### Week 3
+![Screenshot of user stories at the start on GitHub](/media/screenshots/desktop/user-stories-week-3.png)
+
+### Week 4
+![Screenshot of user stories at the start on GitHub](/media/screenshots/desktop/user-stories-week-4.png)
+
+### Finals
+![Screenshot of user stories at the start on GitHub](/media/screenshots/desktop/user-stories-week-finals.png)
+
+### Extra features - undone
+![Screenshot of user stories at the start on GitHub](/media/screenshots/desktop/user-stories-undone-future.png)
+
 #### Strategy Table
 
 Opportunity / Problem | Importance | Viability / Feasibility
@@ -170,7 +188,7 @@ Color scheme of blue(#0126fa) for navigation bar background, light blue(#47a9ff)
 
 No extra fonts we used on this website. All fonts are default by Bootstrap. There is no difficulties to read the text written used by this fonts.
 
-[Back to top ⇧](#genstar-fitness)
+[Back to top ⇧](#genstar-music-store)
 
 # Features
 
@@ -178,48 +196,75 @@ No extra fonts we used on this website. All fonts are default by Bootstrap. Ther
 
 The website is made using the responsive design in mind, as not only desktop PC or laptop users will be visiting it. Website runs smoothly on tablets and phones as well and supports different screen sizes.
 
-Several main website elements were presented on each page.
+The website is done as a classical e-commerce store with products on main page and all neccessary information on each product card. Below I will go through main website elements in details.
+
+#### Header with not authenticated user
+
+![Screenshot of header with user not autheticated](/media/screenshots/desktop/header-not-auth-desktop.png)
+
+Header with no authenticated user consist of three main parts:
+
+* Logo, clickable, that returns customer to main page
+* Search bar, where customer can search products or categories
+* Two icons/buttons - My Account with Login and Register buttons in dropdown menu; and Cart button which show sum of products already in cart, quantity of products in cart and if clicked move customer to current cart.
+
+#### Header when user is authenticated
+
+![Screenshot of header with user not autheticated](/media/screenshots/desktop/header-user-auth-desktop.png)
+
+Header when user is authenticated differs, consist of three main parts, but has more elements:
+
+* Logo, clickable, that returns customer to main page
+* Search bar, where customer can search products or categories
+* Three icons/buttons: 
+    - My Account with dropdown, where if user is administrator, store owner or staff member there is a Product Management button, for adding, editing or deleting product. Otherwise there is just a My Profile and Logout buttons.
+    - Wishlist button that leads customer to its wishlist.
+    - Cart button which show sum of products already in cart, quantity of products in cart and if clicked move customer to current cart.
 
 #### Navigation bar
-* Main navigation bar
 
-![Screenshot of main navigation bar](/media/screenshots/desktop/navigation-bar-main.PNG)
+Navigation bar is presented as a categories list in closed state and with mouse over it opens with sub-categories for each parent category.
 
-Main navigation bar contains all the necessary buttons for user to get all the information about fitness club services, memberships and contacts. 
+* Main navigation bar in closed state
 
-* User logged in navigation bar
+![Screenshot of main navigation bar which is closed](/media/screenshots/desktop/navigation-panel-closed-desktop.png)
 
-![Screenshot of navigation bar when user logged in](/media/screenshots/desktop/navigation-bar-logged-in.PNG)
+* Main navigation bar in opened state
 
-When user is authenticated, on main navigation bar adds three new buttons such as "Book Workout" - as direct link to booking service, "My Profile" - page where user can see all his bookings, edit or delete them; edit profile; make new bookings and "Logout" to logout from account.
+![Screenshot of main navigation bar which is open](/media/screenshots/desktop/navigation-panel-open-desktop.png)
 
-* Navigation bar on user profile / booking page
-
-![Screenshot of navigation bar on user profile/booking page](/media/screenshots/desktop/navigation-bar-booking.PNG)
-
-This is navigation bar which is shown when user clicks on "Book Workout" or "My Profile" buttons after user is authenticated. On this navbar you can see "Staff Panel" button, which is only available to users which have roles as admins or staff members. This button opens a page where staff members or admins can see all the bookings made by users, filter them or delete. More about this button you can find in [THIS](#staff-panel-page) section.
+Navigation bar does not change if the user is logged in or logged out, it contains only information about products.
 
 #### Footer
 
-Footer contains information about:
-- fitness club opening hours, reception opening hours (when the personal of the club are available on site)
-- contact information such as address, phone and email
-- social network links, such as Twitter, Instagram and Facebook
+![Screenshot of footer in desktop view](/media/screenshots/desktop/footer-desktop.png)
 
-#### Flash messages
+Footer has three main areas:
+- area with grey background where Subscription form to newsletters is located on the left and social media buttons on the right
+- main area with logo and different links grouped by categories. Right now not all links are clickable, because it is not suitable for MVP and will take a huge amount of extra time to fix all links working and filled with respektive information. Down on the right customer can find language selector and back to top button. Language selector is a future feature to be implemented if the website will become international.
 
-Flash messages is a very helpful and good for UX tool that flashes when user make some active action such as creating new account or making a new booking. Some other functions when message pops up are - edit profile, edit or delete booking, login and logout.
+#### Toasts and other helpful messages
 
-![Screenshot of flash message after account creation](/media/screenshots/desktop/flash-message-new-account.PNG)
-![Screenshot of flash message after new booking](/media/screenshots/desktop/flash-message-booking.PNG)
+Toasts working as flash messages that supports most of users actions and are quite flexible for containing different information and display success, warning or error messages.
+
+* Simple success toast to show customer successful sign in. 
+
+![Screenshot of flash message after sign in](/media/screenshots/desktop/success-toast-login-desktop.png)
+
+* In this toast I added buttons for customer to view its cart to edit it or go directly to chechout.
+
+![Screenshot of flash message after adding product in cart](/media/screenshots/desktop/success-toast-add-to-cart-desktop.png)
 
 ### Mobile menu
-Menu main | Menu auth | Menu profile |
---- | --- | --- |
-![Desktop Home Page image](/media/screenshots/mobile/main-menu-mobile-res.jpg) | ![Mobile Home Page image ](/media/screenshots/mobile/main-menu-auth-mobile-res.jpg) | ![Mobile Home Page image ](/media/screenshots/mobile/profile-page-menu-mobile-res.jpg)
+
+Each menu category has is a dropdown, containing sub-categories related to its parent category.
+
+Menu without authentication | Menu with authentication |
+--- | --- |
+![Screenshot of Menu without authentication](/media/screenshots/mobile/mobile-menu-not-auth.jpg) | ![Screenshot of Menu with authentication ](/media/screenshots/mobile/mobile-menu-user-auth.jpg) |
 
 
-[Back to top ⇧](#genstar-fitness)
+[Back to top ⇧](#genstar-music-store)
 
 ### Home page
 Desktop | Mobile |
