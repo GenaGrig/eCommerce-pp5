@@ -32,11 +32,9 @@ GitHub repository you can find here - [GitHub repo](https://github.com/GenaGrig/
     6. [Checkout Page](#checkout-page)
     7. [Order Confirmation Page](#order-confirmation-page)
     7. [Profile Pages](#profile-pages)
-    8. [Update Profile Page](#update-profile-page)
-    9. [Wishlist](#wishlist)
-    10. [Product Management Page](#product-management-page)
-    11. [Authentication Pages](#authentication-pages)
-    12. [Terms of Use and Privacy Policy Pages](#terms-of-use-and-privacy-policy-pages)
+    8. [Wishlist](#wishlist)
+    9. [Product Management Page](#product-management-page)
+    10. [Authentication Pages](#authentication-pages)
 3. [Technologies Used](#technologies-used)
     1. [Languages Used](#languages-used)
     2. [Libraries and Frameworks](#languages-and-frameworks)
@@ -371,56 +369,88 @@ Desktop | Mobile view 1 | Mobile view 2 | Mobile view 3 |
 
 Order Confirmation Page contains all the information about the order, such as order number, order details with products ordered and customer information. An order confirmation email was sent to customer provided email. 
 
-### Profile page
+### Profile pages
+
+#### Profile page main
 Desktop | Mobile |
 --- | --- |
-![Desktop User Profile Page image](/media/screenshots/desktop/user-profile-page-desktop.png) | ![Mobile User Profile Page image ](/media/screenshots/mobile/user-profile-new.jpg) |
+![Desktop User Profile Page image](/media/screenshots/desktop/profile-main-page-desktop.png) | ![Mobile User Profile Page image ](/media/screenshots/mobile/profile-main-1-mobile.jpg) |
 
-User profile page consists of two major parts - User Info and My Bookings.
-* User Info contains information about user as first and last name, username and email. An Edit Profile button  allows users to change their data. By default first and last name are empty, so user needs to enter them by editing profile. As a future feature, more fields to user profile will be added. 
+User profile page consists of four links to pages that summarize user information and actions on website.
 
-* My Bookings part allows user to see all reserved bookings and edit or delete them. Here all the CRUD functionality is implemented. User can create a booking, see all bookings made, update bookings and delete them. Edit and delete buttons are shown as icons, because this design is much more comfortable on small screens, such as phones. 
+* Profile main page has general infromation about customer. Before first purchase or when the customer has not entered any personal infromation or unchecked "save info" before order confirmation, all fields are empty and the value is None. After customer made first purchase with personal information entered and 'save info' box checked, values in respective fields will be filled out with information given. Customer can change personal information in Profile setting tab. 
 
-#### Delete Workout Confirmation Modal
+* Below the personal information customer can find Latest 3 orders. This is limited for customer UX to not overflow the profile page. If the customer wants to see all orders made, there is a button "View all orders" that redirects to orders history tab with all orders available. Customer has an option to delete an order in case he received it or canceled. By clicking Order ID link, customer can open Order Confirmation page. 
 
+On each page in profile tab, customer can opens other tabs in the menu on the left.
+
+Log Out link in the end of Profile pages menu redirect customer to log out page. 
+
+#### Orders History page
+Desktop | Mobile view 1 | Mobile view 2 |
+--- | --- | --- |
+![Desktop orders history page image](/media/screenshots/desktop/orders-history-desktop.png) | ![Mobile orders history page image ](/media/screenshots/mobile/orders-history-1-mobile.jpg) | ![Mobile orders history page image ](/media/screenshots/mobile/orders-history-2-mobile.jpg) |
+
+
+* Orders history tab contains all orders made by customer with exactly the same layout as on main profile page but without any view limit. 
+
+#### My Wishlist page
 Desktop | Mobile |
 --- | --- |
-![Desktop Delete Booking Confirmation Modal image](/media/screenshots/desktop/confirm-delete-modal-desktop.PNG) | ![Mobile Delete Booking Confirmation Modal image ](/media/screenshots/mobile/delete-booking-confirmation-mobile-res.jpg) |
+![Desktop User Profile My Wishlist Page image](/media/screenshots/desktop/my-wishlist-profile-desktop.png) | ![Mobile User Profile My Wishlist Page image ](/media/screenshots/mobile/my-wishlist-profile-mobile.jpg) |
 
-This is an extended feature for user convenience and to be sure, that user will not delete booking accidentally. The same feature is realized on staff panel for the same reason.
+* My Wishlist page has the same functionality and view as Wishlist in the main website. It is made for ease of use for customer to check which products are in Wishlist without need to go back from Profile pages. 
 
-### Update profile page
+#### Profile settings
 Desktop | Mobile |
 --- | --- |
-![Desktop Update Profile Page image](/media/screenshots/desktop/update-profile-form-desktop.PNG) | ![Mobile Update Profile Page image ](/media/screenshots/mobile/update-profile-mobile-res.jpg) |
+![Desktop User Profile Settings Page image](/media/screenshots/desktop/profile-settings-and-update.png) | ![Mobile User Profile Settings Page image ](/media/screenshots/mobile/profile-settings-mobile.jpg) |
 
-This page allows user to update profile and change such information as first and last name (empty by default), username and email. As a future feature, change of password and some extra fields can be added.
+* Profile setting is a page where customer can update personal information. It can be filled after account creation or edited after first completed order. Saved information entered in order form is displayed here. Only fields that was filled in will be displayed, non-filled fields will have value of None. 
 
-### Booking pages
+### Wishlist
 Desktop | Mobile |
 --- | --- |
-![Desktop Booking Page image](/media/screenshots/desktop/booking-page-desktop.PNG) | ![Mobile Booking Page image ](/media/screenshots/mobile/booking-page-mobile-res.jpg) |
+![Desktop Wishlist Page image](/media/screenshots/desktop/wishlist-desktop.png) | ![Mobile Wishlist Page image ](/media/screenshots/mobile/wishlist-main-mobile.jpg) |
 
-On this booking page user selects workout type and date in pop-up calendar. When done, user need to click on continue to proceed to next page or back to return to user profile page. 
+* Wishlist page displays products that customer saved clicking the heart on product card on main products page or clicking the Save button on product details page. From wishlist page customer can add saved products to cart or remove products from Wishlist by clicking respective buttons. 
 
-Desktop | Mobile |
+### Product Management Pages
+
+#### Add Product page
+Desktop view 1 | Desktop view 2 |
 --- | --- |
-![Desktop Booking Time Page image](/media/screenshots/desktop/booking-time-page-desktop.PNG) | ![Mobile Booking Time Page image ](/media/screenshots/mobile/booking-time-select-mobile-res.jpg) |
+![Desktop Add Product Page 1 image](/media/screenshots/desktop/add-product-page-1-desktop.png) | ![Desktop Add Product Page 2 image ](/media/screenshots/desktop/add-product-page-2-desktop.png) |
 
-On this page user need to select time for chosen workout. When done, user clicks on "Book Workout" to confirm and save booking, or "Back" to go back to previous page and change workout or date.
-
-* This booking section has many improvement possibilities that can be added in the future. For example:
-    * Schedule for each workout with exact dates and time that repeats every week
-    * Make all booking process on a single page to reduce clicking and pages count
-    * Add workout booking for non-member of fitness club as a free pass or onetime payment (requires payment system and functionality)
-
-### Staff panel page
-Desktop | Mobile |
+Mobile view 1 | Mobile view 2 |
 --- | --- |
-![Desktop Staff Panel Page image](/media/screenshots/desktop/staff-panel-page-desktop.png) | ![Mobile Staff Panel Page image ](/media/screenshots/mobile/staff-panel-new.jpg) |
+![Mobile Add Product Page 1 image](/media/screenshots/mobile/add-product-page-1-mobile.jpg) | ![Mobile Add Product Page 2 image ](/media/screenshots/mobile/add-product-page-2-mobile.jpg) |
 
-Staff panel is made only for admins and staff members. On this panel, staff members can see all the bookings made by users and filter them by different values. 
+Add product page is accessable via link in My Account - Product Management and let site owners, administrators or staff members who has rights add products to ecommerce website. It is not neccessary to fill in all fields, but there are required filed that needs to be filled to add product successfully. For customer service it is better to fill as much information as possible. 
 
+It can be easier to add new product via adming panel, because it has Summernotes editor for easier editing of description of product. 
+
+![Desktop Add Product Admin Panel with Summernote editor screnshot](/media/screenshots/desktop/admin-panel-with-summernote-editor-desktop.png) |
+
+#### Edit Product page
+Desktop view 1 | Desktop view 2 |
+--- | --- |
+![Desktop Edit Product Page 1 image](/media/screenshots/desktop/edit-product-page-1-desktop.png) | ![Desktop Edit Product Page 2 image ](/media/screenshots/desktop/edit-product-page-2-desktop.png) |
+
+Mobile view 1 | Mobile view 2 |
+--- | --- |
+![Mobile Edit Product Page 1 image](/media/screenshots/mobile/edit-product-page-1-mobile.jpg) | ![Mobile Edit Product Page 2 image ](/media/screenshots/mobile/edit-product-page-2-mobile.jpg) |
+
+Edit product page is accessable via button on Product Detail page or admin panel. It has the same functionality as Add Product page, with the only difference that information about product is already filled in. If admins will change any information about product, they just need to change it and click in Edit Product button below, otherwise click Cancel to discard changes. 
+
+Products can be edited via admin panel with help of Summernote editor.
+![Desktop Edit Product Admin Panel with Summernote editor screnshot](/media/screenshots/desktop/admin-panel-editing-product-with-summernote-editor-desktop.png) |
+
+From this page Quantity in Stock is available, and admins can change stock values directly from the front-end, otherwise this option is available at back-end in admin panel as well.
+
+#### Delete Product
+
+Deleting Product option is accessable via admin panel or Product Detail page by clicking "Delete Product" button. As future option a confirmation modal can be made to prevent admins for deleting product unintentionally. 
 
 ### Authentication pages
 
