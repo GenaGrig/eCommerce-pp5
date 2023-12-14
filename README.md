@@ -458,15 +458,15 @@ Deleting Product option is accessable via admin panel or Product Detail page by 
 
 Desktop | Mobile |
 --- | --- |
-![Desktop Register Account image](/media/screenshots/desktop/register-account-page-desktop.PNG) | ![Mobile Register Account Page image ](/media/screenshots/mobile/register-accont-mobile-res.jpg) |
+![Desktop Register Account image](/media/screenshots/desktop/register-new-account-desktop.png) | ![Mobile Register Account Page image ](/media/screenshots/mobile/register-new-account-mobile.jpg) |
 
-Register New Account form contains three required fields that should be filled to register new user and save users' information to database. Each field has a little description below, to help the user enter correct information and avoid mistakes. After this procedure, user is available to log in to website at any time. After registration user is redirected to users' profile page directly, without need to sign in. If user already has an account and opened register account page by mistake, there is a direct link to sing in page in header or on navigation bar.
+Register New Account form contains three required fields that should be filled to register new user. Each field has a little description below, to help the user enter correct information and avoid mistakes. After this procedure, user is available to log in to website at any time. After registration user will get email with confirmation link that user will need to click on to verify registration email. Registered users will have access to Profile pages, Wishlist and save personal information for orders.
 
 #### Sign In page
 
 Desktop | Mobile |
 --- | --- |
-![Desktop Sign In Page image](/media/screenshots/desktop/sign-ip-desktop.PNG) | ![Mobile Sign In Page image ](/media/screenshots/mobile/sign-in-page-mobile-res.jpg) |
+![Desktop Sign In Page image](/media/screenshots/desktop/sign-in-page-desktop.png) | ![Mobile Sign In Page image ](/media/screenshots/mobile/sign-in-mobile.jpg) |
 
 Sign In page has just to field to be filled as Username and Password, which user entered when registered new account. There is a checkbox "Remember me" to store user information as cookie. Below that, a "Forgot password" link redirects user to a password reset page, where user needs to enter email address and get a link to change password. 
 
@@ -474,23 +474,22 @@ Sign In page has just to field to be filled as Username and Password, which user
 
 Desktop | Mobile |
 --- | --- |
-![Desktop Sign Out Page image](/media/screenshots/desktop/sign-out-page-desktop.png) | ![Mobile Sign Out Page image ](/media/screenshots/mobile/sign-out-page-mobile-res.jpg) |
+![Desktop Sign Out Page image](/media/screenshots/desktop/sign-out-page-desktop.png) | ![Mobile Sign Out Page image ](/media/screenshots/mobile/sign-out-mobile.jpg) |
 
 Sign Out page is quite simple and contains only one button - "Sign Out". At this stage, action can be reverted and user can go back to other pages without signing out. As a future feature, this page can be changed to modal with the same functionality.
 
 ### Future features
 
-Some features where mentioned directly in page description, but let's summarize them in this section:
+Ecommerce website can be upgraded with many features, but to the lack of time and knowledge, not all of them were implemented now:
 
-* Membership. Membership role will affect booking opportunities, as some membership roles contains exclusive offers
-* Membership. Only fitness club members can book workouts (now it can do everyone, who has an active account), those who have free pass, or onetime payment (requires payment system on a website)
-* Workout. Schedule for each workout with fixed days and times
-* Personal Trainer. Possibility to book a personal trainer session both free and for a fixed price
-* Personal Trainer and Contact pages contact forms should send messages to user emails
-* Update profile should be able to change password. Several field with information should be available to update, such as address, city, country and telephone number
-* Booking. All booking process on one page
-* Booking. Booking for non-members for free (testing pass) or fixed price
-* Register form with more information, such as first and last name and telephone number
+* Special offers, deals and discount products. This can be implemented by adding extra category to product model and selecting it in product description.
+* Profile image. Extra feature just to make UI more attractive. This feature is not commonly used on ecommerce websites.
+* Sign in with social networks. This feature is quite popular and save time for customer on registering. Due to the lack of time and knowledge it was not implemented now, but can be done in future updates.
+* Coupons. Quite popular feature on ecommerce websites. There were tries to implement this feature in this deployment, but they were not successful. This feature will definetely be implemented in future updates.
+* More products. In this deployment main goal was to make MVP website, and that is why only 51 product was added. In future updates this amount can be inscreased if needed.
+* Footer. Right now links in the footer are decorative and does not redirect to respective pages. Due to the lack of time they were not filled with appropriate infromation. In future updates theese pages can be made.
+* Delete products button. As I mentioned in relative section, confirmation modal can be made in future updates to avoid unintentional delete of product. 
+* Profile setting page should have option to change password. This can be done in future updates.
 * Sign out function as a modal, to skip the separate sign out page. 
 
 [Back to top ⇧](#genstar-fitness)
