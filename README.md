@@ -157,18 +157,19 @@ Based on strategy table, not all the features will be implemented in the first d
 
 Page | Desktop Version | Mobile Version
 --- | --- | ---
-Home page | ![Desktop home page image](/media/wireframes/home-page-desktop.png) | ![Mobile home page image](/media/wireframes/home-page-mobile.png)
-Membership | ![Desktop membership wireframe image](/media/wireframes/membership-page-desktop.png) | ![Mobile membership wireframe image](/media/wireframes/membership-page-mobile.png)
-Workouts | ![Desktop workouts wireframe image](/media/wireframes/workouts-page-desktop.png) | ![Mobile workouts wireframe image](/media/wireframes/workouts-page-mobile.png)
-PT | ![Desktop personal trainer wireframe image](/media/wireframes/pt-page-desktop.png) | ![Mobile personal trainer wireframe image](/media/wireframes/pt-page-mobile.png)
-Contact Us | ![Desktop contact page wireframe image](/media/wireframes/contact-page-desktop.png) | ![Mobile contact page wireframe image](/media/wireframes/contact-page-mobile.png)
-Login page | ![Desktop login wireframe image](/media/wireframes/login-page-desktop.png) | ![Mobile login wireframe image](/media/wireframes/login-page-mobile.png)
-Register page | ![Desktop register new user wireframe image](/media/wireframes/register-page-desktop.png) | ![Mobile register new user wireframe image](/media/wireframes/register-page-mobile.png)
-User profile / User signed in | ![Desktop user profile wireframe image](/media/wireframes/user-panel-desktop.png) | ![Mobile user profile wireframe image](/media/wireframes/user-panel-mobile.png)
-Staff page / Admin or staff members signed in | ![Desktop staff panel wireframe image](/media/wireframes/staff-panel-desktop.png) | ![Mobile staff panel wireframe image](/media/wireframes/staff-panel-mobile.png)
-Booking page / User signed in | ![Desktop booking wireframe image](/media/wireframes/book-workout-desktop.png) | ![Mobile booking wireframe image](/media/wireframes/book-workout-mobile.png)
-Booking submit / User signed in | ![Desktop booking submit wireframe image](/media/wireframes/booking-submit-desktop.png) | ![Mobile booking submit wireframe image](/media/wireframes/booking-submit-mobile.png)
-Logout page / User signed in | ![Desktop logout wireframe image](/media/wireframes/logout-desktop.png) | ![Mobile logout wireframe image](/media/wireframes/logout-mobile.png)
+Main products page | ![Desktop main products page image](/media/wireframes/Products%20main%20page.png) | ![Mobile main products image](/media/wireframes/Mobile%20Products%20page.png)
+Product details | ![Desktop product details page image](/media/wireframes/Products%20details%20page.png) | ![Mobile product details page image](/media/wireframes/Mobile%20Product%20details%20page.png)
+Wishlist page | ![Desktop wishlist page image](/media/wireframes/Wishlist.png) | ![Mobile wishlist page image](/media/wireframes/Mobile%20Wishlist%20page.png)
+Shopping cart | ![Desktop shopping cart image](/media/wireframes/Shopping%20cart.png) | ![Mobile shoppin cart image](/media/wireframes/Mobile%20Shopping%20cart%20page.png)
+Checkout page | ![Desktop checkout page image](/media/wireframes/Checkout%20form.png) | ![Mobile checkout page image](/media/wireframes/Mobile%20Checkout%20page.png)
+Profile page | ![Desktop user profile page image](/media/wireframes/My%20Profile.png) | ![Mobile user profile page image](/media/wireframes/Mobile%20Profile%20main%20page.png)
+Profile page / Orders History | ![Desktop orders history page image](/media/wireframes/Orders%20history.png) | ![Mobile orders history page image](/media/wireframes/Mobile%20Orders%20History%20page.png)
+Profile page / My Wishlist | ![Desktop profile wishlist page image](/media/wireframes/My%20wishlist.png) | ![Mobile profile wishlist page image](/media/wireframes/Mobile%20profile%20Wishlist%20page.png)
+Profile page / Profile settings | ![Desktop profile settings page image](/media/wireframes/Profile%20setting.png) | ![Mobile profile setting page image](/media/wireframes/Mobile%20profile%20settings%20page.png)
+Product management pages Add/Edit Product | ![Desktop product management page image](/media/wireframes/Add-Edit%20Product%20pages.png) | ![Mobile product management image](/media/wireframes/Mobile%20Add-Edit%20product%20page.png)
+Login page | ![Desktop login wireframe image](/media/wireframes/Sign%20In%20page.png) | ![Mobile login wireframe image](/media/wireframes/Mobile%20Sign%20In.png)
+Register page | ![Desktop register new user wireframe image](/media/wireframes/Sign%20Up%20page.png) | ![Mobile register new user wireframe image](/media/wireframes/Mobile%20Sign%20Up.png)
+Logout page / User signed in | ![Desktop logout wireframe image](/media/wireframes/Sign%20Out%20page.png) | ![Mobile logout wireframe image](/media/wireframes/Mobile%20Sign%20Out.png)
 
 ### Structure
 
