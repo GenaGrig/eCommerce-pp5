@@ -179,7 +179,6 @@ def checkout_success(request, order_id):
     order.tax = tax
     order.save()
 
-    send_confirmation_email(order)
     messages.success(request, f'Order successfully processed! \
                 Your order number is {order.order_id}. \
                 A confirmation email will be sent to {order.email_address}.')
@@ -188,6 +187,7 @@ def checkout_success(request, order_id):
         update_product_quantities(request)
         del request.session['cart']
 
+    send_confirmation_email(request, order)
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
@@ -242,7 +242,7 @@ def get_or_create_order(request):
     return order
 
 
-def send_confirmation_email(order):
+def send_confirmation_email(request, order):
     ''' A view to send a confirmation email'''
     cust_email = order.email_address
     subject = render_to_string(
@@ -251,7 +251,7 @@ def send_confirmation_email(order):
     body = render_to_string(
         'checkout/confirmation_emails/confirmation_email_body.txt',
         {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-
+    
     send_mail(
         subject,
         body,
