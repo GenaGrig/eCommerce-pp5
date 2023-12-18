@@ -187,7 +187,14 @@ def checkout_success(request, order_id):
         update_product_quantities(request)
         del request.session['cart']
 
-    send_confirmation_email(request, order)
+    send_mail(
+        subject='Genstar Music Store - Order Confirmation',
+        message=render_to_string(
+            'checkout/confirmation_emails/confirmation_email.txt',
+            {'order': order}),
+        from_email=settings.DEFAULT_FROM_EMAIL,
+        recipient_list=[order.email_address]
+    )
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
