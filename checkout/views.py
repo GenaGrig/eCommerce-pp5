@@ -179,7 +179,7 @@ def checkout_success(request, order_id):
     order.tax = tax
     order.save()
 
-    send_confirmation_email(request, order)
+    send_confirmation_email(order)
     messages.success(request, f'Order successfully processed! \
                 Your order number is {order.order_id}. \
                 A confirmation email will be sent to {order.email_address}.')
@@ -242,7 +242,7 @@ def get_or_create_order(request):
     return order
 
 
-def send_confirmation_email(request, order):
+def send_confirmation_email(order):
     ''' A view to send a confirmation email'''
     cust_email = order.email_address
     subject = render_to_string(
