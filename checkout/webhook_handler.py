@@ -64,7 +64,7 @@ class StripeWH_Handler:
         send_mail(
             subject='Genstar Music Store - Order Confirmation',
             message=render_to_string(
-                'checkout/confirmation_emails/confirmation_email.txt',
+                'checkout/confirmation_emails/confirmation_email_body.txt',
                 {'order': order}),
             from_email=settings.DEFAULT_FROM_EMAIL,
             recipient_list=[order.email_address]
