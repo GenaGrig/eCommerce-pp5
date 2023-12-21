@@ -2,14 +2,12 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpR
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
-from django.template.loader import render_to_string
-from django.core.mail import send_mail
-
-from profiles.models import UserProfile
-from profiles.forms import UserProfileForm
 
 import stripe
 import json
+
+from profiles.models import UserProfile
+from profiles.forms import UserProfileForm
 
 from cart.contexts import cart_contents
 from products.models import Product
@@ -147,7 +145,7 @@ def checkout_success(request, order_id):
 
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_id=order_id)
-    
+
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
         # Attach the user's profile to the order
@@ -187,14 +185,6 @@ def checkout_success(request, order_id):
         update_product_quantities(request)
         del request.session['cart']
 
-    send_mail(
-        subject='Genstar Music Store - Order Confirmation',
-        message=render_to_string(
-            'checkout/confirmation_emails/confirmation_email_body.txt',
-            {'order': order}),
-        from_email=settings.DEFAULT_FROM_EMAIL,
-        recipient_list=[order.email_address]
-    )
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
@@ -228,14 +218,16 @@ def apply_coupon(request):
         if coupon_code:
             try:
                 coupon = Coupon.objects.get(coupon_code=coupon_code, active=True)
-                order = get_or_create_order(request)  # Implement this function to get or create the order
-                order.apply_coupon(coupon)  # Implement a method in your Order model to apply the coupon
+                # Implement this function to get or create the order
+                order = get_or_create_order(request)
+                # Implement a method in your Order model to apply the coupon
+                order.apply_coupon(coupon)
                 messages.success(request, f"Coupon '{coupon.coupon_code}' applied successfully! \
                                 Coupon value is {coupon.coupon_value} eur.")
             except Coupon.DoesNotExist:
                 messages.error(request, "Invalid coupon code.")
 
-    return redirect(reverse('checkout')) 
+    return redirect(reverse('checkout'))
 
 
 def get_or_create_order(request):
@@ -247,21 +239,3 @@ def get_or_create_order(request):
         order = Order.objects.create()
         request.session['order_id'] = order.id
     return order
-
-
-def send_confirmation_email(request, order):
-    ''' A view to send a confirmation email'''
-    cust_email = order.email_address
-    subject = render_to_string(
-        'checkout/confirmation_emails/confirmation_email_subject.txt',
-        {'order': order})
-    body = render_to_string(
-        'checkout/confirmation_emails/confirmation_email_body.txt',
-        {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-    
-    send_mail(
-        subject,
-        body,
-        settings.DEFAULT_FROM_EMAIL,
-        [cust_email]
-    )

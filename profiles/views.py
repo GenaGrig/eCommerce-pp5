@@ -78,13 +78,13 @@ def view_wishlist(request):
 def profile_settings(request):
     '''Display the user's profile settings'''
     profile_settings = get_object_or_404(UserProfile, user=request.user)
-    
+
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile_settings)
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile updated successfully')
-    
+
     form = UserProfileForm(instance=profile_settings)
 
     template = 'profiles/profile_settings.html'
@@ -100,10 +100,10 @@ def orders_history(request):
     '''Display the user's order history'''
     profile = get_object_or_404(UserProfile, user=request.user)
     user_profile = get_user_profile(request.user)
-    
+
     form = UserProfileForm(instance=profile)
     orders = Order.objects.filter(user_profile=get_user_profile(request.user)).order_by('-created')
-    
+
     template = 'profiles/orders_history.html'
     context = {
         'form': form,
@@ -116,7 +116,7 @@ def orders_history(request):
 
 def order_history(request, order_id):
     '''Display the user's order history'''
-    
+
     order = Order.objects.filter(user_profile=request.user.userprofile).order_by('-created')[:3]
 
     messages.info(request, (

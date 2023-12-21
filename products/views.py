@@ -4,8 +4,6 @@ from django.contrib import messages
 from django.db.models import Q, Avg
 from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
-from django.core.mail import send_mail
-from django.template.loader import render_to_string
 from .models import Product, Category, Wishlist, Subscriber, Review
 from .forms import ProductForm
 
@@ -17,14 +15,15 @@ def all_products(request):
     quantity_in_stock = Product.objects.filter(quantity_in_stock__gt=0).count()
     parent_categories = Category.objects.filter(parent_category_id__isnull=True)
     query = None
-    categories = None
     sort = None
     direction = None
 
     if request.GET:
         if 'q' in request.GET:
-            query = request.GET['q'].strip()  # Strip whitespace from the query
-            if not query:  # Check if the query is empty after stripping whitespace
+            # Strip whitespace from the query
+            query = request.GET['q'].strip()
+            # Check if the query is empty after stripping whitespace
+            if not query:
                 messages.error(request, "You didn't enter any valid search criteria!")
                 return redirect(reverse('products'))
 
@@ -44,7 +43,7 @@ def all_products(request):
             elif sortkey == 'category':
                 sortkey = 'category'
             else:
-                sortkey = 'name'  # Set a default sort field if 'sort' is not recognized
+                sortkey = 'name'
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']
@@ -53,7 +52,7 @@ def all_products(request):
             products = products.order_by(sortkey)
 
     current_sorting = f'{sort}_{direction}'
-    
+
     for product in products:
         average_rating = Review.objects.filter(product=product).aggregate(Avg('rating'))['rating__avg']
         product.rating = average_rating
@@ -104,7 +103,7 @@ def products_in_category(request, category_id):
 
     # Retrieve products from the descendant categories
     products_in_category = Product.objects.filter(category__in=descendant_categories)
-    
+
     # Sorting logic
     sort = request.GET.get('sort', 'name')
     direction = request.GET.get('direction', 'asc')
@@ -143,7 +142,7 @@ def wishlist_test(request):
         messages.info(request, "You don't have an active wishlist")
         wishlist = Wishlist.objects.create(user=request.user)
         wishlist.save()
-        
+
     context = {
         'wishlist_items': wishlist_items,
         'show_delivery_banner': True,
@@ -158,9 +157,9 @@ def wishlist_test(request):
 def add_to_wishlist(request, product_id):
     ''' A view to add a product to the wishlist '''
     product = get_object_or_404(Product, id=product_id)
-    wishlist, created = Wishlist.objects.get_or_create(user=request.user)
+    wishlist = Wishlist.objects.get_or_create(user=request.user)
     wishlist.products.add(product)
-    
+
     print(wishlist.date_added)
 
     messages.warning(request, f'Added {product.name} to your wishlist')
@@ -254,14 +253,6 @@ def subscribe_to_newsletter(request):
         if not Subscriber.objects.filter(email=email).exists():
             subscriber = Subscriber(email=email)
             subscriber.save()
-
-            # Send a welcome email
-            subject = 'Welcome to Our Newsletter'
-            message = render_to_string('products/subscribe_letter_template.txt')
-            from_email = 'genstarmusicstore@example.com'
-            recipient_list = [email]
-
-            send_mail(subject, message, from_email, recipient_list, fail_silently=False)
         else:
             messages.error(request, 'You are already subscribed to our newsletter!')
             return redirect(reverse('products'))
@@ -277,7 +268,8 @@ def unsubscribe_from_newsletter(request):
             email = request.user.email
             print(f"Authenticated user's email: {email}")
         else:
-            # If the user is not authenticated, try to get the email from the POST data
+            # If the user is not authenticated, try to get the email 
+            # from the POST data
             email = request.POST.get('email')
 
         # Check if the email exists in the Subscriber model
@@ -305,8 +297,6 @@ def submit_review(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         rating = request.POST.get('rating')
-        product = product
-        
         try:
             # Attempt to create a new rating
             Review.objects.create(
@@ -317,6 +307,6 @@ def submit_review(request, product_id):
         except IntegrityError:
             # Handle the case where a rating already exists for the user and product
             messages.error(request, 'You have already rated for this product.')
-            
+
         return redirect(reverse('product_detail', args=[product.id]))
     return render(request, 'products/product_detail.html', {'product': product})
