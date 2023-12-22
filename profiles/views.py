@@ -120,8 +120,7 @@ def orders_history(request):
 def order_history(request, order_id):
     '''Display the user's order history'''
 
-    order = Order.objects.filter(user_profile=request.user.userprofile)\
-        .order_by('-created')[:3]
+    order = get_object_or_404(Order, order_id=order_id)
 
     messages.info(request, (
         f'This is a past confirmation for order number {order_id}. '

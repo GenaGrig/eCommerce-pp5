@@ -32,16 +32,16 @@ class Order(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     paid = models.BooleanField(default=False)
-    delivery_cost = models.DecimalField(max_digits=6, decimal_places=2,
-                                        null=False, default=0)
-    order_total = models.DecimalField(max_digits=10, decimal_places=2,
-                                      null=False, default=0)
-    grand_total = models.DecimalField(max_digits=10, decimal_places=2,
-                                      null=False, default=0)
-    tax = models.DecimalField(max_digits=10, decimal_places=2,
-                              null=False, default=0)
-    coupon = models.ForeignKey('Coupon', null=True, blank=True,
-                               on_delete=models.SET_NULL)
+    delivery_cost = (models.DecimalField(max_digits=6, decimal_places=2,
+                                         null=False, default=0))
+    order_total = (models.DecimalField(max_digits=10, decimal_places=2,
+                                       null=False, default=0))
+    grand_total = (models.DecimalField(max_digits=10, decimal_places=2,
+                                       null=False, default=0))
+    tax = (models.DecimalField(max_digits=10, decimal_places=2,
+                               null=False, default=0))
+    coupon = (models.ForeignKey('Coupon', null=True, blank=True,
+                                on_delete=models.SET_NULL))
 
     def _generate_order_id(self):
         '''Generate a random, unique order id using UUID'''
