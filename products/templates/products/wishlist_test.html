@@ -19,11 +19,6 @@
             <div class="col-lg-12">
                 <div class="card border shadow-0">
                     <div class="m-4">
-                        <!-- {% if wishlist_items|length == 0 %}
-                            <h4 class="card-title mb-4">{{ user.username }} You have 0 item(s) in your wishlist.</h4>
-                        {% else %}
-                            <h4 class="card-title mb-4">{{ user.username }} You have {{ wishlist_items|length }} item(s) in your wishlist.</h4>
-                        {% endif %} -->
                         {% if wishlist_items %}
                             {% for product in products %}
                             <div class="row gy-3 mb-4">
@@ -59,14 +54,14 @@
                                     </div>
                                     <div class="col-lg col-sm-6 mb-2">
                                         <a href="{% url 'add_to_cart' product.id %}"
-                                            class="btn btn-success border border-solid text-white icon-hover-info">
+                                            class="btn btn-sm btn-success border border-solid text-white icon-hover-info">
                                             <i class="me-1 fa fa-shopping-cart fa-lg"></i> Add to Cart
                                         </a>
                                         <a href="{% url 'remove_from_wishlist' product.id %}"
-                                            class="btn btn-danger border border-solid text-white icon-hover-danger">
+                                            class="btn btn-sm btn-danger border border-solid text-white icon-hover-danger">
                                             <i class="fa-solid fa-trash"></i> Remove</a>
                                         <div class="float-md-start">
-                                            <h6>Date Added: {{ item.date_added }}</h6>
+                                            <h6>Date Added: {{ wishlist_items.date_added|date:'Y-m-d' }}</h6>
                                         </div>
                                     </div>
                                 </div>

@@ -163,7 +163,7 @@ def wishlist_test(request):
 def add_to_wishlist(request, product_id):
     ''' A view to add a product to the wishlist '''
     product = get_object_or_404(Product, id=product_id)
-    wishlist = Wishlist.objects.get_or_create(user=request.user)
+    wishlist, created = Wishlist.objects.get_or_create(user=request.user)
     wishlist.products.add(product)
 
     print(wishlist.date_added)

@@ -24,7 +24,7 @@
                     <a class="nav-link my-0 bg-light" href="{% url 'view_profile' %}">
                         <p class="pb-0 mb-0" style="width: 100px">Profile main</p>
                     </a>
-                    <a class="nav-link my-0 bg-light" href="#">
+                    <a class="nav-link my-0 bg-light" href="{% url 'orders_history' %}">
                         <p class="pb-0 mb-0" style="width: 100px">Orders history</p>
                     </a>
                     <a class="nav-link my-0 active" style="background-color: blueviolet;" href="{% url 'view_wishlist' %}">
@@ -80,15 +80,15 @@
                                         </div>
                                         <div class="col-lg col-sm-6 mb-2">
                                             <a href="{% url 'add_to_cart' product.id %}"
-                                                class="btn btn-success border border-solid text-white icon-hover-info">
+                                                class="btn btn-sm btn-success border border-solid text-white icon-hover-info">
                                                 <i class="me-1 fa fa-shopping-cart fa-lg"></i> Add to Cart
                                             </a>
                                             <a href="{% url 'remove_from_wishlist' product.id %}"
-                                                class="btn btn-danger border border-solid text-white icon-hover-danger">
+                                                class="btn btn-sm btn-danger border border-solid text-white icon-hover-danger">
                                                 <i class="fa-solid fa-trash"></i> Remove</a>
-                                            <div class="float-md-start">
-                                                <h6>Date Added: {{ product.date_added }}</h6>
-                                            </div>
+                                                <div class="float-md-start">
+                                                    <h6>Date Added: {{ wishlist.date_added|date:'Y-m-d' }}</h6>
+                                                </div>
                                         </div>
                                     </div>
                                 </div>
