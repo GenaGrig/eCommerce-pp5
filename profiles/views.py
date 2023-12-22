@@ -20,11 +20,13 @@ def view_profile(request):
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Update failed. Please ensure the form is valid.')
+            messages.error(request, 'Update failed. Please ensure the \
+                form is valid.')
     else:
         form = UserProfileForm(instance=profile)
 
-    orders = Order.objects.filter(user_profile=get_user_profile(request.user)).order_by('-created')[:3]
+    orders = Order.objects.filter(user_profile=get_user_profile(request.user))\
+        .order_by('-created')[:3]
 
     template = 'profiles/profiles.html'
     context = {
@@ -40,7 +42,7 @@ def view_alternative_profile(request):
     '''Display the user's alternative profile'''
     profile = get_object_or_404(UserProfile, user=request.user)
     user_profile = get_user_profile(request.user)
-    
+
     form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
 
@@ -102,7 +104,8 @@ def orders_history(request):
     user_profile = get_user_profile(request.user)
 
     form = UserProfileForm(instance=profile)
-    orders = Order.objects.filter(user_profile=get_user_profile(request.user)).order_by('-created')
+    orders = Order.objects.filter(user_profile=get_user_profile(request.user))\
+        .order_by('-created')
 
     template = 'profiles/orders_history.html'
     context = {
@@ -117,7 +120,8 @@ def orders_history(request):
 def order_history(request, order_id):
     '''Display the user's order history'''
 
-    order = Order.objects.filter(user_profile=request.user.userprofile).order_by('-created')[:3]
+    order = Order.objects.filter(user_profile=request.user.userprofile)\
+        .order_by('-created')[:3]
 
     messages.info(request, (
         f'This is a past confirmation for order number {order_id}. '

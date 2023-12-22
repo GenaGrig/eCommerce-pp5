@@ -18,7 +18,6 @@ class StripeWH_Handler:
     def __init__(self, request):
         self.request = request
 
-
     def handle_event(self, event):
         """
         Handle a generic/unknown/unexpected webhook event
@@ -45,7 +44,7 @@ class StripeWH_Handler:
             billing_details = stripe_charge.billing_details
             shipping_details = intent.shipping
             grand_total = round(stripe_charge.amount / 100, 2)
-            
+
             order = self.request.POST.get('order.id')
             print("Order ID:", order)
 
@@ -57,7 +56,7 @@ class StripeWH_Handler:
                     print("Order not found for ID:", order.id)
             else:
                 print("Order ID not found in metadata.")
-                
+
         except KeyError as e:
             print("KeyError:", e)
             print('Cart data not found in metadata.')
@@ -72,7 +71,7 @@ class StripeWH_Handler:
         return HttpResponse(
             content=f'Webhook received: {event["type"]}',
             status=200)
-        
+
     def handle_payment_intent_payment_failed(self, event):
         """
         Handle the payment_intent.payment_failed webhook from Stripe

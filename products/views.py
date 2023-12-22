@@ -13,7 +13,8 @@ def all_products(request):
 
     products = Product.objects.all()
     quantity_in_stock = Product.objects.filter(quantity_in_stock__gt=0).count()
-    parent_categories = Category.objects.filter(parent_category_id__isnull=True)
+    parent_categories = Category.objects.\
+        filter(parent_category_id__isnull=True)
     query = None
     sort = None
     direction = None
@@ -24,10 +25,12 @@ def all_products(request):
             query = request.GET['q'].strip()
             # Check if the query is empty after stripping whitespace
             if not query:
-                messages.error(request, "You didn't enter any valid search criteria!")
+                messages.error(request, "You didn't enter any valid \
+                    search criteria!")
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = (Q(name__icontains=query) |
+                       Q(description__icontains=query))
             products = products.filter(queries)
 
         if 'sort' in request.GET:
@@ -54,7 +57,8 @@ def all_products(request):
     current_sorting = f'{sort}_{direction}'
 
     for product in products:
-        average_rating = Review.objects.filter(product=product).aggregate(Avg('rating'))['rating__avg']
+        average_rating = Review.objects.filter(product=product)\
+            .aggregate(Avg('rating'))['rating__avg']
         product.rating = average_rating
         product.save()
 
@@ -76,7 +80,8 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
 
     # Calculate the average rating for the product
-    product.average_rating = Review.objects.filter(product=product).aggregate(Avg('rating'))['rating__avg']
+    product.average_rating = Review.objects.filter(product=product)\
+        .aggregate(Avg('rating'))['rating__avg']
 
     context = {
         'product': product,
@@ -102,7 +107,8 @@ def products_in_category(request, category_id):
     descendant_categories = get_descendant_categories(category)
 
     # Retrieve products from the descendant categories
-    products_in_category = Product.objects.filter(category__in=descendant_categories)
+    products_in_category = (Product.objects.filter
+                            (category__in=descendant_categories))
 
     # Sorting logic
     sort = request.GET.get('sort', 'name')
@@ -121,7 +127,7 @@ def products_in_category(request, category_id):
         sort_field = f'-{sort_field}'
 
     products_in_category = products_in_category.order_by(sort_field)
-    
+
     context = {
         'category': category,
         'products': products_in_category,
@@ -191,7 +197,8 @@ def add_product(request):
             messages.success(request, f'Successfully added {product.name}!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add product. Please ensure \
+                the form is valid.')
     else:
         form = ProductForm()
 
@@ -218,7 +225,8 @@ def edit_product(request, product_id):
             messages.success(request, f'Successfully updated {product.name}!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update product. \
+                Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -254,9 +262,11 @@ def subscribe_to_newsletter(request):
             subscriber = Subscriber(email=email)
             subscriber.save()
         else:
-            messages.error(request, 'You are already subscribed to our newsletter!')
+            messages.error(request, 'You are already subscribed to\
+                our newsletter!')
             return redirect(reverse('products'))
-    messages.success(request, 'You have successfully subscribed to our newsletter!')
+    messages.success(request, 'You have successfully subscribed to\
+        our newsletter!')
     return render(request, 'products/subscribe.html')
 
 
@@ -268,7 +278,7 @@ def unsubscribe_from_newsletter(request):
             email = request.user.email
             print(f"Authenticated user's email: {email}")
         else:
-            # If the user is not authenticated, try to get the email 
+            # If the user is not authenticated, try to get the email
             # from the POST data
             email = request.POST.get('email')
 
@@ -276,9 +286,11 @@ def unsubscribe_from_newsletter(request):
         if Subscriber.objects.filter(email=email).exists():
             subscriber = Subscriber.objects.get(email=email)
             subscriber.delete()
-            messages.success(request, 'You have successfully unsubscribed from our newsletter!')
+            messages.success(request, 'You have successfully unsubscribed from\
+                our newsletter!')
         else:
-            messages.error(request, 'You are not subscribed to our newsletter!')
+            messages.error(request, 'You are not subscribed to \
+                our newsletter!')
 
         # Redirect to a relevant page (e.g., 'products' page)
         return redirect(reverse('products'))
@@ -303,10 +315,13 @@ def submit_review(request, product_id):
                 user=request.user,
                 product=product,
                 rating=rating)
-            messages.success(request, 'Your rating value has been submitted successfully.')
+            messages.success(request, 'Your rating value has been submitted\
+                successfully.')
         except IntegrityError:
-            # Handle the case where a rating already exists for the user and product
+            # Handle the case where a rating already exists for the user
+            # and product
             messages.error(request, 'You have already rated for this product.')
 
         return redirect(reverse('product_detail', args=[product.id]))
-    return render(request, 'products/product_detail.html', {'product': product})
+    return render(request, 'products/product_detail.html',
+                  {'product': product})

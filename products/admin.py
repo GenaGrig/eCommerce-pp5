@@ -17,7 +17,7 @@ class ProductAdmin(SummernoteModelAdmin):
 
     ordering = ('sku',)
     summernote_fields = ('short_description', 'description',)
-    
+
 
 class ProductInline(admin.TabularInline):
     ''' Admin view for products in categories'''
@@ -35,8 +35,8 @@ class CategoryAdmin(admin.ModelAdmin):
     )
 
     ordering = ('category_name',)
-    
-    
+
+
 class SubscriberAdmin(admin.ModelAdmin):
     ''' Admin view for subscribers'''
     list_display = (
@@ -46,8 +46,8 @@ class SubscriberAdmin(admin.ModelAdmin):
     search_fields = ('email',)
 
     ordering = ('email',)
-    
-    
+
+
 class ReviewAdmin(admin.ModelAdmin):
     ''' Admin view for reviews'''
     list_display = (

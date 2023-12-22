@@ -46,7 +46,7 @@ class Order(models.Model):
     def _generate_order_id(self):
         '''Generate a random, unique order id using UUID'''
         return uuid.uuid4().hex.upper()
-    
+
     def apply_coupon(self, coupon):
         '''Apply a gift coupon to the order'''
         self.discount = coupon.coupon_value
@@ -54,13 +54,14 @@ class Order(models.Model):
         self.save()
         print(f'Coupon value {coupon.coupon_value}')
         print(f'Order total {self.order_total}')
-        
+
     def update_total(self):
         """
         Update grand total each time a line item is added,
         accounting for delivery costs.
         """
-        self.order_total = self.line_items.aggregate(Sum('line_item_total'))['line_item_total__sum'] or 0
+        self.order_total = (self.line_items.aggregate(Sum('line_item_total'))
+                            ['line_item_total__sum'] or 0)
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
             self.delivery_cost = settings.STANDARD_DELIVERY_COST
         else:
@@ -73,7 +74,7 @@ class Order(models.Model):
 
         def __str__(self):
             return f'Order {self.id}'
-        
+
     def save(self, *args, **kwargs):
         """
         Override the original save method to set the order number
@@ -89,10 +90,15 @@ class Order(models.Model):
 
 class OrderLineItem(models.Model):
     '''Create an order line item model to store order line item details'''
-    order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='line_items')
-    product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
+    order = (models.ForeignKey(Order, null=False,
+                               blank=False, on_delete=models.CASCADE,
+                               related_name='line_items'))
+    product = (models.ForeignKey(Product, null=False, blank=False,
+                                 on_delete=models.CASCADE))
     quantity = models.IntegerField(null=False, blank=False, default=0)
-    line_item_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+    line_item_total = (models.DecimalField(max_digits=6, decimal_places=2,
+                                           null=False, blank=False,
+                                           editable=False))
 
     def save(self, *args, **kwargs):
         '''Override the original save method to set the line item total and
@@ -108,7 +114,8 @@ class Coupon(models.Model):
     '''Create a gift coupon model to store gift coupon details'''
     coupon_id = models.CharField(max_length=50, null=False, editable=False)
     coupon_code = models.CharField(max_length=50, null=False, blank=False)
-    coupon_value = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False)
+    coupon_value = (models.DecimalField(max_digits=6, decimal_places=2,
+                                        null=False, blank=False))
     coupon_expiry = models.DateField(null=False, blank=False)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -118,7 +125,7 @@ class Coupon(models.Model):
     def _generate_coupon_id(self):
         '''Generate a random, unique coupon id using UUID'''
         return uuid.uuid4().hex.upper()
-    
+
     def is_valid(self):
         '''Check if the coupon is valid'''
         return self.active and self.coupon_expiry >= timezone.now().date()
@@ -126,11 +133,11 @@ class Coupon(models.Model):
     def save(self, *args, **kwargs):
         '''Override the original save method to set the coupon id if it
         hasn't been set already'''
-        
+
         if not self.coupon_id:
             self.coupon_id = self._generate_coupon_id()
         super().save(*args, **kwargs)
-        
+
         if self.coupon_expiry < timezone.now().date():
             raise ValueError('Coupon has expired')
 
