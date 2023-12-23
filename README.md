@@ -7,7 +7,7 @@ Desktop | Mobile |
 
 Genstar Music Store (later in a document just GMS for better use) is a musical instrument store, where customers can but different musical instruments from most famous brands online. There is also a big variety of other tools for producers, sound engineers and stage technicians for recording, live performances and lighting on stage or other places. 
 
-GMS allows customers to buy instruments online and get them delivered by 3-5 days. Customers can buy anonimously or with created account. Creating account gives customers preferences, such as wishlist, saving data for future purchases and my profile page with orders history.  
+GMS allows customers to buy instruments online and get them delivered by 3-5 days. Customers can buy anonymously or with created account. Creating account gives customers preferences, such as wishlist, saving data for future purchases and my profile page with orders history.  
 
 You can visit the deployed website here - [Genstar Music Store](https://genstar-music-store-3a732f4aac46.herokuapp.com/products/).
 
@@ -43,10 +43,11 @@ GitHub repository you can find here - [GitHub repo](https://github.com/GenaGrig/
     5. [Tools and Programs](#tools-and-programs)
 4. [Testing](#testing)
     1. [Go to TESTING.md](https://github.com/GenaGrig/eCommerce-pp5/blob/main/TESTING.md)
-5. [Deployment](#deployment)
-6. [Credits](#credits)
-7. [Known Bugs](#known-bugs)
-8. [Acknowledgements](#acknowledgements)
+5. [Marketing](#marketing)
+6. [Deployment](#deployment)
+7. [Credits](#credits)
+8. [Known Bugs](#known-bugs)
+9. [Acknowledgements](#acknowledgements)
 
 ***
 
@@ -64,42 +65,42 @@ GitHub repository you can find here - [GitHub repo](https://github.com/GenaGrig/
 * Site users are able to register an account to use extra services
 * Site users are able to login to their accounts to use extra services
 * Site users are able to logout from their accounts to secure their private information and order details
-* Site admins can add, edit or delete products both from admin panel or via user interface on product management page
+* Site admins can add, edit or delete products both from admin panel and via user interface on product management page
 * Site users are able to edit their profiles after creating account and save personal info if they wish
 * Site users can leave ratings to products they purchase (login required)
 * Site users has their own wishlist to save products they want to buy (login required)
-* Site users has their own profile page with pesonal information, wishlist and orders history (login required)
+* Site users has their own profile page with personal information, wishlist and orders history (login required)
 * Website uses pop-up messages that follows actions made by the users
 
 #### User Stories
 
-* As a Shopper I can view list of products so that I can select some to purchase
-* As a Shopper I can view individual product details so that I can identify the price, description, product rating, product image
-* As a Shopper I can identify deals, special offers and discounts so that I can take advantage of special sales for purchasing
-* As a Shopper I can easily view the total of my purchases at any time so that I will not spend too much or add more items to my cart to reach my budget
-* As a Site User I can easily register and account so that have a personal account to view my profile and have access to extra features
-* As a Site User I can login or logout to/from site so that I can access my personal account information
-* As a Site User I can recover my password in case I forget it so that I can recover access to my account
-* As a Site User I can receive confirmation email after new account registering so that I can verify that my account registration was successful
-* As a Site User I can have personalized user profile so that I can view my order history, order confirmations and save my payment and shipping information
-* As a Shopper I can sort the list of all available products so that I can identify the best rated, best priced and categorically sorted products
-* As a Shopper I can sort specific category of product so that I can find best-rated, best-priced product in specific category, or sort the products by name in specific category
-* As a Shopper I can sort multiple categories of products simultaneously so that I can find the best-priced or best-rated products across broad categories
-* As a Shopper I can search for a product by name or description so that I can find a specific product I would like to purchase
-* As a Shopper I can easily see what I've searched for and the number of results so that I can quickly decide whether the product I want is available
-* As a Shopper I can select quantity of a product when purchasing it so that I can ensure I do not accidentally select the wrong product quantity
-* As a Shopper I can view items in my basket to be purchased so that I can identify the total cost of my purchase and all items I will receive
-* As a Shopper I can adjust the quantity of individual items in my bag so that I can easily make changes to my purchase before checkout
-* As a Shopper I can easily enter my payment information so that check out quickly and with no difficulties
-* As a Shopper I can feel my personal and payment information is safe and secure so that I can confidently provide the needed information to make a purchase
-* As a Shopper I can view an order confirmation after checkout so that I can verify that I have not made any mistakes when purchased products
-* As a Shopper I can receive an order confirmation email after checking out so that I can keep the confirmation of what I've purchased for my records and order following
-* As a Store Owner I can add a product so that I can add new items to store
-* As a Store Owner I can edit/update a product so that I can change product prices, descriptions, images and other product criteria
-* As a Store Owner I can delete a product so that I can remove items that are no longer for sale/out of stock
-* As a Site User I can add my personal profile image so that I can click it instead and open my profile menu
-* As a Site User I can sign in using social networks so that I can have multiple choices for signing in from different platforms
-* As a Shopper I can see real number of desired product in stock so that I am sure my product is available and I can order it right now
+* As a Shopper, I can view list of products so that I can select some to purchase
+* As a Shopper, I can view individual product details so that I can identify the price, description, product rating and product image
+* As a Shopper, I can identify deals, special offers and discounts so that I can take advantage of special sales for purchasing
+* As a Shopper, I can easily view the total of my purchases at any time so that I will not spend too much or add more items to my cart to reach my budget
+* As a Site User, I can easily register and account so that have a personal account to view my profile and have access to extra features
+* As a Site User, I can login or logout to/from site so that I can access my personal account information
+* As a Site User, I can recover my password in case I forget it so that I can recover access to my account
+* As a Site User, I can receive confirmation email after new account registering so that I can verify that my account registration was successful
+* As a Site User, I can have personalized user profile so that I can view my order history, order confirmations and save my payment and shipping information
+* As a Shopper, I can sort the list of all available products so that I can identify the best rated, best priced and categorically sorted products
+* As a Shopper, I can sort specific category of product so that I can find best-rated, best-priced product in specific category, or sort the products by name in specific category
+* As a Shopper, I can sort multiple categories of products simultaneously so that I can find the best-priced or best-rated products across broad categories
+* As a Shopper, I can search for a product by name or description so that I can find a specific product I would like to purchase
+* As a Shopper, I can easily see what I have searched for and the number of results so that I can quickly decide whether the product I want is available
+* As a Shopper, I can select quantity of a product when purchasing it so that I can ensure I do not accidentally select the wrong product quantity
+* As a Shopper, I can view items in my basket to be purchased so that I can identify the total cost of my purchase and all items I will receive
+* As a Shopper, I can adjust the quantity of individual items in my bag so that I can easily make changes to my purchase before checkout
+* As a Shopper, I can easily enter my payment information so that check out quickly and with no difficulties
+* As a Shopper, I can feel my personal and payment information is safe and secure so that I can confidently provide the needed information to make a purchase
+* As a Shopper, I can view an order confirmation after checkout so that I can verify that I have not made any mistakes when purchased products
+* As a Shopper, I can receive an order confirmation email after checking out so that I can keep the confirmation of what I have purchased for my records and order following
+* As a Store Owner, I can add a product so that I can add new items to store
+* As a Store Owner, I can edit/update a product so that I can change product prices, descriptions, images and other product criteria
+* As a Store Owner, I can delete a product so that I can remove items that are no longer for sale/out of stock
+* As a Site User, I can add my personal profile image so that I can click it instead and open my profile menu
+* As a Site User, I can sign in using social networks so that I can have multiple choices for signing in from different platforms
+* As a Shopper, I can see real number of desired product in stock so that I am sure my product is available and I can order it right now
 
 At the start of the project user stories looked like this:
 
@@ -153,7 +154,7 @@ Based on strategy table, not all the features will be implemented in the first d
 
 #### Wireframes
 
-[Balsamiq](https://balsamiq.com/) has been used to showcase the appearance of the site and display the placement of the different elements whitin the pages.
+[Balsamiq](https://balsamiq.com/) has been used to display the appearance of the site and display the placement of the different elements within the pages.
 
 Page | Desktop Version | Mobile Version
 --- | --- | ---
@@ -173,19 +174,22 @@ Logout page / User signed in | ![Desktop logout wireframe image](/media/wirefram
 
 ### Structure
 
-![Structure of the Genstar Fitness website](/media/screenshots/desktop/genstar-fitness-structure.png)
+#### Database Model
+The database model has been designed using [Lucidchart](https://www.lucidchart.com/).
+
+![Database Model of the Genstar Music Store website](/media/screenshots/desktop/GMS%20Database%20ER%20diagram.png)
 
 ### Surface
 
 #### Color palette
 
-Color scheme of blue(#0126fa) for navigation bar background, light blue(#47a9ff) for footer and some container page elements background and white(#ffffff) for text color on a blue or light blue background. These colors are used throughout the website and create together mild color palette for user eyes to make the UI and UX smoother.
+Color scheme of blue violet(#8A2BE2) were used for titles, button backgrounds and as main color for website. To the contrast white color(#ffffff) was used and the combination of blue violet and white creates mild color palette for customer eyes to make the UI and UX smoother. Grey color was used only for navigation bar and footer. It looks mild and does not have problems with contrast or other colors used.
 
-![Screenshot of color palette for website](/media/screenshots/desktop/color-palette.PNG)
+![Screenshot of color palette for website](/media/screenshots/desktop/genstar-music-store-color-pallette.png)
 
 #### Fonts
 
-No extra fonts we used on this website. All fonts are default by Bootstrap. There is no difficulties to read the text written used by this fonts.
+[Playfair Display](https://fonts.google.com/?query=playfair+display) font from Google Fonts was used on a website for some titles. Other fonts are base Bootstrap fonts.
 
 [Back to top ⇧](#genstar-music-store)
 
@@ -195,7 +199,7 @@ No extra fonts we used on this website. All fonts are default by Bootstrap. Ther
 
 The website is made using the responsive design in mind, as not only desktop PC or laptop users will be visiting it. Website runs smoothly on tablets and phones as well and supports different screen sizes.
 
-The website is done as a classical e-commerce store with products on main page and all neccessary information on each product card. Below I will go through main website elements in details.
+The website is done as a classical e-commerce store with products on main page and all necessary information on each product card. Below I will go through main website elements in details.
 
 #### Header with not authenticated user
 
@@ -216,7 +220,7 @@ Header when user is authenticated differs, consist of three main parts, but has 
 * Logo, clickable, that returns customer to main page
 * Search bar, where customer can search products or categories
 * Three icons/buttons: 
-    - My Account with dropdown, where if user is administrator, store owner or staff member there is a Product Management button, for adding, editing or deleting product. Otherwise there is just a My Profile and Logout buttons.
+    - My Account with dropdown, where if user is administrator, store owner or staff member there is a Product Management button, for adding, editing or deleting product. Otherwise, there is just a My Profile and Logout buttons.
     - Wishlist button that leads customer to its wishlist.
     - Cart button which show sum of products already in cart, quantity of products in cart and if clicked move customer to current cart.
 
@@ -240,17 +244,17 @@ Navigation bar does not change if the user is logged in or logged out, it contai
 
 Footer has three main areas:
 - area with grey background where Subscription form to newsletters is located on the left and social media buttons on the right
-- main area with logo and different links grouped by categories. Right now not all links are clickable, because it is not suitable for MVP and will take a huge amount of extra time to fix all links working and filled with respektive information. Down on the right customer can find language selector and back to top button. Language selector is a future feature to be implemented if the website will become international.
+- main area with logo and different links grouped by categories. Right now, not all links are clickable, because it is not suitable for MVP, and will take a huge amount of extra time to fix all links working, and filled with respective information. Down on the right customer can find language selector and back to top button. Language selector is a future feature to be implemented if the website will become international.
 
 #### Toasts and other helpful messages
 
-Toasts working as flash messages that supports most of users actions and are quite flexible for containing different information and display success, warning or error messages.
+Toasts working as flash messages that supports most of users' actions and are quite flexible for containing different information and display success, warning or error messages.
 
 * Simple success toast to show customer successful sign in. 
 
 ![Screenshot of flash message after sign in](/media/screenshots/desktop/success-toast-login-desktop.png)
 
-* In this toast I added buttons for customer to view its cart to edit it or go directly to chechout.
+* In this toast, I added buttons for customer to view its cart to edit it or go directly to checkout.
 
 ![Screenshot of flash message after adding product in cart](/media/screenshots/desktop/success-toast-add-to-cart-desktop.png)
 
@@ -270,13 +274,13 @@ Desktop | Mobile |
 --- | --- |
 ![Desktop Products Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Products Page image ](/media/screenshots/mobile/main-page-mobile.jpg) |
 
-Main page has first major element below the menu that is carousel that contains slides with photos that are an advertising of featured music products and campaings that is going on at the moment. Changing of slides is authomatic each 5 seconds, with stop when mouse is over slide.
+Main page has first major element below the menu that is carousel that contains slides with photos that are an advertising of featured music products and campaigns that is going on now. Changing of slides is automatic each 5 seconds, with stop when mouse is over slide.
 
-Second element is a category list below the carousel. Theese are parent categories for products related to them. Clicking on a respective category, customer will see the page, containing all the products in the sub-categories related to parent category.
+Second element is a category list below the carousel. These are parent categories for products related to them. Clicking on a respective category, customer will see the page, containing all the products in the sub-categories related to parent category.
 
-Below category list customer will see all the product cards that are existing on a website. They are sorted by name by default, but customer can choose his own way of sorting with help of sort option element on the top left of products list. Sorting options are various and has both acscending and descending view. 
+Below category list customer will see all the product cards that are existing on a website. They are sorted by name by default, but customer can choose his own way of sorting with help of sort option element on the top left of products list. Sorting options are various and has both ascending and descending view. 
 
-Each product card contains general information about product such as product photo, product name, product price, add to wishlist icon (only if user is authenticated), product rating (based on customer ratings), realtime quantity in stock, product category and product sku number. 
+Each product card contains general information about product such as product photo, product name, product price, add to wishlist icon (only if user is authenticated), product rating (based on customer ratings), real-time quantity in stock, product category and product sku number. 
 
 Desktop | Mobile |
 --- | --- |
@@ -297,19 +301,19 @@ Product details page has several elements that is worth to describe in details:
 * Big photo of product that enlarges and opens in new tab by clicking on it.
     - As a future feature a gallery of photos can be made, to show to customer more angles of product and even featured videos about product. It is not implemented due to lack of knowledge on how to make it and shortage of time.
 * Product name
-* Average Rating that is calculated based on customer product rating. It shows "No Rating" in case there are no customer ratings on a product. 
-* Quantity in stock (right of average rating in green color) shows realtime quantity in stock. This number decreases if other customers make purchases of relative product and updates with page refresh. Product quantities can be changed manually by staff members and administrators both on front-end on product management page, clicking the "Edit Product" button on product details page or on back-end in admin panel. 
+* Average rating that is calculated based on customer product rating. It shows "No Rating" in case there are no customer ratings on a product. 
+* Quantity in stock (right of average rating in green color) shows real-time quantity in stock. This number decreases if other customers make purchases of relative product and updates with page refresh. Product quantities can be changed manually by staff members and administrators both in front-end on product management page, clicking the "Edit Product" button on product details page or in back-end in admin panel. 
 * Price shows product price in euro.
-* Short features of a product and some general information such as type of product, color, material, brand.
+* Short features of a product and some general information such as type of product, color, material and brand.
 * Rate the product is a working option, by which customers can leave their rating to products they purchased. Based on customer ratings average rating is calculated and shown below product name and on the main products page. 
-* Only when user is authenticated as a staff member or administrator two buttons - Edit Product and Delete Product is shown. If customer is not a member of this groups, this buttons are hidden and not accessible via address bar as well. So site users can not add, edit or delete products using address bar, they will get the error that just site owners can do that. 
+* Only when user is authenticated as a staff member or administrator two buttons - Edit Product and Delete Product is shown. If customer is not a member of these groups, this buttons are hidden and not accessible via address bar as well. So site users cannot add, edit or delete products using address bar, they will get the error that just site owners can do that. 
 
-![Screnshot of error of user trying to edit product](/media/screenshots/desktop/error-edit-product-by-not-access-user.png)
+![Screenshot of error of user trying to edit product](/media/screenshots/desktop/error-edit-product-by-not-access-user.png)
 * Quantity change element, by which customer can change quantity of a product and add it to cart then
 * Three buttons:
     - Continue shopping - that return customer to main products page
     - Add to cart - that adds desired quantity of products to cart
-    - Save button - adds product to whishlist, only when user is authenticated. Otherwise this button is hidden.
+    - Save button - adds product to wishlist, only when user is authenticated. Otherwise, this button is hidden.
 * Full description of product features.
 
 ### Breadcrumbs and Categories Page
@@ -328,7 +332,7 @@ Desktop | Mobile |
 --- | --- |
 ![Desktop categories image](/media/screenshots/desktop/categories-desktop.png) | ![Mobile categories image ](/media/screenshots/mobile/categories-mobile.jpg) |
 
-Categories has same function as breadcrumbs, combining all product of parent categories together. Customer can select just acoustic guitar category to see only acoustic guitars in it or select acoustic guitar products category, that contains all sub-categories in parent category Acoustic Guitars including amplifiers and accessories. This is of course a bonus option, but in my mind it is better for both UI and UX. 
+Categories has same function as breadcrumbs, combining all product of parent categories together. Customer can select just acoustic guitar category to see only acoustic guitars in it or select acoustic guitar products category, that contains all sub-categories in parent category Acoustic Guitars including amplifiers and accessories. This is of course a bonus option, but in my mind, it is better for both UI and UX. 
 
 ### Shopping Cart Page
 Desktop | Mobile view 1 | Mobile view 2 |
@@ -379,7 +383,7 @@ Desktop | Mobile |
 
 User profile page consists of four links to pages that summarize user information and actions on website.
 
-* Profile main page has general infromation about customer. Before first purchase or when the customer has not entered any personal infromation or unchecked "save info" before order confirmation, all fields are empty and the value is None. After customer made first purchase with personal information entered and 'save info' box checked, values in respective fields will be filled out with information given. Customer can change personal information in Profile setting tab. 
+* Profile main page has general information about customer. Before first purchase or when the customer has not entered any personal information or unchecked "save info" before order confirmation, all fields are empty and the value is None. After customer made first purchase with personal information entered and 'save info' box checked, values in respective fields would be filled out with information given. Customer can change personal information in Profile setting tab. 
 
 * Below the personal information customer can find Latest 3 orders. This is limited for customer UX to not overflow the profile page. If the customer wants to see all orders made, there is a button "View all orders" that redirects to orders history tab with all orders available. Customer has an option to delete an order in case he received it or canceled. By clicking Order ID link, customer can open Order Confirmation page. 
 
@@ -427,9 +431,9 @@ Mobile view 1 | Mobile view 2 |
 --- | --- |
 ![Mobile Add Product Page 1 image](/media/screenshots/mobile/add-product-page-1-mobile.jpg) | ![Mobile Add Product Page 2 image ](/media/screenshots/mobile/add-product-page-2-mobile.jpg) |
 
-Add product page is accessable via link in My Account - Product Management and let site owners, administrators or staff members who has rights add products to ecommerce website. It is not neccessary to fill in all fields, but there are required filed that needs to be filled to add product successfully. For customer service it is better to fill as much information as possible. 
+Add product page is accessible via link in My Account - Product Management and let site owners, administrators or staff members who has rights add products to ecommerce website. It is not necessary to fill in all fields, but there are required filed that needs to be filled to add product successfully. For customer service, it is better to fill as much information as possible. 
 
-It can be easier to add new product via adming panel, because it has Summernotes editor for easier editing of description of product. 
+It can be easier to add new product via admin panel, because it has Summernote editor for easier editing of description of product. 
 
 ![Desktop Add Product Admin Panel with Summernote editor screnshot](/media/screenshots/desktop/admin-panel-with-summernote-editor-desktop.png) |
 
@@ -442,16 +446,16 @@ Mobile view 1 | Mobile view 2 |
 --- | --- |
 ![Mobile Edit Product Page 1 image](/media/screenshots/mobile/edit-product-page-1-mobile.jpg) | ![Mobile Edit Product Page 2 image ](/media/screenshots/mobile/edit-product-page-2-mobile.jpg) |
 
-Edit product page is accessable via button on Product Detail page or admin panel. It has the same functionality as Add Product page, with the only difference that information about product is already filled in. If admins will change any information about product, they just need to change it and click in Edit Product button below, otherwise click Cancel to discard changes. 
+Edit product page is accessible via button on Product Detail page or admin panel. It has the same functionality as Add Product page, with the only difference that information about product is already filled in. If admins will change any information about product, they just need to change it and click in Edit Product button below, otherwise click Cancel to discard changes. 
 
 Products can be edited via admin panel with help of Summernote editor.
 ![Desktop Edit Product Admin Panel with Summernote editor screnshot](/media/screenshots/desktop/admin-panel-editing-product-with-summernote-editor-desktop.png) |
 
-From this page Quantity in Stock is available, and admins can change stock values directly from the front-end, otherwise this option is available at back-end in admin panel as well.
+From this page, Quantity in Stock is available, and admins can change stock values directly from the front-end, otherwise this option is available at back-end in admin panel as well.
 
 #### Delete Product
 
-Deleting Product option is accessable via admin panel or Product Detail page by clicking "Delete Product" button. As future option a confirmation modal can be made to prevent admins for deleting product unintentionally. 
+Deleting Product option is accessible via admin panel or Product Detail page by clicking "Delete Product" button. As future option, a confirmation modal can be made to prevent admins for deleting product unintentionally. 
 
 ### Authentication pages
 
@@ -461,7 +465,7 @@ Desktop | Mobile |
 --- | --- |
 ![Desktop Register Account image](/media/screenshots/desktop/register-new-account-desktop.png) | ![Mobile Register Account Page image ](/media/screenshots/mobile/register-new-account-mobile.jpg) |
 
-Register New Account form contains three required fields that should be filled to register new user. Each field has a little description below, to help the user enter correct information and avoid mistakes. After this procedure, user is available to log in to website at any time. After registration user will get email with confirmation link that user will need to click on to verify registration email. Registered users will have access to Profile pages, Wishlist and save personal information for orders.
+Register New Account form contains three required fields that should be filled to register new user. Each field has a little description below, to help the user enter correct information and avoid mistakes. After this procedure, user is available to log in to website at any time. After registration, user will get email with confirmation link, that user will need to click on to verify registration email (disabled in this deployed version). Registered users will have access to Profile pages, Wishlist and save personal information for orders.
 
 #### Sign In page
 
@@ -485,13 +489,14 @@ Ecommerce website can be upgraded with many features, but to the lack of time an
 
 * Special offers, deals and discount products. This can be implemented by adding extra category to product model and selecting it in product description.
 * Profile image. Extra feature just to make UI more attractive. This feature is not commonly used on ecommerce websites.
-* Sign in with social networks. This feature is quite popular and save time for customer on registering. Due to the lack of time and knowledge it was not implemented now, but can be done in future updates.
-* Coupons. Quite popular feature on ecommerce websites. There were tries to implement this feature in this deployment, but they were not successful. This feature will definetely be implemented in future updates.
-* More products. In this deployment main goal was to make MVP website, and that is why only 51 product was added. In future updates this amount can be inscreased if needed.
-* Footer. Right now links in the footer are decorative and does not redirect to respective pages. Due to the lack of time they were not filled with appropriate infromation. In future updates theese pages can be made.
+* Sign in with social networks. This feature is quite popular and save time for customer on registering. Due to the lack of time and knowledge, it was not implemented now, but can be done in future updates.
+* Coupons. Quite popular feature on ecommerce websites. There were tries to implement this feature in this deployment, but they were not successful. This feature will definitely be implemented in future updates.
+* More products. In this deployment, main goal was to make MVP website, and that is why only 51 product was added. In future updates this amount can be increased if needed.
+* Footer. Right now links in the footer are decorative and does not redirect to respective pages. Due to the lack of time, they were not filled with appropriate information. In future updates these pages can be made to functional.
 * Delete products button. As I mentioned in relative section, confirmation modal can be made in future updates to avoid unintentional delete of product. 
 * Profile setting page should have option to change password. This can be done in future updates.
-* Sign out function as a modal, to skip the separate sign out page. 
+* Sign out function as a modal, to skip the separate sign out page.
+* Customer can change their previous rating value to products. 
 
 [Back to top ⇧](#genstar-fitness)
 
@@ -528,8 +533,11 @@ Ecommerce website can be upgraded with many features, but to the lack of time an
 * [Gunicorn](https://gunicorn.org/)  
     * Gunicorn was used as Python WSGI HTTP Server for UNIX to support the deployment of Django application.  
 
-* [Cloudinary](https://cloudinary.com/)
-    * Cloudinary has been used as image management solution
+* [AWS](https://aws.amazon.com)
+    * Amazon Web Services has been used as static and media files storage management solution
+
+* [Summernote](https://summernote.org/)
+    * Sumemrnote has been used as admin panel editor for adding or editing products short and full description.
 
 ### Database Management
 * [ElephantSQL](https://www.elephantsql.com/)   
@@ -550,9 +558,6 @@ Ecommerce website can be upgraded with many features, but to the lack of time an
 * [Heroku](https://www.heroku.com)   
     * Heroku was used to deploy the website.
 
-* [Am I Responsive](ami.responsivedesign.is)  
-    * Am I Responsive was used to preview the website across a variety of popular devices.
-
 * [Coolors](https://coolors.co)  
     * Coolors was used to create a color scheme for the website.
 
@@ -568,20 +573,58 @@ Ecommerce website can be upgraded with many features, but to the lack of time an
 * [JSHint](https://jshint.com/) 
     * The JSHints JavaScript Code Quality Tool was used to validate the site's JavaScript code.
 
-* [Google Maps](https://www.google.com/maps)
-    * Google maps API to embed google map with location on a website.
-
 * [Terms and Conditions generator](https://www.termsandconditionsgenerator.com)
     * Terms and Conditions generator was used to create an agreement between website and user for protection of GenStar Fitness website rights
 
 * [Privacy Policy generator](https://www.termsfeed.com/privacy-policy-generator/)
     * Privacy Policy generator was used to create a document describing which information GenStar Fitness website collects and stores and how it secures users privacy
 
-[Back to top ⇧](#genstar-fitness)
+[Back to top ⇧](#genstar-music-store)
 
 # Testing
 
-The testing is available in separate file [TESTING.md](https://github.com/GenaGrig/genstar-fitness/blob/main/TESTING.md)
+The testing is available in separate file [TESTING.md](https://github.com/GenaGrig/eCommerce-pp5/blob/main/TESTING.md)
+
+# Marketing
+
+### Facebook business page
+
+Facebook business page was created for marketing purposes. For more divertisement in future can be created Instagram and X(Twitter) accounts. YouTube can be used more for storing product previews.
+
+Facebook page main | FB page view 1 | FB page view 2 |
+--- | --- | --- |
+![Screenshot of facebook business page](/media/screenshots/desktop/gms-facebook-page.png) | ![Screenshot of facebook business page](/media/screenshots/desktop/gms-facebook-page-1.png) | ![Screenshot of facebook business page](/media/screenshots/desktop/gms-facebook-page-2.png) |
+
+### Newsletter
+
+Newsletter subscription form is located in the top of the footer and has an email input and subscribe button. By entering email and clicking subscribe button customer adds email address to database which will be used as recipients list for future newsletters. 
+
+![Screenshot of newsletter subscription](/media/screenshots/desktop/newsletter-subscribe-confirmation-page.png) |
+
+### Business Model and Marketing Strategies
+
+* Genstar Music Store (GMS) is an e-commerce retail store that provides a wide choice of musical instruments, accessories and other tools and equipment related to music. 
+* Customers are both private persons and businesses that are in need of musical instruments, accessories and other equipment.
+* Products in music store can be specified or wide ranged. GMS has wide range of products and provides musical instruments for every need, stage lighting systems, sound systems for clubs or smaller locations, recording devices and equipment for big and small studios for both professional and amateur use and a lot more. Price range is very wide and depends mostly on needs of customer.
+* Payment system on a website at the moment is a credit card, but in future implementations can be expanded and complemented with other payment options.
+* Business model is both B2C and B2B as GMS products are suitable for both private customers and businesses like music clubs, official and signed bands, orchestras etc.
+
+#### Marketing Strategies
+
+* Search Engine Optimization - implemented in meta tags and keywords on a website.
+* Social media marketing - Facebook business page. Can be diversified with creating Instagram and X(Twitter) accounts for marketing purposes such as advertising, hot deals and special offers.
+* Email marketing - Subscription option for customers that provides newsletters with later deals, discounts and many other information. Implemented on website.
+* Paid advertising. Can be implemented to view music store first at searching results for musical instruments on search websites. 
+
+### Search Engine Optimisation (SEO)
+
+Genstar Music Store is a music instruments website. It has a big meta block with all required information in base.html page that is extended all over the website. Keywords are used as a SEO for better searching of website.
+
+![Screenshot of meta block in base.html](media/screenshots/desktop/seo-meta-tags.png)
+
+SEO in HTML on a website is implemented only in navigation bar and headers on each page. All other titles and names visible on a front-end is written in html as Django tag for ease of use. All the product names, information and descriptions are stored in database. Images as well are stored in cloud services and has no alternative attributes written in the html code. 
+
+XML-sitemap and robots.txt is presented for this website in the root of the project.
 
 # Deployment
 
@@ -653,24 +696,24 @@ This will trigger a new GitPod workspace to be created from the code in GitHub w
 How to run this project within a local IDE, such as VSCode:
 
 1. Log into [GitHub](https://github.com/login) or [create an account](https://github.com/join).
-2. Locate the [GitHub Repository](https://github.com/GenaGrig/genstar-fitness.git).
+2. Locate the [GitHub Repository](https://github.com/GenaGrig/eCommerce-pp5.git).
 3. Under the repository name, click "Clone or download".
 4. In the Clone with HTTPs section, copy the clone URL for the repository.
 5. In your local IDE, open the terminal.
 6. Change the current working directory to the location where you want the cloned directory to be made.
 7. Type 'git clone', and then paste the URL you copied in Step 3.
 ```
-git clone https://github.com/GenaGrig/genstar-fitness.git
+git clone https://github.com/GenaGrig/eCommerce-pp5.git
 ```
 8. Press Enter. Your local clone will be created.
 
 Further reading and troubleshooting on cloning a repository from GitHub [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
-[Back to top ⇧](#genstar-fitness)
+[Back to top ⇧](#genstar-music-store)
 
 # Credits
 
-This resources were used as a help to create [GenStar Fitness](https://genstar-fitness-and-gym-0d51dc3aa6d0.herokuapp.com/) website:
+This resources were used as a help to create [GenStar Music Store](https://genstar-music-store-3a732f4aac46.herokuapp.com/products/) website:
 
 ### Content
 * Website content was written by the developer
@@ -679,15 +722,16 @@ This resources were used as a help to create [GenStar Fitness](https://genstar-f
     * GitHubs [Basic writing and formatting syntax](https://docs.github.com/ru/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#headings)
     * Hints and some structure of README files from existing projects from other CI students
     * [josswe26 code-buddy project readme](https://github.com/josswe26/code-buddy.git) as a perfect example how readme file should look like. Some parts were taken from this Readme file.
+    * [Genstar Fitness project readme](https://github.com/GenaGrig/genstar-fitness/blob/main/README.md) my readme file from previous project that was updated and filled with more parts to describe this project in more details.
 
 ### Media
 
-* [New register user form tutorial](https://www.youtube.com/watch?v=JeTGxvFnAaU&list=TLPQMDYwODIwMjOuesC_k1wr0A&index=1)
-* [Update user profile tutorial](https://www.youtube.com/watch?v=F5kTZdi_c5k)
-* [Fix problem with updating user profile, username already exists](https://www.appsloveworld.com/django/100/94/django-user-account-update-ignore-user-with-this-username-already-exists)
-* [Booking system tutorial](https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78)
-* [Booking system tutorial video guide](https://youtu.be/s5xbtuo9pR0?si=x7hmhprUzVnpzoAJ)
-* [404 image was taken here](https://pxhere.com/ru/photo/1380359)
+* [ChatGTP](https://chat.openai.com) - very useful tool for implementing different features and models, that was not covered in course. Adaptation of code was required every time, as nothing worked from scratch by just copy-paste. Useful to understand what each function and line of code does before implementing the code. Many problems were solved by help of ChatGTP with understanding were the error was. 
+* [Gear4Music music store](https://www.gear4music.com) - all information about products (photos, description) were taken here. Idea of carousel and images were taken here as well. 
+* [Bootstrap eCommerce free templates & themes](https://bootstrap-ecommerce.com) - a collection of free E-commerce website page templates. Ideas for design and layout of main products page, product details page, shopping cart page, checkout page and user account page was taken here. Code parts and layout of above mentioned pages were taken here and adapted for my website.
+* [W3Schools Mega Menu](https://www.w3schools.com/howto/howto_css_mega_menu.asp) - Mega Menu for my website was taken here and adapted for website needs
+* [Bootstrap Offcanvas mobile navigation bar](https://getbootstrap.com/docs/5.3/components/navbar/#offcanvas) - offcanvas navigation bar for mobile devices was taken here and adapted for website needs
+* [BoutiqueAdo tutorial project by Code Institute](https://github.com/Code-Institute-Solutions/boutique_ado_v1.git) - code parts, models and ideas from this tutorial project were adapted and used in Genstar Music Store website code
 
 ### Code
 
@@ -695,16 +739,16 @@ This resources were used as a help to create [GenStar Fitness](https://genstar-f
 * [Bootstrap 5](https://getbootstrap.com/) website was used very often to fix the problems with different elements and get responsive design work
 * Some of code functions was written with help of [GitHub Copilot](https://github.com/features/copilot)
 
-[Back to top ⇧](#genstar-fitness)
+[Back to top ⇧](#genstar-music-store)
 
 # Known Bugs
 
-* Booking of workouts is available to everyone who has registered account; membership role does not work and affect booking opportunities for now
-* Both contact forms at PT and Contact pages does not work and do not send emails. All the tries to get it work failed. Developer does not have necessary skills to fix it right now, but promise to fix it in the future, after getting skills to fix this bug.
+* Sending emails function was disabled due to unknown bug from Gmail, that requires some form of user authentication and smtp server error. Everything was made by Gmail tutorials with creating app password and 2-step verification, but still the same error was displayed every time email should be send. No solution was found.
+![Send email error screenshot](/media/screenshots/desktop/send-email-gmail-error.png) |
 
 # Acknowledgements
 
 * I want to thank my mentor Marcel Mulders for very good feedback and very useful advices that made my project complete and interesting. Very good ideas from my mentor that was implemented and made project look more solid.
 * I want to thank members in our Code Institute Slack community for giving feedback and showing their own projects that was inspiring in different ways.
 
-[Back to top ⇧](#genstar-fitness)
+[Back to top ⇧](#genstar-music-store)
