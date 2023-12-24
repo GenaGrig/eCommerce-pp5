@@ -624,7 +624,7 @@ Genstar Music Store is a music instruments website. It has a big meta block with
 
 SEO in HTML on a website is implemented only in navigation bar and headers on each page. All other titles and names visible on a front-end is written in html as Django tag for ease of use. All the product names, information and descriptions are stored in database. Images as well are stored in cloud services and has no alternative attributes written in the html code. 
 
-XML-sitemap and robots.txt is presented for this website in the root of the project.
+XML-sitemap and robots.txt are presented for this website in the root of the project.
 
 # Deployment
 
@@ -722,12 +722,12 @@ This resources were used as a help to create [GenStar Music Store](https://genst
     * GitHubs [Basic writing and formatting syntax](https://docs.github.com/ru/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#headings)
     * Hints and some structure of README files from existing projects from other CI students
     * [josswe26 code-buddy project readme](https://github.com/josswe26/code-buddy.git) as a perfect example how readme file should look like. Some parts were taken from this Readme file.
-    * [Genstar Fitness project readme](https://github.com/GenaGrig/genstar-fitness/blob/main/README.md) my readme file from previous project that was updated and filled with more parts to describe this project in more details.
+    * [Genstar Fitness project readme](https://github.com/GenaGrig/genstar-fitness/blob/main/README.md) file from previous project that was updated and filled with more parts to describe this project in more details.
 
 ### Media
 
 * [ChatGTP](https://chat.openai.com) - very useful tool for implementing different features and models, that was not covered in course. Adaptation of code was required every time, as nothing worked from scratch by just copy-paste. Useful to understand what each function and line of code does before implementing the code. Many problems were solved by help of ChatGTP with understanding were the error was. 
-* [Gear4Music music store](https://www.gear4music.com) - all information about products (photos, description) were taken here. Idea of carousel and images were taken here as well. 
+* [Gear4Music music store](https://www.gear4music.com) - all information about products (photos, description of products) were taken here. Idea of carousel and images were taken from this website as well. 
 * [Bootstrap eCommerce free templates & themes](https://bootstrap-ecommerce.com) - a collection of free E-commerce website page templates. Ideas for design and layout of main products page, product details page, shopping cart page, checkout page and user account page was taken here. Code parts and layout of above mentioned pages were taken here and adapted for my website.
 * [W3Schools Mega Menu](https://www.w3schools.com/howto/howto_css_mega_menu.asp) - Mega Menu for my website was taken here and adapted for website needs
 * [Bootstrap Offcanvas mobile navigation bar](https://getbootstrap.com/docs/5.3/components/navbar/#offcanvas) - offcanvas navigation bar for mobile devices was taken here and adapted for website needs
