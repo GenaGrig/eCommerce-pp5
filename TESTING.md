@@ -1,4 +1,4 @@
-# GenStar Music Store Testing
+# Genstar Music Store Testing
 
 [Back to the README.md file](https://github.com/GenaGrig/eCommerce-pp5/blob/main/README.md)  
 
@@ -75,42 +75,89 @@
 
 ### HTML
 
-[The W3C Markup Validator](https://validator.w3.org) was used to check HTML side of a webpage. Following errors were found:
+[The W3C Markup Validator](https://validator.w3.org) was used to check HTML code of a webpage. 
 
+All errors on html pages are of the same type and mostly are related for using Django in HTML code. Because of each page is an extension of Base.html, there is no usual tags in the beginning of pages, and code validator marks it as both warning and error. Most of the errors are "Bad value" errors, that points to illegal characters. This is due to using of Django synthax in href links and other HTML tags. I went through every HTML page and fixed code problems related to invalid spaces, unclosed tags and other small synthax errors that has no impact on code and page functionality.
 
-* Index page errors
+Following errors were found on each html page:
 
-![HTML Validator index page check errors](/media/screenshots/testing/html-index-check-errors.PNG)
+* Base page errors
 
-* Index page errors fixed
-    * Errors were fixed by changing failed tags to correct and deleting failed attribute
+![HTML Validator index page check errors](/media/code-validation/html/base.html.png)
 
-![HTML Validator index page check fixed](/media/screenshots/testing/html-index-check-fixed.PNG)
+* Products page errors
 
-* Contact page errors
+![Products page errors](/media/code-validation/html/products.html.png)
 
-![Contact page errors](/media/screenshots/testing/html-contact-check-errors.PNG)
+* Product details page errors
 
-* Contact page errors fixed
-    * Error was fixed by deleting wrong attribute
+![Product details page errors](/media/code-validation/html/product_detail.png)
 
-![Contact page errors fixed](/media/screenshots/testing/html-contact-check-fix.PNG)
+* Add product page errors
 
-#### All other pages were error free. Some pages html validator was unable to check, giving following error:
+![Add Product page errors](/media/code-validation/html/add_product.html.png)
 
-![Checking page error 500](/media/screenshots/testing/checking-page-error-500.PNG)
+* Edit product page errors
+
+![Edit products page errors](/media/code-validation/html/edit_product.html.png)
+
+* Products in category page errors
+
+![Products in category page errors](/media/code-validation/html/products_in_category.html.png)
+
+* Quantity form page errors
+
+![Quantity form page errors](/media/code-validation/html/quantity_form_products.html.png)
+
+* Subscribe page errors
+
+![Subscribe page errors](/media/code-validation/html/subscribe.html.png)
+
+* Unsubscribe page errors
+
+![Unsubscribe page errors](/media/code-validation/html/unsubscribe.html.png)
+
+* Wishlist page errors
+
+![Wishlist page errors](/media/code-validation/html/wishlist.html.png)
+
+* Shopping cart page errors
+
+![Shopping cart page errors](/media/code-validation/html/cart.html.png)
+
+* Checkout page errors
+
+![Checkout page errors](/media/code-validation/html/checkout.html.png)
+
+* Checkout success page errors
+
+![Checkout success page errors](/media/code-validation/html/checkout_success.html.png)
+
+* Profiles page errors
+
+![Profiles page errors](/media/code-validation/html/profiles.html.png)
+
+* Orders history page errors
+
+![Orders history page errors](/media/code-validation/html/orders_history.html.png)
+
+* Profile settings page errors
+
+![Profile settings page errors](/media/code-validation/html/profile_settings.html.png)
+
+* Wishlist in profile page errors
+
+![Wishlist in profile page errors](/media/code-validation/html/wishlist_profile.html.png)
+
 
 ### CSS
 
 For check of CSS in a project [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used.
 
-There are four CSS files in my project, main is style.css, containing all general styling for the project and overriding most of Bootstrap default CSS. Booking.css, membership.css and workout.css were made to override default Bootstrap CSS in specific files, as there were problem with CSS override when adding to main style.css file. No attempts to join all CSS files in one were successful, as design broke and only discard of changes helped to restore it. 
-
-There are no repetitions, comment out or double code across all css files.
+There are no repetitions, comment out or double code across css files.
 
 Each file was checked manually in [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) and no errors were found.
 
-![No errors in CSS files](/media/screenshots/testing/css-check.PNG)
 
 ### Python
 

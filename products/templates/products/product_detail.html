@@ -12,14 +12,14 @@
 
 {% block content %}
 <div class="breadcrumb" id="breadcrumb">
-{% product_breadcrumb product as breadcrumbs %}
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb" style="margin-top: 15px;">
-            {% for crumb in breadcrumbs %}
-                <li class="breadcrumb-item"><a href="{{ crumb.url }}">{{ crumb.name }}</a></li>
-            {% endfor %}
-        </ol>
-    </nav>
+    {% product_breadcrumb product as breadcrumbs %}
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb" style="margin-top: 15px;">
+                {% for crumb in breadcrumbs %}
+                    <li class="breadcrumb-item"><a href="{{ crumb.url }}">{{ crumb.name }}</a></li>
+                {% endfor %}
+            </ol>
+        </nav>
 </div>
 <div class="container-fluid">
     <div class="row">
@@ -125,18 +125,16 @@
                 </div>
                 {% endif %}
 
-                <hr />
+                <hr>
                 {% include 'products/quantity-form-products.html' %}
             </div>
-        </main>
+        </div>
     </div>
     <div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
         <div class="product-details-container mb-5 mt-md-5">
             <p>{{ product.description|safe }}</p>
         </div>
     </div>
-</div>
-</section>
 </div>
 {% endblock %}
 

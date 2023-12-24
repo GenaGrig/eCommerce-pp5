@@ -75,7 +75,7 @@
                                 </div>
                             </div>
 
-                            <hr class="my-4" />
+                            <hr class="my-4">
 
                             <h5 class="card-title mb-3">Shipping info</h5>
 
@@ -85,9 +85,9 @@
                                     <div class="form-check h-100 border rounded-3">
                                         <div class="p-3">
                                             <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                id="flexRadioDefault1" checked />
+                                                id="flexRadioDefault1" checked>
                                             <label class="form-check-label" for="flexRadioDefault1">
-                                                Standart delivery <br />
+                                                Standart delivery <br>
                                                 <small class="text-muted">3-4 days via PostNord </small>
                                             </label>
                                         </div>
@@ -98,9 +98,9 @@
                                     <div class="form-check h-100 border rounded-3">
                                         <div class="p-3">
                                             <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                id="flexRadioDefault2" />
+                                                id="flexRadioDefault2">
                                             <label class="form-check-label" for="flexRadioDefault2">
-                                                Express Delivery <br />
+                                                Express Delivery <br>
                                                 <small class="text-muted">1-3 days via DHL </small>
                                             </label>
                                         </div>
@@ -111,9 +111,9 @@
                                     <div class="form-check h-100 border rounded-3">
                                         <div class="p-3">
                                             <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                id="flexRadioDefault3" />
+                                                id="flexRadioDefault3">
                                             <label class="form-check-label" for="flexRadioDefault3">
-                                                Self pick-up <br />
+                                                Self pick-up <br>
                                                 <small class="text-muted">Come to our shop </small>
                                             </label>
                                         </div>
@@ -174,16 +174,16 @@
 
                             {% if request.user.is_authenticated %}
                             <div class="form-check mb-3">
-                                <input class="form-check-input" type="checkbox" id="id-save-info" name="save-info" checked/>
+                                <input class="form-check-input" type="checkbox" id="id-save-info" name="save-info">
                                 <label class="form-check-label" for="id-save-info">Save this address</label>
                             </div>
                             {% endif %}
-                            <hr class="my-4" />
+                            <hr class="my-4">
 
                             <h5 class="card-title mb-3">Payment card details</h5>
                             <!-- Stripe Elements Placeholder -->
                             <fieldset class="stripe-style-input form-outline">
-                                <!-- A Stripe Element will be inserted here. -->
+                                <!-- A Stripe Element is inserted here. -->
                                 <div class="mb-3 form-outline" id="card-element"></div>
         
                                 <!-- Used to display form errors. -->
@@ -192,7 +192,7 @@
                                 <input type="hidden" value="{{ client_secret }}" name="client_secret">
                             </fieldset>
 
-                            <hr class="my-4" />
+                            <hr class="my-4">
 
                             <h6 class="mb-3 text-muted">You can read our Privacy Policy <a href="https://www.termsfeed.com/live/4b638e8a-0cd3-46b2-89fa-6fe5a9c0ca5c" 
                                 alt="Opens Privacy Policy on new page" target="_blank">here</a>,
@@ -229,7 +229,7 @@
                                 <div class="form-group">
                                     <label class="form-label">Have Gift Coupon?</label>
                                     <div class="input-group">
-                                        <input type="text" class="form-control border" name="coupon_code" placeholder="Enter your coupon code" />
+                                        <input type="text" class="form-control border" name="coupon_code" placeholder="Enter your coupon code">
                                         <button class="btn btn-light border" type="submit">Apply</button>
                                     </div>
                                 </div>
@@ -259,13 +259,13 @@
                                 <p class="mb-2">Delivery Cost:</p>
                                 <p class="mb-2">{{ delivery }} <i class="fa-solid fa-euro-sign fa-sm"></i></p>
                             </div>
-                            <hr />
+                            <hr>
                             <div class="d-flex justify-content-between">
                                 <p class="mb-2"><strong>Grand Total (incl. TAX):</strong></p>
                                 <p class="mb-2 fw-bold">{{ grand_total|floatformat:2}} <i class="fa-solid fa-euro-sign fa-sm"></i></p>
                             </div>
 
-                            <hr />
+                            <hr>
                             <h5 class="text-dark my-4">Items in cart:</h5>
                             {% for item in cart_items %}
                             <div class="d-flex align-items-center mb-4">
@@ -275,7 +275,7 @@
                                         1
                                     </span>
                                     <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}"
-                                        style="height: 96px; width: 96x;" class="img-sm rounded border" />
+                                        style="height: 96px; width: 96x;" class="img-sm rounded border">
                                 </div>
                                 <div class="">
                                     <a class="nav-link" href="{% url 'product_detail' item.item_id %}" style="text-decoration: none;">

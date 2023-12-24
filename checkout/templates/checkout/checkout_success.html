@@ -63,12 +63,12 @@
                     </div>
                     <p>Number of Items in your order - {{ order.line_items.count }}</p>
                     {% for item in order.line_items.all %}
-                    <div class="row gy-3 mb-4"">
+                    <div class="row gy-3 mb-4">
                         <div class="col-lg-6">
                             <div class="me-lg-6">
                                 <div class="d-flex">
                                     <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="border rounded me-3"
-                                        style="width: 96px; height: 96px;" />
+                                        style="width: 96px; height: 96px;">
                                     <div class="">
                                         <a class="nav-link" href="{% url 'product_detail' product_id=item.product.id %}" style="text-decoration: none;">
                                             {{ item.product.name }}
@@ -92,7 +92,7 @@
                         </div>
                         <div class="col-lg-2 col-sm-6 col-6 d-flex flex-row flex-lg-column flex-xl-row text-nowrap">                                         
                             <div class="mx-5">
-                                <text class="h6 total-price" data-row-id="{{ item.product.id }}">{{ item.product.price|multiply:item.quantity }}</text> <i class="fa-solid fa-euro-sign fa-sm"></i> <br />
+                                <text class="h6 total-price" data-row-id="{{ item.product.id }}">{{ item.product.price|multiply:item.quantity }}</text> <i class="fa-solid fa-euro-sign fa-sm"></i> <br>
                                 <small class="text-muted text-nowrap"> {{ item.product.price }} <i class="fa-solid fa-euro-sign fa-sm"></i> / per item </small>
                             </div>
                         </div>
