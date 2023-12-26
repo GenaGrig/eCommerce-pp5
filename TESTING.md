@@ -212,22 +212,22 @@ No errors were found.
 
 Page | Lighthouse Report |
 | --- | --- |
-| Products | ![Products Page Lighthouse Report](/media/screenshots/testing/lighthouse/index-lighthouse-report.PNG) |
-| Product details | ![Membership Page Lighthouse Report](/media/screenshots/testing/lighthouse/membership-lighthouse-report.PNG) |
-| Add / Edit Product | ![Workouts Page Lighthouse Report](/media/screenshots/testing/lighthouse/workouts-lighthouse-report.PNG) |
-| Products in category | ![Contact Page Lighthouse Report](/media/screenshots/testing/lighthouse/contact-lighthouse-report.PNG) |
-| Shopping Cart !| ![Personal Trainer Page Lighthouse Report](/media/screenshots/testing/lighthouse/personal-trainer-lighthouse-report.PNG) |
-| Checkout !| ![Personal Trainer Page Lighthouse Report](/media/screenshots/testing/lighthouse/personal-trainer-lighthouse-report.PNG) |
-| Order Confirmation !| ![Personal Trainer Page Lighthouse Report](/media/screenshots/testing/lighthouse/personal-trainer-lighthouse-report.PNG) |
-| Wishlist | ![Privacy Policy Page Lighthouse Report](/media/screenshots/testing/lighthouse/privacy-policy-lighthouse-report.PNG) |
-| My Profile | ![My Profile Page Lighthouse Report](/media/screenshots/testing/lighthouse/user-profile-lighthouse-report.PNG) |
-| Orders History | ![Update Profile Page Lighthouse Report](/media/screenshots/testing/lighthouse/update-profile-lighthouse-report.PNG) |
-| Profile Wishlist| ![Staff Panel Page Lighthouse Report](/media/screenshots/testing/lighthouse/staff-panel-lighthouse-report.PNG) |
-| Profile Settings | ![Book Workout Page Lighthouse Report](/media/screenshots/testing/lighthouse/booking1-lighthouse-report.PNG) |
-| Register | ![Register Page Lighthouse Report](/media/screenshots/testing/lighthouse/register-lighthouse-report.PNG) |
-| Login | ![Login Page Lighthouse Report](/media/screenshots/testing/lighthouse/login-lighthouse-report.PNG) |
-| Logout | ![Logout Page Lighthouse Report](/media/screenshots/testing/lighthouse/logout-lighthouse-report.PNG) |
-| Subscribe | ![Terms and Conditions Page Lighthouse Report](/media/screenshots/testing/lighthouse/terms-and-conditions-lighthouse-report.PNG) |
+| Products | ![Products Page Lighthouse Report](/media/code-validation/lighthouse/products-page-lighthouse.png) |
+| Product details | ![Product details Page Lighthouse Report](/media/code-validation/lighthouse/products-details-page-lighthouse.png) |
+| Add / Edit Product | ![Add / Edit Page Lighthouse Report](/media/code-validation/lighthouse/add-edit-products-details-page-lighthouse.png) |
+| Products in category | ![Products in category Page Lighthouse Report](/media/code-validation/lighthouse/products-in-category-details-page-lighthouse.png) |
+| Shopping Cart !| ![Shopping Cart page Lighthouse Report](/media/code-validation/lighthouse/shopping-cart-details-page-lighthouse.png) |
+| Checkout !| ![Checkout Page Lighthouse Report](/media/code-validation/lighthouse/checkout-page-lighthouse.png) |
+| Order Confirmation !| ![Order Confirmation Page Lighthouse Report](/media/code-validation/lighthouse/checkout-success-page-lighthouse.png) |
+| Wishlist | ![Wishlist Page Lighthouse Report](/media/code-validation/lighthouse/wishlist-page-lighthouse.png) |
+| My Profile | ![My Profile Page Lighthouse Report](/media/code-validation/lighthouse/my-profile-page-lighthouse.png) |
+| Orders History | ![Orders History Page Lighthouse Report](/media/code-validation/lighthouse/orders-history-page-lighthouse.png) |
+| Profile Wishlist| ![Profile Wishlist Page Lighthouse Report](/media/code-validation/lighthouse/profile-wishlist-page-lighthouse.png) |
+| Profile Settings | ![Profile Settings Page Lighthouse Report](/media/code-validation/lighthouse/profile-settings-page-lighthouse.png) |
+| Register | ![Register Page Lighthouse Report](/media/code-validation/lighthouse/register-page-lighthouse.png) |
+| Login | ![Login Page Lighthouse Report](/media/code-validation/lighthouse/login-page-lighthouse.png) |
+| Logout | ![Logout Page Lighthouse Report](/media/code-validation/lighthouse/logout-page-lighthouse.png) |
+| Subscribe | ![Subscribe Page Lighthouse Report](/media/code-validation/lighthouse/subscribe-page-lighthouse.png) |
 
 [Back to top ⇧](#genstar-music-store-testing)
 
@@ -262,8 +262,8 @@ Device | Operative System |Outcome | Pass/Fail
 MSI Katana 15.6" | Windows 11 | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
 Asus Rog Strix Desktop 27" | Windows 10 | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
 Lenovo Pad | Android | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
-Samsung S21 6.2" | Android |No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
-Nokia S7 Plus 6.0" | Android |No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+Samsung Z Flip 5 | Android |No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
 
 ### Test results
 
