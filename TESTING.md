@@ -1118,7 +1118,7 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <th>Pass/Fail</th>
     </tr>
     <tr>
-        <td rowspan=12>My Profile</td>
+        <td rowspan=16>My Profile</td>
         <td rowspan=2>Profile main side menu link</td>
         <td rowspan=2>Signed in customers</td>
         <td>Functionality</td>
