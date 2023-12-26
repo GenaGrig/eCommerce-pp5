@@ -278,11 +278,11 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <th>Pass/Fail</th>
     </tr>
     <tr>
-        <td rowspan=32>Navigation Bar</td>
+        <td rowspan=28>Navigation Bar</td>
         <td rowspan=2>Main logo link</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
-        <td>Clicking the link redirects to the Home page.</td>
+        <td>Clicking the link redirects to the Products page.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -291,70 +291,82 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <td>N/A</td>
     </tr>
     <tr>
-        <td rowspan=2>Home link</td>
+        <td rowspan=2>Search input field</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
-        <td>Clicking the link redirects to the Home page.</td>
+        <td>Search text input works as expected</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
         <td>Style</td>
-        <td>Hover effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
+        <td>N/A</td>
+        <td>N/A</td>
     </tr>
     <tr>
-        <td rowspan=2>Membership link</td>
+        <td rowspan=2>Search button</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
-        <td>Clicking the link redirects to the Membership page.</td>
+        <td>Clicking the button starts searching query</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
         <td>Style</td>
-        <td>Hover effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
+        <td>N/A</td>
+        <td>N/A</td>
     </tr>
     <tr>
-        <td rowspan=2>Workouts link</td>
-        <td rowspan=2>All</td>
+        <td rowspan=2>My Account icon</td>
+        <td rowspan=2>Not signed in customers</td>
         <td>Functionality</td>
-        <td>Clicking the link redirects to the Workouts page.</td>
+        <td>Clicking the icon opens dropdown menu with Login and Register links.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
      <tr>
         <td>Style</td>
-        <td>Hover effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
+        <td>N/A</td>
+        <td>N/A</td>
     </tr>
     <tr>
-        <td rowspan=2>PT link</td>
-        <td rowspan=2>All</td>
+        <td rowspan=2>My Account icon</td>
+        <td rowspan=2>Signed in customers</td>
         <td>Functionality</td>
-        <td>Clicking the link redirects to the PT page.</td>
+        <td>Clicking the icon opens dropdown menu with Product Management, My Profile and Logout links </td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
         <td>Style</td>
-        <td>Hover effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
+        <td>N/A</td>
+        <td>N/A</td>
     </tr>
     <tr>
-        <td rowspan=2>Contact Us link</td>
-        <td rowspan=2>All</td>
+        <td rowspan=2>Wishlist icon</td>
+        <td rowspan=2>Signed in customers</td>
         <td>Functionality</td>
-        <td>Clicking the link redirects to the Contact page.</td>
+        <td>Clicking the icon redirects to customer wishlist page.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
         <tr>
         <td>Style</td>
-        <td>Hover effect working as expected.</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Shopping cart icon</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the icon redirects customer to shopping cart page.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
-        <td rowspan=2>Terms of Use dropdown menu</td>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Mega Menu bar</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
-        <td>Clicking the link opens dropdown menu with two links - Terms and Conditions and Privacy Policy.</td>
+        <td>Clicking the relative link in menu opens the relative product category.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -363,31 +375,7 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
-        <td rowspan=2>Terms and Conditions link</td>
-        <td rowspan=2>All</td>
-        <td>Functionality</td>
-        <td>Clicking the link opens Terms and Conditions page.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Hover effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td rowspan=2>Privacy Policy</td>
-        <td rowspan=2>All</td>
-        <td>Functionality</td>
-        <td>Clicking the link opens Privacy Policy page.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Hover effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td rowspan=2>Register link</td>
+        <td rowspan=2>My Account - Register link</td>
         <td rowspan=2>Unregistered</td>
         <td>Functionality</td>
         <td>Clicking the link redirects to the Register page.</td>
@@ -399,7 +387,7 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
-        <td rowspan=2>Login link</td>
+        <td rowspan=2>My Account - Login link</td>
         <td rowspan=2>Unregistered</td>
         <td>Functionality</td>
         <td>Clicking the link redirects to the Sign In page.</td>
@@ -411,10 +399,10 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
-        <td rowspan=2>Book Workout link</td>
-        <td rowspan=2>Registered</td>
+        <td rowspan=2>My Account - Product Management</td>
+        <td rowspan=2>Signed in customer</td>
         <td>Functionality</td>
-        <td>Clicking the link redirects to the Book Workout page.</td>
+        <td>Clicking the link redirects to the Product Management Add Product page.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -423,22 +411,10 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
-        <td rowspan=2>User Profile link</td>
-        <td rowspan=2>Registered</td>
+        <td rowspan=2>My Profile link</td>
+        <td rowspan=2>Signed in customers</td>
         <td>Functionality</td>
-        <td>Clicking the link redirects to the User Profile page.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Hover effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td rowspan=2>Staff panel link</td>
-        <td rowspan=2>Admins or stagg members</td>
-        <td>Functionality</td>
-        <td>Clicking the link redirects to the Staff Panel page.</td>
+        <td>Clicking the link redirects to the My Profile page.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -471,11 +447,23 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
-        <td rowspan=10>Footer</td>
-        <td rowspan=2>Email link</td>
+        <td rowspan=0>Footer</td>
+        <td rowspan=2>Email input field</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
-        <td>Clicking the Email link opens email sending program.</td>
+        <td>Text input field for email address.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td><span>N/A</span></td>
+    </tr>
+     <tr>
+        <td rowspan=2>Subscribe button</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking subscribe button submits email to subscribe for newsletters.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -487,7 +475,7 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <td rowspan=2>Facebook icon</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
-        <td>Clicking the link open Facebook page on a separate tab.</td>
+        <td>Clicking the link opens Facebook business page on a separate tab.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -496,10 +484,10 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <td><span>N/A</span></td>
     </tr>
     <tr>
-        <td rowspan=2>Instagram icon</td>
+        <td rowspan=2>Website logo in footer</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
-        <td>Clicking the link open Instagram page on a separate tab.</td>
+        <td>Clicking the logo opens main Products page.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -508,10 +496,10 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <td><span>N/A</span></td>
     </tr>
     <tr>
-        <td rowspan=2>Twitter icon</td>
+        <td rowspan=2>Support - Unsubscribe from newsletter button</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
-        <td>Clicking the link open Twitter page on a separate tab.</td>
+        <td>Clicking the button unsubscribe customer from newsletter.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -521,7 +509,7 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
     </tr>
 </table>
 
-#### Home page
+#### Products page
 
 <table>
     <tr>
@@ -532,8 +520,8 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <th>Pass/Fail</th>
     </tr>
     <tr>
-        <td rowspan=2>Carousel</td>
-        <td rowspan=2>Left/Right scroll buttons</td>
+        <td rowspan=12>Products page</td>
+        <td rowspan=2>Left/Right carousel scroll buttons</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
         <td>Clicking the Left/Rights scroll button slides images.</td>
@@ -544,34 +532,69 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <td>N/A</td>
         <td>N/A</td>
     </tr>
-</table>
-
-#### Membership page
-
-<table>
     <tr>
-        <th colspan=2>Feature</th>
-        <th>Users</th>
-        <th>Test</th>
-        <th>Outcome</th>
-        <th>Pass/Fail</th>
-    </tr>
-    <tr>
-        <td rowspan=2>Membership button</td>
-        <td rowspan=2>Buy membership buttons</td>
+        <td rowspan=2>Category buttons</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
-        <td>Clicking the Buy membership button redirect user to Contact Us page.</td>
+        <td>Clicking the buttons opens relative category.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
         <td>Style</td>
-        <td>Bootstrap button CSS</td>
-        <td>Pass</td>
+        <td>Hover effects work as expected</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>"Sort by" filter</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Allows to choose different product sorting filters.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Product cards</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the product image opens product details page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Heart icon/button on product card</td>
+        <td rowspan=2>Signed in customers</td>
+        <td>Functionality</td>
+        <td>Clicking the icon/button adds product to wishlist.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effects work as expected</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Save button</td>
+        <td rowspan=2>Signed in customers</td>
+        <td>Functionality</td>
+        <td>Clicking this button adds product to wishlist and redirects to main products page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
     </tr>
 </table>
 
-#### Workouts page
+#### Product details page
 
 <table>
     <tr>
@@ -582,11 +605,120 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <th>Pass/Fail</th>
     </tr>
     <tr>
-        <td rowspan=2>Accordion</td>
-        <td rowspan=2>Accordion slides</td>
+        <td rowspan=18>Product details</td>
+        <td rowspan=2>Product image</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
-        <td>Clicking each accordion slide should open its content and close previous.</td>
+        <td>Clicking the product image opens product image on new tab.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Radio buttons (Rate the product)</td>
+        <td rowspan=2>Signed in customers</td>
+        <td>Functionality</td>
+        <td>Check the relative radio button for rating the product.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Submit Rating</td>
+        <td rowspan=2>Signed in customers</td>
+        <td>Functionality</td>
+        <td>Click the "submit rating" button to rate the product and submit checked radio button value.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Edit Product</td>
+        <td rowspan=2>Admins and Staff members</td>
+        <td>Functionality</td>
+        <td>Clicking this button opens product editing page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Delete Product</td>
+        <td rowspan=2>Admins and Staff members</td>
+        <td>Functionality</td>
+        <td>Clicking this button deletes product from the website and database.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Continue Shopping button</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking this button redirects customers to main products page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Add to Cart button</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking this button adds product to shopping cart and refreshes the page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Radio buttons (Rate the product)</td>
+        <td rowspan=2>Signed in customers</td>
+        <td>Functionality</td>
+        <td>Check the relative radio button for rating the product.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+</table>
+
+#### Shopping cart page
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=14>Shopping cart</td>
+        <td rowspan=2>Product name as a link</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking product name opens product details page.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -594,9 +726,81 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <td>General styling</td>
         <td>Pass</td>
     </tr>
+     <tr>
+        <td rowspan=2>Product category as a link</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking product category opens products category page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>General styling</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Decrease/Increase quantity buttons (- and +)</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking this buttons decrease or increase product quantity in value input field.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>General styling</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Update Cart button</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking this button updates the cart with new product quantity values.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>General styling</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Remove button</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking this button removes product item from the shopping cart.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>General styling</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Proceed to Checkout button</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking this button redirects customers to Checkout page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect works as expected</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Continue Shopping button</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking this button redirects customers to main products page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
 </table>
 
-#### Personal Trainer page
+#### Checkout page
 
 <table>
     <tr>
@@ -607,8 +811,8 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <th>Pass/Fail</th>
     </tr>
     <tr>
-        <td rowspan=10>Contact form</td>
-        <td rowspan=2>Name input</td>
+        <td rowspan=12>Checkout form</td>
+        <td rowspan=2>Text input fields with * (required)</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
         <td>Text can be entered in the field.<br>Field is required and validates input.</td>
@@ -616,26 +820,26 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
     </tr>
     <tr>
         <td>Style</td>
-        <td>Focus effect working as expected.</td>
+        <td>Placeholders</td>
         <td>Pass</td>
     </tr>
     <tr>
-        <td rowspan=2>Email input</td>
+        <td rowspan=2>Text input field without * (not required)</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
-        <td>Text can be entered in the field.<br>Field is required and validates input text as email.</td>
+        <td>Text can be entered in the field.<br>Field is not required and can be skipped.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
         <td>Style</td>
-        <td>Focus effect working as expected.</td>
+        <td>Placeholders</td>
         <td>Pass</td>
     </tr>
     <tr>
-        <td rowspan=2>Select subject</td>
+        <td rowspan=2>Payment / Card number input field</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
-        <td>Text can be entered in the field.<br>Field is optional and no subject can be chosen.</td>
+        <td>Enter card number, expiry date and CVC code<br>Field is required and validates input.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -644,22 +848,34 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <td>N/A</td>
     </tr>
     <tr>
-        <td rowspan=2>Message</td>
+        <td rowspan=2>Privacy Policy and Terms and Conditions links</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
-        <td>Text can be entered in the field.<br>Field is required and validates input.</td>
+        <td>Clicking this links opens Privacy Policy or Terms and Conditions pages on new tab.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
         <td>Style</td>
-        <td>Focus effect working as expected.</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Back to Cart button</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the button redirects customer to shopping cart page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Bootstrap button CSS</td>
         <td>Pass</td>
     </tr>
     <tr>
-        <td rowspan=2>Send button</td>
+        <td rowspan=2>Complete Order button</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
-        <td>Clicking the button submits this form and shows returned form data from CI to confirm that form works and submits data to back-end.</td>
+        <td>Clicking the button completes the order and in case of success redirects customer to Order Confirmation page.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -669,7 +885,7 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
     </tr>
 </table>
 
-#### Contact Us page
+#### Product Management page / Add or Edit Product (Only for Admin or Staff members)
 
 <table>
     <tr>
@@ -680,48 +896,11 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <th>Pass/Fail</th>
     </tr>
     <tr>
-        <td rowspan=2>Google maps API</td>
-        <td rowspan=2>Google maps</td>
-        <td rowspan=2>All</td>
-        <td>Functionality</td>
-        <td>Google maps embedded to page and shows map with chosen location.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Responsive design on all screen sizes.</td>
-        <td>Pass</td>
-    </tr>
-    <tr>
-        <td rowspan=10>Contact form</td>
-        <td rowspan=2>Name input</td>
-        <td rowspan=2>All</td>
+        <td rowspan=12>Checkout form</td>
+        <td rowspan=2>Text input fields with * (required)</td>
+        <td rowspan=2>Admins or Staff members</td>
         <td>Functionality</td>
         <td>Text can be entered in the field.<br>Field is required and validates input.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Focus effect working as expected.</td>
-        <td>Pass</td>
-    </tr>
-    <tr>
-        <td rowspan=2>Email input</td>
-        <td rowspan=2>All</td>
-        <td>Functionality</td>
-        <td>Text can be entered in the field.<br>Field is required and validates input text as email.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Focus effect working as expected.</td>
-        <td>Pass</td>
-    </tr>
-    <tr>
-        <td rowspan=2>Select subject</td>
-        <td rowspan=2>All</td>
-        <td>Functionality</td>
-        <td>Text can be entered in the field.<br>Field is optional and no subject can be chosen.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -730,28 +909,52 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <td>N/A</td>
     </tr>
     <tr>
-        <td rowspan=2>Message</td>
-        <td rowspan=2>All</td>
+        <td rowspan=2>Text input field without * (not required)</td>
+        <td rowspan=2>Admins or Staff members</td>
         <td>Functionality</td>
-        <td>Text can be entered in the field.<br>Field is required and validates input.</td>
+        <td>Text can be entered in the field.<br>Field is not required and can be skipped.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
         <td>Style</td>
-        <td>Focus effect working as expected.</td>
-        <td>Pass</td>
+        <td>N/A</td>
+        <td>N/A</td>
     </tr>
     <tr>
-        <td rowspan=2>Submit button</td>
-        <td rowspan=2>All</td>
+        <td rowspan=2>Choose file button</td>
+        <td rowspan=2>Admins or Staff members</td>
         <td>Functionality</td>
-        <td>Clicking the button submits this form and shows returned form data from CI to confirm that form works and submits data to back-end</td>
+        <td>Clicking the button opens explorer window to choose picture for product</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
         <td>Style</td>
-        <td>Bootstrap button CSS</td>
-        <td>Pass</td>
+        <td>N/A</td>
+        <td>N/A/td>
+    </tr>
+    <tr>
+        <td rowspan=2>Add/Edit Product button</td>
+        <td rowspan=2>Admins or Staff members</td>
+        <td>Functionality</td>
+        <td>Adds product to database / Edits existing product information</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Cancel button</td>
+        <td rowspan=2>Admins or Staff members</td>
+        <td>Functionality</td>
+        <td>Cancels adding or editing of product</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
     </tr>
 </table>
 
@@ -892,7 +1095,7 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
     <tr>
         <td rowspan=2>Sign Out Page</td>
         <td rowspan=2>Sign Out button</td>
-        <td rowspan=2>Registered</td>
+        <td rowspan=2>Signed in customers</td>
         <td>Functionality</td>
         <td>Clicking the button sign out the user and redirect to the Home page.<br>Display message if user logout successfully.</td>
         <td><span style="color:green">Pass</span></td>
@@ -904,7 +1107,7 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
     </tr>
 </table>
 
-#### User Profile page
+#### My Profile page
 
 <table>
     <tr>
@@ -915,35 +1118,59 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <th>Pass/Fail</th>
     </tr>
     <tr>
-        <td rowspan=8>Page Buttons</td>
-        <td rowspan=2>Edit Profile button</td>
-        <td rowspan=2>Registered</td>
+        <td rowspan=12>My Profile</td>
+        <td rowspan=2>Profile main side menu link</td>
+        <td rowspan=2>Signed in customers</td>
         <td>Functionality</td>
-        <td>Clicking Edit Profile button redirects to Edit Profile page.</td>
+        <td>Clicking this button refreshes the page / return to My Profile page.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
         <td>Style</td>
-        <td>Hover effect working as expected.</td>
+        <td>Hover effect working as expected when selected.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
-        <td rowspan=2>Book Workout button</td>
-        <td rowspan=2>Registered</td>
+        <td rowspan=2>Orders History side menu link</td>
+        <td rowspan=2>Signed in customers</td>
         <td>Functionality</td>
-        <td>Clicking Book Workout button redirects to Book Workout page.</td>
+        <td>Clicking this button redirects to Orders History page.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
         <td>Style</td>
-        <td>Hover effect working as expected.</td>
+        <td>Hover effect working as expected when selected.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
      <tr>
-        <td rowspan=2>Edit Workout icon/button</td>
-        <td rowspan=2>Registered</td>
+        <td rowspan=2>My wishlist side menu link</td>
+        <td rowspan=2>Signed in customers</td>
         <td>Functionality</td>
-        <td>Clicking Edit Workout button redirects to Edit Workout page.</td>
+        <td>Clicking this button redirects to Profile Wishlist page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected when selected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Profile setting side menu link</td>
+        <td rowspan=2>Signed in customers</td>
+        <td>Functionality</td>
+        <td>Clicking this button redirects to Profile Setting page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected when selected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Logout side menu link</td>
+        <td rowspan=2>Signed in customers</td>
+        <td>Functionality</td>
+        <td>Clicking this button redirects to Sign Out page.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -952,23 +1179,10 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <td>N/A</td>
     </tr>
     <tr>
-        <td rowspan=2>Delete Workout icon/button</td>
-        <td rowspan=2>Registered</td>
+        <td rowspan=2>View all orders button</td>
+        <td rowspan=2>Signed in customers</td>
         <td>Functionality</td>
-        <td>Clicking Delete Workout button opens confirmation modal.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>N/A</td>
-        <td>N/A</td>
-    </tr>
-    <tr>
-        <td rowspan=4>Delete confirmation modal</td>
-        <td rowspan=2>Cancel button</td>
-        <td rowspan=2>Registered</td>
-        <td>Functionality</td>
-        <td>Clicking Cancel button cancels deleting of workout and closes modal.</td>
+        <td>Clicking this button redirects customer to Orders History page.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -977,10 +1191,22 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
-        <td rowspan=2>Delete button</td>
-        <td rowspan=2>Registered</td>
+        <td rowspan=2>Delete order button</td>
+        <td rowspan=2>Signed in customers</td>
         <td>Functionality</td>
-        <td>Clicking Delete workout button delete selected workout and closes the modal.</td>
+        <td>Clicking this button deletes selected order from the list and database.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Order ID link</td>
+        <td rowspan=2>Signed in customers</td>
+        <td>Functionality</td>
+        <td>Clicking this link redirects customer to respective Order Confirmation page.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -990,7 +1216,7 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
     </tr>
 </table>
 
-#### Update Profile Page
+#### Profile settings Page
 
 <table>
     <tr>
@@ -1001,11 +1227,11 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <th>Pass/Fail</th>
     </tr>
     <tr>
-        <td rowspan=10>Update Profile Form</td>
-        <td rowspan=2>First name input</td>
-        <td rowspan=2>Registered</td>
+        <td rowspan=10>Profile settings Form</td>
+        <td rowspan=2>Text input fields</td>
+        <td rowspan=2>Signed in customers</td>
         <td>Functionality</td>
-        <td>Text can be entered in the field.<br>Optional field. Allows to be left empty.</td>
+        <td>Text can be entered in the field.<br>Optional fields. Allows to be left empty.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -1014,10 +1240,10 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <td>N/A</td>
     </tr>
     <tr>
-        <td rowspan=2>Last name input</td>
-        <td rowspan=2>Registered</td>
+        <td rowspan=2>Country selector (required)</td>
+        <td rowspan=2>Signed in customers</td>
         <td>Functionality</td>
-        <td>Text can be entered in the field.<br>Optional field. Allows to be left empty.</td>
+        <td>Country can be selected here.<br>Required field.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -1026,34 +1252,10 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <td>N/A</td>
     </tr>
     <tr>
-        <td rowspan=2>Username input</td>
-        <td rowspan=2>Registered</td>
+        <td rowspan=2>Update Profile info button</td>
+        <td rowspan=2>Signed in customers</td>
         <td>Functionality</td>
-        <td>Text can be entered in the field.<br>Field validates input to be present.<br>Validate input is a valid username.<br>Display message if username is not valid.<br></td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Focus effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td rowspan=2>E-mail input</td>
-        <td rowspan=2>Registered</td>
-        <td>Functionality</td>
-        <td>Text can be entered in the field.<br>Optional field. Allows to be left empty.<br>Validate input is an email address.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>N/A</td>
-        <td>N/A</td>
-    </tr>
-    <tr>
-        <td rowspan=2>Update Profile button</td>
-        <td rowspan=2>Registered</td>
-        <td>Functionality</td>
-        <td>Clicking the button submit the form and redirects to the User Profile page.<br>Updates user profile info if form is valid.<br>Display message if user profile is successfully updated.</td>
+        <td>Clicking the button submit the form and refreshes the page.<br>Updates user profile info if form is valid.<br>Display message if user profile is successfully updated.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -1063,7 +1265,7 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
     </tr>
 </table>
 
-#### Staff Panel page
+#### Wishlist / Profile wishlist page
 
 <table>
     <tr>
@@ -1074,136 +1276,35 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <th>Pass/Fail</th>
     </tr>
     <tr>
-        <td rowspan=2>Search Bar</td>
-        <td rowspan=2>Input field</td>
-        <td rowspan=2>Admins or staff members</td>
-        <td>Functionality</td>
-        <td>Placeholder "Search Booking" shows as expected.<br>Text can be entered in the field.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>N/A</td>
-        <td>N/A</td>
-    </tr>
-    <tr>
-        <td rowspan=2>Delete icon/button</td>
-        <td rowspan=2>Delete Workout icon/button</td>
-        <td rowspan=2>Admins or staff members</td>
-        <td>Functionality</td>
-        <td>Clicking Delete Workout button opens confirmation modal.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>N/A</td>
-        <td>N/A</td>
-    </tr>
-    <tr>
-        <td rowspan=4>Delete confirmation modal</td>
-        <td rowspan=2>Cancel button</td>
-        <td rowspan=2>Admins or staff members</td>
-        <td>Functionality</td>
-        <td>Clicking Cancel button cancels deleting of workout and closes modal.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Hover effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td rowspan=2>Delete button</td>
-        <td rowspan=2>Admins or staff members</td>
-        <td>Functionality</td>
-        <td>Clicking Delete workout button delete selected workout and closes the modal.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Hover effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-</table>
-
-#### Book Workout page
-
-<table>
-    <tr>
-        <th colspan=2>Feature</th>
-        <th>Users</th>
-        <th>Test</th>
-        <th>Outcome</th>
-        <th>Pass/Fail</th>
-    </tr>
-    <tr>
-        <td rowspan=4>Select element</td>
-        <td rowspan=2>Workout selector</td>
+        <td rowspan=14>Wishlist</td>
+        <td rowspan=2>Product name as a link</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
-        <td>Clicking on "Select Workout" selector all bookable workouts shows up.</td>
+        <td>Clicking product name opens product details page.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
         <td>Style</td>
-        <td>N/A</td>
-        <td>N/A</td>
+        <td>General styling</td>
+        <td>Pass</td>
     </tr>
-    <tr>
-        <td rowspan=2>Date selector</td>
+     <tr>
+        <td rowspan=2>Product category as a link</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
-        <td>Clicking on "Select Date" selector, Datepicker calender shows up.<br>Placeholder "Select Date" shows as expected.<br>Field validates input to be present.<br>Display message if date is not valid.</td>
+        <td>Clicking product category opens products category page.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
         <td>Style</td>
-        <td>Custom CSS</td>
-        <td><span style="color:green">Pass</span></td>
+        <td>General styling</td>
+        <td>Pass</td>
     </tr>
     <tr>
-        <td rowspan=4>Online Booking page buttons</td>
-        <td rowspan=2>Continue button</td>
-        <td rowspan=2>Registered</td>
+        <td rowspan=2>Remove button</td>
+        <td rowspan=2>Signed in customers</td>
         <td>Functionality</td>
-        <td>Clicking the button redirects user to Booking submit page.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Hover effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td rowspan=2>Back button</td>
-        <td rowspan=2>Registered</td>
-        <td>Functionality</td>
-        <td>Clicking the Back button cancels the booking process and redirects user to User Profile page.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Hover effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-</table>
-
-#### Book Workout Submit page
-
-<table>
-    <tr>
-        <th colspan=2>Feature</th>
-        <th>Users</th>
-        <th>Test</th>
-        <th>Outcome</th>
-        <th>Pass/Fail</th>
-    </tr>
-    <tr>
-        <td rowspan=2>Select element</td>
-        <td rowspan=2>Time selector</td>
-        <td rowspan=2>All</td>
-        <td>Functionality</td>
-        <td>Clicking on "Time" selector all bookable times shows up.</td>
+        <td>Clicking this button removes product from wishlist.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -1212,23 +1313,10 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <td>N/A</td>
     </tr>
     <tr>
-        <td rowspan=4>Online Booking page buttons</td>
-        <td rowspan=2>Book Workout button</td>
-        <td rowspan=2>Registered</td>
+        <td rowspan=2>Add to Cart button</td>
+        <td rowspan=2>Signed in customers</td>
         <td>Functionality</td>
-        <td>Clicking the button saves the booking and redirects user to User Profile page.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Hover effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td rowspan=2>Back button</td>
-        <td rowspan=2>Registered</td>
-        <td>Functionality</td>
-        <td>Clicking the Back button redirects user to previous Booking workout page.</td>
+        <td>Clicking this button adds product to shopping cart.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
