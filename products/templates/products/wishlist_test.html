@@ -53,7 +53,7 @@
                                                 class="fa-solid fa-euro-sign fa-sm"></i> / per item </small>
                                     </div>
                                     <div class="col-lg col-sm-6 mb-2">
-                                        <form class="form" id="wishlist-form" action="{% url 'add_to_cart' product.id %}" method="POST">
+                                        <form class="form wishlist-form" action="{% url 'add_to_cart' product.id %}" method="POST">
                                             {% csrf_token %}
                                             <button class="btn btn-sm btn-success border border-solid text-white icon-hover-info" 
                                             type="submit" aria-label="Add to cart button">

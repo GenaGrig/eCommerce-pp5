@@ -437,9 +437,8 @@ select oprion[value=""] {
         margin-top: 5px; /* Add some space between the icon and the badge */
     }
 
-    #wishlist-form {
+    .wishlist-form {
         display: flex !important;
-        flex-direction: column;
         flex-wrap: wrap;
     }
 }
