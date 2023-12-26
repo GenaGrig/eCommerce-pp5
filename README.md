@@ -604,7 +604,7 @@ Newsletter subscription form is located in the top of the footer and has an emai
 ### Business Model and Marketing Strategies
 
 * Genstar Music Store (GMS) is an e-commerce retail store that provides a wide choice of musical instruments, accessories and other tools and equipment related to music. 
-* Customers are both private persons and businesses that are in need of musical instruments, accessories and other equipment.
+* Customers are both private persons and businesses that are in need of musical instruments, accessories and other equipment. All the products provided in store can be used for home or professional use, depending on customer needs. 
 * Products in music store can be specified or wide ranged. GMS has wide range of products and provides musical instruments for every need, stage lighting systems, sound systems for clubs or smaller locations, recording devices and equipment for big and small studios for both professional and amateur use and a lot more. Price range is very wide and depends mostly on needs of customer.
 * Payment system on a website at the moment is a credit card, but in future implementations can be expanded and complemented with other payment options.
 * Business model is both B2C and B2B as GMS products are suitable for both private customers and businesses like music clubs, official and signed bands, orchestras etc.
