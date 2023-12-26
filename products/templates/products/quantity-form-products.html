@@ -13,7 +13,7 @@
             <input class="form-control form-control-sm qty_input" type="number"
                 name="quantity" value="1" min="1" max="99"
                 data-item_id="{{ item.item_id }}"
-                id="id_qty_{{ item.item_id }}">
+                id="id_qty_{{ item.item_id }}" aria-label="Input form for product quantity">
             <div class="input-group-append">
                 <button class="increment-qty btn btn-sm btn-white border border-secondary px-3"
                     data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}" aria-label="increase quantity button">

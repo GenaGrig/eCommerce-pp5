@@ -71,22 +71,24 @@
                 </div>
 
                 <div class="row">
-                    <dt class="col-3">Type:</dt>
-                    <dd class="col-9">{{ product.product_type }}</dd>
+                    <dl>
+                        <dt class="col-3">Type:</dt>
+                        <dd class="col-9">{{ product.product_type }}</dd>
 
-                    <dt class="col-3">Color:</dt>
-                    <dd class="col-9">{{ product.product_color }}</dd>
+                        <dt class="col-3">Color:</dt>
+                        <dd class="col-9">{{ product.product_color }}</dd>
 
-                    {% if product.product_material %}
-                    <dt class="col-3">Material:</dt>
-                    <dd class="col-9">{{ product.product_material }}</dd>
-                    {% else %}
-                    <dt class="col-3">Material:</dt>
-                    <dd class="col-9"> N/A </dd>
-                    {% endif %}
+                        {% if product.product_material %}
+                        <dt class="col-3">Material:</dt>
+                        <dd class="col-9">{{ product.product_material }}</dd>
+                        {% else %}
+                        <dt class="col-3">Material:</dt>
+                        <dd class="col-9"> N/A </dd>
+                        {% endif %}
 
-                    <dt class="col-3">Brand:</dt>
-                    <dd class="col-9">{{ product.product_brand }}</dd>
+                        <dt class="col-3">Brand:</dt>
+                        <dd class="col-9">{{ product.product_brand }}</dd>
+                    </dl>
                 </div>
                 <!-- Rating form -->
                 <form method="post" action="{% url 'submit_review' product_id=product.id %}">

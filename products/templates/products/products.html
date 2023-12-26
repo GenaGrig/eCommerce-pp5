@@ -30,7 +30,8 @@
                 <div class="mt-2 mb-4">
                     <div class="col-12 col-md-6 my-auto order-md-last">
                         <div class="sort-select-wrapper w-50">
-                            <select id="sortSelect" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}secondary{% else %}black{% endif %}" onchange="window.location.href=this.value">
+                            <select id="sortSelect" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}secondary{% else %}black{% endif %}" onchange="window.location.href=this.value" 
+                            aria-label="Select menu for sorting products by different categories">
                                 <option value="{% url 'products' %}" {% if not current_sorting %}selected{% endif %} selected>Sort by </option>
                                 <option value="{% url 'products' %}?sort=price&direction=asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price: Low to High</option>
                                 <option value="{% url 'products' %}?sort=price&direction=desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price: High to Low</option>
