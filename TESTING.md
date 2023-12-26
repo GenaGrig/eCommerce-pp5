@@ -509,6 +509,153 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
     </tr>
 </table>
 
+#### Register Page
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=10>Register New Account</td>
+        <td rowspan=2>Username input</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Field validates input to be present.<br>Display message if the username already exists.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>E-mail input</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Field validates input to be present.<br>Validate input is an email address.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Password input</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Field validates input to be present.<br>Validate input is a valid password.<br>Display message if password is not valid.<br>Display message if both passwords are not equal.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Password Repeat input</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Field validates input to be present.<br>Validate input is a valid password<br>Display message if password is not valid<br>Display message if both passwords are not equal</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Sign Up button</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the button submit the form and redirects to the User Profile page.<br>Create user if form is valid.<br>Display message if user is successfully created.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+</table>
+
+#### Login Page
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=6>Sign In Form</td>
+        <td rowspan=2>Username input</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+         <td>Text can be entered in the field.<br>Field validates input to be present.<br>Display message if the user name and/or password are not correct.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Password input</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Field validates input to be present.<br>Display message if the user name and/or password are not correct.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Sign In button</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the button authenticates the user and redirect to the User Profile page.<br>Display message if credentials are not valid.<br>Display message if user login successfully.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+</table>
+
+#### Logout Page
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=2>Sign Out Page</td>
+        <td rowspan=2>Sign Out button</td>
+        <td rowspan=2>Signed in customers</td>
+        <td>Functionality</td>
+        <td>Clicking the button sign out the user and redirect to the Home page.<br>Display message if user logout successfully.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+</table>
+
 #### Products page
 
 <table>
@@ -958,155 +1105,6 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
     </tr>
 </table>
 
-#### Register Page
-
-<table>
-    <tr>
-        <th colspan=2>Feature</th>
-        <th>Users</th>
-        <th>Test</th>
-        <th>Outcome</th>
-        <th>Pass/Fail</th>
-    </tr>
-    <tr>
-        <td rowspan=10>Register New Account</td>
-        <td rowspan=2>Username input</td>
-        <td rowspan=2>All</td>
-        <td>Functionality</td>
-        <td>Text can be entered in the field.<br>Field validates input to be present.<br>Display message if the username already exists.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Focus effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td rowspan=2>E-mail input</td>
-        <td rowspan=2>All</td>
-        <td>Functionality</td>
-        <td>Text can be entered in the field.<br>Field validates input to be present.<br>Validate input is an email address.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Focus effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td rowspan=2>Password input</td>
-        <td rowspan=2>All</td>
-        <td>Functionality</td>
-        <td>Text can be entered in the field.<br>Field validates input to be present.<br>Validate input is a valid password.<br>Display message if password is not valid.<br>Display message if both passwords are not equal.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Focus effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td rowspan=2>Password Repeat input</td>
-        <td rowspan=2>All</td>
-        <td>Functionality</td>
-        <td>Text can be entered in the field.<br>Field validates input to be present.<br>Validate input is a valid password<br>Display message if password is not valid<br>Display message if both passwords are not equal</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Focus effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td rowspan=2>Sign Up button</td>
-        <td rowspan=2>All</td>
-        <td>Functionality</td>
-        <td>Clicking the button submit the form and redirects to the User Profile page.<br>Create user if form is valid.<br>Display message if user is successfully created.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Hover effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-</table>
-
-
-#### Login Page
-
-<table>
-    <tr>
-        <th colspan=2>Feature</th>
-        <th>Users</th>
-        <th>Test</th>
-        <th>Outcome</th>
-        <th>Pass/Fail</th>
-    </tr>
-    <tr>
-        <td rowspan=6>Sign In Form</td>
-        <td rowspan=2>Username input</td>
-        <td rowspan=2>All</td>
-        <td>Functionality</td>
-         <td>Text can be entered in the field.<br>Field validates input to be present.<br>Display message if the user name and/or password are not correct.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Focus effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td rowspan=2>Password input</td>
-        <td rowspan=2>All</td>
-        <td>Functionality</td>
-        <td>Text can be entered in the field.<br>Field validates input to be present.<br>Display message if the user name and/or password are not correct.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Focus effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td rowspan=2>Sign In button</td>
-        <td rowspan=2>All</td>
-        <td>Functionality</td>
-        <td>Clicking the button authenticates the user and redirect to the User Profile page.<br>Display message if credentials are not valid.<br>Display message if user login successfully.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Hover effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-</table>
-
-
-#### Logout Page
-
-<table>
-    <tr>
-        <th colspan=2>Feature</th>
-        <th>Users</th>
-        <th>Test</th>
-        <th>Outcome</th>
-        <th>Pass/Fail</th>
-    </tr>
-    <tr>
-        <td rowspan=2>Sign Out Page</td>
-        <td rowspan=2>Sign Out button</td>
-        <td rowspan=2>Signed in customers</td>
-        <td>Functionality</td>
-        <td>Clicking the button sign out the user and redirect to the Home page.<br>Display message if user logout successfully.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Hover effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-</table>
-
 #### My Profile page
 
 <table>
@@ -1216,7 +1214,7 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
     </tr>
 </table>
 
-#### Profile settings Page
+#### Profile settings page
 
 <table>
     <tr>
