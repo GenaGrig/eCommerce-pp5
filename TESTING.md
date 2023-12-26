@@ -212,21 +212,22 @@ No errors were found.
 
 Page | Lighthouse Report |
 | --- | --- |
-| Home | ![Home Page Lighthouse Report](/media/screenshots/testing/lighthouse/index-lighthouse-report.PNG) |
-| Membership | ![Membership Page Lighthouse Report](/media/screenshots/testing/lighthouse/membership-lighthouse-report.PNG) |
-| Workouts | ![Workouts Page Lighthouse Report](/media/screenshots/testing/lighthouse/workouts-lighthouse-report.PNG) |
+| Products | ![Products Page Lighthouse Report](/media/screenshots/testing/lighthouse/index-lighthouse-report.PNG) |
+| Product details | ![Membership Page Lighthouse Report](/media/screenshots/testing/lighthouse/membership-lighthouse-report.PNG) |
+| Add / Edit Product | ![Workouts Page Lighthouse Report](/media/screenshots/testing/lighthouse/workouts-lighthouse-report.PNG) |
+| Products in category | ![Contact Page Lighthouse Report](/media/screenshots/testing/lighthouse/contact-lighthouse-report.PNG) |
+| Shopping Cart !| ![Personal Trainer Page Lighthouse Report](/media/screenshots/testing/lighthouse/personal-trainer-lighthouse-report.PNG) |
+| Checkout !| ![Personal Trainer Page Lighthouse Report](/media/screenshots/testing/lighthouse/personal-trainer-lighthouse-report.PNG) |
+| Order Confirmation !| ![Personal Trainer Page Lighthouse Report](/media/screenshots/testing/lighthouse/personal-trainer-lighthouse-report.PNG) |
+| Wishlist | ![Privacy Policy Page Lighthouse Report](/media/screenshots/testing/lighthouse/privacy-policy-lighthouse-report.PNG) |
+| My Profile | ![My Profile Page Lighthouse Report](/media/screenshots/testing/lighthouse/user-profile-lighthouse-report.PNG) |
+| Orders History | ![Update Profile Page Lighthouse Report](/media/screenshots/testing/lighthouse/update-profile-lighthouse-report.PNG) |
+| Profile Wishlist| ![Staff Panel Page Lighthouse Report](/media/screenshots/testing/lighthouse/staff-panel-lighthouse-report.PNG) |
+| Profile Settings | ![Book Workout Page Lighthouse Report](/media/screenshots/testing/lighthouse/booking1-lighthouse-report.PNG) |
 | Register | ![Register Page Lighthouse Report](/media/screenshots/testing/lighthouse/register-lighthouse-report.PNG) |
 | Login | ![Login Page Lighthouse Report](/media/screenshots/testing/lighthouse/login-lighthouse-report.PNG) |
 | Logout | ![Logout Page Lighthouse Report](/media/screenshots/testing/lighthouse/logout-lighthouse-report.PNG) |
-| PT !| ![Personal Trainer Page Lighthouse Report](/media/screenshots/testing/lighthouse/personal-trainer-lighthouse-report.PNG) |
-| Contact Us | ![Contact Page Lighthouse Report](/media/screenshots/testing/lighthouse/contact-lighthouse-report.PNG) |
-| Terms and Conditions | ![Terms and Conditions Page Lighthouse Report](/media/screenshots/testing/lighthouse/terms-and-conditions-lighthouse-report.PNG) |
-| Privacy Policy | ![Privacy Policy Page Lighthouse Report](/media/screenshots/testing/lighthouse/privacy-policy-lighthouse-report.PNG) |
-| My Profile | ![My Profile Page Lighthouse Report](/media/screenshots/testing/lighthouse/user-profile-lighthouse-report.PNG) |
-| Update Profile | ![Update Profile Page Lighthouse Report](/media/screenshots/testing/lighthouse/update-profile-lighthouse-report.PNG) |
-| Staff Panel | ![Staff Panel Page Lighthouse Report](/media/screenshots/testing/lighthouse/staff-panel-lighthouse-report.PNG) |
-| Book Workout | ![Book Workout Page Lighthouse Report](/media/screenshots/testing/lighthouse/booking1-lighthouse-report.PNG) |
-| Book Workout Submit| ![Book Workout Page Lighthouse Report](/media/screenshots/testing/lighthouse/booking2-lighthouse-report.PNG) |
+| Subscribe | ![Terms and Conditions Page Lighthouse Report](/media/screenshots/testing/lighthouse/terms-and-conditions-lighthouse-report.PNG) |
 
 [Back to top ⇧](#genstar-music-store-testing)
 
