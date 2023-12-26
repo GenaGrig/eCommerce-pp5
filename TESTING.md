@@ -168,18 +168,35 @@ Pylint was used continuously during the development process to analyze the Pytho
 
 | Location | Errors / Warnings | Code Reviewed |
 | --- | --- | --- |
-| ./fitness/admin.py | No errors / warnings |![admin.py code reviewed image](/media/screenshots/testing/fitness-admin-py-clean.PNG) |
-| ./fitness/apps.py | No errors / warnings |![apps.py code reviewed image](/media/screenshots/testing/fitness-apps-py-clean.PNG) |
-| ./fitness/forms.py | ![forms.py errors/warnings image](/media/screenshots/testing/fitness-forms-py-errors.PNG) | ![forms.py code reviewed image](/media/screenshots/testing/booking-forms-py-clear.PNG) |
-| ./fitness/models.py | ![models.py errors/warnings image](/media/screenshots/testing/fitness-models-py-errors.PNG) | ![models.py code reviewed image](/media/screenshots/testing/fitness-models-py-clean.PNG) |
-| ./fitness/urls.py | No errors / warnings | ![urls.py code reviewed image](/media/screenshots/testing/fitness-urls-py-clean.PNG) |
-| ./fitness/views.py | ![views.py errors/warnings image](/media/screenshots/testing/fitness-views-py-errors.PNG) | ![views.py code reviewed image](/media/screenshots/testing/fitness-views-py-clean.PNG) |
-| ./booking/admin.py | No errors / warnings |![admin.py code reviewed image](/media/screenshots/testing/booking-admin-py-clear.PNG) |
-| ./booking/apps.py | No errors / warnings |![apps.py code reviewed image](/media/screenshots/testing/booking-apps-py-clear.PNG) |
-| ./booking/forms.py | ![forms.py errors/warnings image](/media/screenshots/testing/booking-forms-py-errors.PNG) | ![forms.py code reviewed image](/media/screenshots/testing/booking-forms-py-clear.PNG) |
-| ./booking/models.py | ![models.py errors/warnings image](/media/screenshots/testing/booking-models-py-errors.PNG) | ![models.py code reviewed image](/media/screenshots/testing/booking-models-py-clear.PNG) |
-| ./booking/urls.py | ![urls.py errors/warnings image](/media/screenshots/testing/booking-urls-py-errors.PNG) | ![urls.py code reviewed image](/media/screenshots/testing/booking-urls-py-clear.PNG) |
-| ./booking/views.py | ![views.py errors/warnings image](/media/screenshots/testing/booking-views-py-errors.PNG) | ![views.py code reviewed image](/media/screenshots/testing/booking-views-py-clear.PNG) |
+| ./manage.py | No errors / warnings |![manage.py code reviewed image](/media/code-validation/python/genstar-music-store-manage.py.png) |
+| ./settings.py | No errors / warnings |![settings.py code reviewed image](/media/code-validation/python/genstar-music-store-settings.py.png) |
+| ./urls.py | No errors / warnings |![urls.py code reviewed image](/media/code-validation/python/genstar-music-store-urls.py.png) |
+| ./products/admin.py | No errors / warnings |![admin.py code reviewed image](/media/code-validation/python/products-admin.py.png) |
+| ./products/apps.py | No errors / warnings |![apps.py code reviewed image](/media/code-validation/python/products-apps.py.png) |
+| ./products/forms.py | No errors / warnings |![forms.py code reviewed image](/media/code-validation/python/products-forms.py.png) |
+| ./products/models.py | No errors / warnings |![models.py code reviewed image](/media/code-validation/python/products-models.py.png) |
+| ./products/urls.py | No errors / warnings | ![urls.py code reviewed image](/media/code-validation/python/products-urls.py.png) |
+| ./products/views.py | No errors / warnings |![views.py code reviewed image](/media/code-validation/python/products-views.py.png) |
+| ./cart/apps.py | No errors / warnings |![apps.py code reviewed image](/media/code-validation/python/cart-apps.py.png) |
+| ./cart/contexts.py | No errors / warnings |![contexts.py code reviewed image](/media/code-validation/python/cart-contexts.py.png) |
+| ./cart/models.py | No errors / warnings |![models.py code reviewed image](/media/code-validation/python/cart-models.py.png) |
+| ./cart/urls.py | No errors / warnings |![urls.py code reviewed image](/media/code-validation/python/cart-urls.py.png) |
+| ./cart/views.py | No errors / warnings |![views.py code reviewed image](/media/code-validation/python/cart-views.py.png) |
+| ./checkout/admin.py | No errors / warnings |![admin.py code reviewed image](/media/code-validation/python/checkout-admin.py.png) |
+| ./checkout/apps.py | No errors / warnings |![apps.py code reviewed image](/media/code-validation/python/checkout-apps.py.png) |
+| ./checkout/forms.py | No errors / warnings |![forms.py code reviewed image](/media/code-validation/python/checkout-forms.py.png) |
+| ./checkout/models.py | No errors / warnings |![models.py code reviewed image](/media/code-validation/python/checkout-models.py.png) |
+| ./checkout/signals.py | No errors / warnings | ![signals.py code reviewed image](/media/code-validation/python/checkout-signals.py.png) |
+| ./checkout/urls.py | No errors / warnings | ![urls.py code reviewed image](/media/code-validation/python/checkout-urls.py.png) |
+| ./checkout/views.py | No errors / warnings |![views.py code reviewed image](/media/code-validation/python/checkout-views.py.png) |
+| ./checkout/webhook-handler.py | No errors / warnings | ![webhook-handler.py code reviewed image](/media/code-validation/python/checkout-webhook-handler.py.png) |
+| ./checkout/webhooks.py | No errors / warnings | ![webhooks.py code reviewed image](/media/code-validation/python/checkout-webhooks.py.png) |
+| ./profiles/admin.py | No errors / warnings |![admin.py code reviewed image](/media/code-validation/python/profiles-admin.py.png) |
+| ./profiles/apps.py | No errors / warnings |![apps.py code reviewed image](/media/code-validation/python/profiles-apps.py.png) |
+| ./profiles/forms.py | No errors / warnings |![forms.py code reviewed image](/media/code-validation/python/profiles-forms.py.png) |
+| ./profiles/models.py | No errors / warnings |![models.py code reviewed image](/media/code-validation/python/profiles-models.py.png) |
+| ./profiles/urls.py | No errors / warnings | ![urls.py code reviewed image](/media/code-validation/python/profiles-urls.py.png) |
+| ./profiles/views.py | No errors / warnings |![views.py code reviewed image](/media/code-validation/python/profiles-views.py.png) |
 
 ### JavaScript
 

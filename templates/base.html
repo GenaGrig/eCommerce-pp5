@@ -74,7 +74,7 @@
                             placeholder="Search your musical instrument...">
                         <div class="input-group-append">
                             <button type="submit" class="form-control btn border border-darkgrey rounded-2 search-btn"
-                                style="background: darkgrey;">
+                                style="background: darkgrey;" aria-label="Search products button">
                                 <span class="icon">
                                     <i class="fa-solid fa-magnifying-glass" style="color: white"></i>
                                 </span>
@@ -224,7 +224,7 @@
                             <div class="input-group" style="max-width: 400px;">
                                 <input type="email" name="email" class="form-control border" placeholder="Email" aria-label="Email"
                                     aria-describedby="button-addon2" id="email" required />
-                                <button class="btn btn-light border" type="submit" id="button-addon2" data-mdb-ripple-color="dark">
+                                <button class="btn btn-light border" type="submit" id="button-addon2" data-mdb-ripple-color="dark" aria-label="Subscribe button">
                                     Subscribe
                                 </button>
                             </div>
@@ -313,7 +313,7 @@
                                 <form method="post" id="subscribe-form" action="{% url 'unsubscribe_from_newsletter' %}">
                                     {% csrf_token %}
                                     <div class="input-group" style="max-width: 400px;">
-                                        <button class="btn btn-light border" type="submit" id="button-addon2" data-mdb-ripple-color="dark">
+                                        <button class="btn btn-light border" type="submit" id="button-addon2" data-mdb-ripple-color="dark" aria-label="Unsubscribe from newsletter">
                                             Unsubscribe from newsletter
                                         </button>
                                     </div>
@@ -347,7 +347,7 @@
 
                     <!--- language selector --->
                     <div class="dropup-center dropup">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Select language button">
                             Select Language
                         </button>
 

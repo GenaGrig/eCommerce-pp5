@@ -5,7 +5,8 @@ from decimal import Decimal
 
 
 def cart_contents(request):
-    '''Ensures that the cart contents are available when rendering every page'''
+    '''Ensures that the cart contents are available when rendering
+    every page'''
 
     cart = request.session.get('cart', {})
 
@@ -52,7 +53,8 @@ def cart_contents(request):
 
 
 def wishlist_contents(request):
-    '''Ensures that the wishlist contents are available when rendering every page'''
+    '''Ensures that the wishlist contents are available when
+    rendering every page'''
 
     wishlist = request.session.get('wishlist', {})
 

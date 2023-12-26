@@ -204,7 +204,7 @@
                             <div class="float-end submit-button">
                                 <a href="{% url 'view_cart' %}" class="btn btn-secondary shadow-0" style="background-color: blueviolet;">
                                     <i class="fa-solid fa-angles-left" style="color: #ffffff;"></i> Back to Cart </a>
-                                <button id="submit-button" onclick="processPayment()" class="btn btn-success shadow-0">
+                                <button id="submit-button" onclick="processPayment()" class="btn btn-success shadow-0" aria-label="Complete order button">
                                     <i class="fa-solid fa-credit-card"></i> 
                                     <span class="fw-bold">Complete Order</span>
                                 </button>
@@ -230,7 +230,7 @@
                                     <label class="form-label">Have Gift Coupon?</label>
                                     <div class="input-group">
                                         <input type="text" class="form-control border" name="coupon_code" placeholder="Enter your coupon code">
-                                        <button class="btn btn-light border" type="submit">Apply</button>
+                                        <button class="btn btn-light border" type="submit" aria-label="Apply coupon button">Apply</button>
                                     </div>
                                 </div>
                             </form>                    

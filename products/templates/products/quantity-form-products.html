@@ -4,7 +4,7 @@
         <div class="input-group mb-3" style="width: 170px;">
             <div class="input-group-prepend">
                 <button class="decrement-qty btn btn-sm btn-white border border-secondary px-3" 
-                    data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                    data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}" aria-label="decrease quantity button">
                     <span>
                         <i class="fas fa-minus fa-sm"></i>
                     </span>
@@ -16,7 +16,7 @@
                 id="id_qty_{{ item.item_id }}">
             <div class="input-group-append">
                 <button class="increment-qty btn btn-sm btn-white border border-secondary px-3"
-                    data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                    data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}" aria-label="increase quantity button">
                     <span>
                         <i class="fas fa-plus fa-sm"></i>
                     </span>
@@ -27,7 +27,7 @@
     <div class="col-12">
         <a href="{% url 'products' %}" class="btn btn-secondary shadow-0 border border-secondary py-2 icon-hover px-3" style="background-color: blueviolet;"><i
                 class="fa-solid fa-angles-left" style="color: #ffffff;"></i> Continue Shopping </a>
-        <button class="btn btn-primary shadow-0 border icon-hover border border-secondary py-2 icon-hover px-3" type="submit">
+        <button class="btn btn-primary shadow-0 border icon-hover border border-secondary py-2 icon-hover px-3" type="submit" aria-label="Add to cart button">
             <i class="me-1 fa fa-shopping-cart fa-lg"></i> Add to Cart
         </button>
         {% if user.is_authenticated %}
