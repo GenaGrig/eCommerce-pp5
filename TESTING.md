@@ -815,7 +815,7 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <td rowspan=2>Text input fields with * (required)</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
-        <td>Text can be entered in the field.<br>Field is required and validates input.</td>
+        <td>Text can be entered in the fields.<br>Fields are required and validates input.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -824,10 +824,10 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <td>Pass</td>
     </tr>
     <tr>
-        <td rowspan=2>Text input field without * (not required)</td>
+        <td rowspan=2>Text input fields without * (not required)</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
-        <td>Text can be entered in the field.<br>Field is not required and can be skipped.</td>
+        <td>Text can be entered in the fields.<br>Fields are optional and can be skipped.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -839,7 +839,7 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <td rowspan=2>Payment / Card number input field</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
-        <td>Enter card number, expiry date and CVC code<br>Field is required and validates input.</td>
+        <td>Enter card number, expiry date and CVC code<br>Fields are required and validates input.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -896,11 +896,11 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <th>Pass/Fail</th>
     </tr>
     <tr>
-        <td rowspan=12>Checkout form</td>
+        <td rowspan=12>Add/Edit product</td>
         <td rowspan=2>Text input fields with * (required)</td>
         <td rowspan=2>Admins or Staff members</td>
         <td>Functionality</td>
-        <td>Text can be entered in the field.<br>Field is required and validates input.</td>
+        <td>Text can be entered in the fields.<br>Fields are required and validates input.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -909,10 +909,10 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <td>N/A</td>
     </tr>
     <tr>
-        <td rowspan=2>Text input field without * (not required)</td>
+        <td rowspan=2>Text input fields without * (optional)</td>
         <td rowspan=2>Admins or Staff members</td>
         <td>Functionality</td>
-        <td>Text can be entered in the field.<br>Field is not required and can be skipped.</td>
+        <td>Text can be entered in the fields.<br>Fields are optional and can be skipped.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -1231,7 +1231,7 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <td rowspan=2>Text input fields</td>
         <td rowspan=2>Signed in customers</td>
         <td>Functionality</td>
-        <td>Text can be entered in the field.<br>Optional fields. Allows to be left empty.</td>
+        <td>Text can be entered in the fields.<br>Optional fields. Allows to be left empty.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
