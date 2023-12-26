@@ -30,13 +30,13 @@ SECRET_KEY = os.environ.get("SECRET_KEY", '')
 DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
-    "8000-genagrig-ecommercepp5-ffpiw04d4zh.ws-eu106.gitpod.io",
+    "8000-genagrig-ecommercepp5-ffpiw04d4zh.ws-eu107.gitpod.io",
     "localhost",
     'genstar-music-store-3a732f4aac46.herokuapp.com',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-genagrig-ecommercepp5-ffpiw04d4zh.ws-eu106.gitpod.io/",
+    "https://8000-genagrig-ecommercepp5-ffpiw04d4zh.ws-eu107.gitpod.io",
     'https://genstar-music-store-3a732f4aac46.herokuapp.com/',
 ]
 

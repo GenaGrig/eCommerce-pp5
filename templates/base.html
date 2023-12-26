@@ -109,7 +109,6 @@
                     </li>
         <!-- Wishlist -->
                     {% if request.user.is_authenticated %}
-                    <menu>
                         <li class="list-inline-item">
                             <a class="nav-link" href="{% url 'wishlist_test' %}" role="button" aria-expanded="false">
                                 <div class="text-center">
@@ -118,7 +117,6 @@
                                 </div>
                             </a>
                         </li>
-                    </menu>
                     {% endif %}
         <!--Shopping Cart -->
                     <li class="list-inline-item" style="margin-left: 5px;">

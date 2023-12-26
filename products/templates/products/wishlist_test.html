@@ -53,16 +53,20 @@
                                                 class="fa-solid fa-euro-sign fa-sm"></i> / per item </small>
                                     </div>
                                     <div class="col-lg col-sm-6 mb-2">
-                                        <a href="{% url 'add_to_cart' product.id %}"
-                                            class="btn btn-sm btn-success border border-solid text-white icon-hover-info">
-                                            <i class="me-1 fa fa-shopping-cart fa-lg"></i> Add to Cart
-                                        </a>
-                                        <a href="{% url 'remove_from_wishlist' product.id %}"
-                                            class="btn btn-sm btn-danger border border-solid text-white icon-hover-danger">
-                                            <i class="fa-solid fa-trash"></i> Remove</a>
-                                        <div class="float-md-start">
-                                            <h6>Date Added: {{ wishlist_items.date_added|date:'Y-m-d' }}</h6>
-                                        </div>
+                                        <form class="form" id="wishlist-form" action="{% url 'add_to_cart' product.id %}" method="POST">
+                                            {% csrf_token %}
+                                            <button class="btn btn-sm btn-success border border-solid text-white icon-hover-info" 
+                                            type="submit" aria-label="Add to cart button">
+                                                <i class="me-1 fa fa-shopping-cart fa-lg"></i> Add to Cart
+                                            </button>
+                                            <a href="{% url 'remove_from_wishlist' product.id %}" 
+                                                class="btn btn-sm btn-danger border border-solid text-white icon-hover-danger">
+                                                <i class="fa-solid fa-trash"></i>Remove 
+                                            </a>
+                                            <div class="float-md-start">
+                                                <h6>Date Added: {{ wishlist_items.date_added|date:'Y-m-d' }}</h6>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

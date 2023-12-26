@@ -71,7 +71,6 @@
                 </div>
 
                 <div class="row">
-                    <dl>
                         <dt class="col-3">Type:</dt>
                         <dd class="col-9">{{ product.product_type }}</dd>
 
@@ -88,7 +87,6 @@
 
                         <dt class="col-3">Brand:</dt>
                         <dd class="col-9">{{ product.product_brand }}</dd>
-                    </dl>
                 </div>
                 <!-- Rating form -->
                 <form method="post" action="{% url 'submit_review' product_id=product.id %}">

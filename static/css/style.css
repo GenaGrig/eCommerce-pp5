@@ -436,4 +436,10 @@ select oprion[value=""] {
         display: inline-block; /* Ensure the badge doesn't take the full width */
         margin-top: 5px; /* Add some space between the icon and the badge */
     }
+
+    #wishlist-form {
+        display: flex !important;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
 }
