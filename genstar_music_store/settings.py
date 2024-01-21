@@ -32,6 +32,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 ALLOWED_HOSTS = [
     "8000-genagrig-ecommercepp5-ffpiw04d4zh.ws-eu107.gitpod.io",
     "localhost",
+    '127.0.0.1',
     'genstar-music-store-3a732f4aac46.herokuapp.com',
 ]
 
