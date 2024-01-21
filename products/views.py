@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db import IntegrityError
 from django.contrib import messages
 from django.db.models import Q, Avg
@@ -19,6 +20,9 @@ def all_products(request):
     sort = None
     direction = None
 
+    all_products_count = Product.objects.all().count()
+
+    # Sorting logic
     if request.GET:
         if 'q' in request.GET:
             # Strip whitespace from the query
@@ -62,6 +66,22 @@ def all_products(request):
         product.rating = average_rating
         product.save()
 
+    products_per_page = 24
+
+    # Pagination logic
+    paginator = Paginator(products, products_per_page)
+
+    page = request.GET.get('page')
+
+    try:
+        products = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        products = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range, deliver last page of results.
+        products = paginator.page(paginator.num_pages)
+
     context = {
         'products': products,
         'quantity_in_stock': quantity_in_stock,
@@ -69,6 +89,7 @@ def all_products(request):
         "current_categories": parent_categories,
         'show_delivery_banner': True,
         'current_sorting': current_sorting,
+        'all_products_count': all_products_count,
     }
 
     return render(request, 'products/products.html', context)
