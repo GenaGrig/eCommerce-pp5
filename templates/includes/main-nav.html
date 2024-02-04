@@ -45,16 +45,17 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item dropdown">
+
                         <a class="logo-font font-weight-bold text-black nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false" id="all-products-link" aria-haspopup="true">
                             <i class="fa-solid fa-filter" style="color: blueviolet;"></i> All Products
                         </a>
-                        <li class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                        <ul class="dropdown-menu border-0" aria-labelledby="all-products-link">
                             <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                             <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
                             <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                             <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-                        </li>
+                        </ul>
                         
                         <a class="logo-font font-weight-bold text-black nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false" id="specials-link" aria-haspopup="true">
@@ -71,7 +72,7 @@
                             aria-expanded="false" id="guitars-and-basses" aria-haspopup="true">
                             <i class="fa-solid fa-guitar" style="color: blueviolet;"></i> Guitars & Basses
                         </a>
-                        <li class="dropdown-menu border-0" aria-labelledby="specials-link">
+                        <ul class="dropdown-menu border-0" aria-labelledby="guitars-link">
                             <a href="{% url 'products_in_category' category_id=28 %}" class="dropdown-item">Acoustic Guitars</a>
                             <a href="{% url 'products_in_category' category_id=29 %}" class="dropdown-item">Acoustic Amplifiers</a>
                             <a href="{% url 'products_in_category' category_id=30 %}" class="dropdown-item">Acoustic Accessories</a>
@@ -81,13 +82,13 @@
                             <a href="{% url 'products_in_category' category_id=34 %}" class="dropdown-item">Electric Accessories</a>
                             <a href="{% url 'products_in_category' category_id=35 %}" class="dropdown-item">Bass Guitars</a>
                             <a href="{% url 'products_in_category' category_id=36 %}" class="dropdown-item">Bass Amplifiers</a>
-                        </li>
+                        </ul>
 
                         <a class="logo-font font-weight-bold text-black nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false" id="drums" aria-haspopup="true">
                             <i class="fa-solid fa-drum" style="color: blueviolet;"></i> Drums & Percussion
                         </a>
-                        <li class="dropdown-menu border-0" aria-labelledby="specials-link">
+                        <li class="dropdown-menu border-0" aria-labelledby="drums-link">
                             <a href="{% url 'products_in_category' category_id=39 %}" class="dropdown-item">Acoustic Drums</a>
                             <a href="{% url 'products_in_category' category_id=43 %}" class="dropdown-item">Electronic Drums</a>
                             <a href="{% url 'products_in_category' category_id=41 %}" class="dropdown-item">Percussion</a>
@@ -97,7 +98,7 @@
                             aria-expanded="false" id="pianos-and-keyboards" aria-haspopup="true">
                             <i class="fa-solid fa-music" style="color: blueviolet;"></i> Keyboards & Synths
                         </a>
-                        <li class="dropdown-menu border-0" aria-labelledby="specials-link">
+                        <li class="dropdown-menu border-0" aria-labelledby="pianos-link">
                             <a href="{% url 'products_in_category' category_id=13 %}" class="dropdown-item">Digital Pianos</a>
                             <a href="{% url 'products_in_category' category_id=14 %}" class="dropdown-item">Keyboards</a>
                             <a href="{% url 'products_in_category' category_id=15 %}" class="dropdown-item">Midi Keyboards</a>
@@ -107,7 +108,7 @@
                             aria-expanded="false" id="orchestral" aria-haspopup="true">
                             <i class="fa-solid fa-music" style="color: blueviolet;"></i> Orchestral Instruments
                         </a>
-                        <li class="dropdown-menu border-0" aria-labelledby="specials-link">
+                        <li class="dropdown-menu border-0" aria-labelledby="orchestral-link">
                             <a href="{% url 'products_in_category' category_id=16 %}" class="dropdown-item">Woodwinds</a>
                             <a href="{% url 'products_in_category' category_id=17 %}" class="dropdown-item">Strings</a>
                             <a href="{% url 'products_in_category' category_id=18 %}" class="dropdown-item">Brasses</a>
@@ -118,7 +119,7 @@
                             aria-expanded="false" id="live-sound" aria-haspopup="true">
                             <i class="fa-solid fa-volume-high" style="color: blueviolet;"></i> Live Sound & Lighting
                         </a>
-                        <li class="dropdown-menu border-0" aria-labelledby="specials-link">
+                        <li class="dropdown-menu border-0" aria-labelledby="sound-link">
                             <a href="{% url 'products_in_category' category_id=20 %}" class="dropdown-item">PA Systems</a>
                             <a href="{% url 'products_in_category' category_id=21 %}" class="dropdown-item">Mixers</a>
                             <a href="{% url 'products_in_category' category_id=22 %}" class="dropdown-item">Microphones</a>
@@ -129,7 +130,7 @@
                             aria-expanded="false" id="studio-rec" aria-haspopup="true">
                             <i class="fa-solid fa-microphone-lines" style="color: blueviolet;"></i> Studio & Recording
                         </a>
-                        <li class="dropdown-menu border-0" aria-labelledby="specials-link">
+                        <li class="dropdown-menu border-0" aria-labelledby="recording-link">
                             <a href="{% url 'products_in_category' category_id=24 %}" class="dropdown-item">Audio Interfaces</a>
                             <a href="{% url 'products_in_category' category_id=26 %}" class="dropdown-item">Studio Monitors</a>
                             <a href="{% url 'products_in_category' category_id=25 %}" class="dropdown-item">Studio Mixers</a>
