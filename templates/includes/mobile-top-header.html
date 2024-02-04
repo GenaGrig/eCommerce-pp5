@@ -6,7 +6,7 @@
 
 <!-- Wishlist -->
 {% if user.is_authenticated %}
-    <li class="list-inline-item dropdown d-block d-lg-none">
+    <ul class="list-inline-item dropdown d-block d-lg-none">
         <a class="nav-link d-block d-lg-none" href="{% url 'wishlist_test' %}">
             <div class="text-center">
                 <div>
@@ -15,10 +15,10 @@
                 <p class="my-0">Wishlist</p>
             </div>
         </a>
-    </li>
+    </ul>
 {% endif %}
 
-<li class="list-inline-item basket">
+<ul class="list-inline-item basket">
     <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_cart' %}">
         <div class="text-center">
             <div>
@@ -33,4 +33,4 @@
             </p>
         </div>
     </a>
-</li>
+</ul>
