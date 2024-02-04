@@ -161,8 +161,10 @@
 {% endblock %}
 
 {% block postloadjs %}
+    <script>
     {{ block.super }}
 		$('.btt-link').click(function(e) {
 			window.scrollTo(0,0)
 		})
+    </script>
 {% endblock %}
