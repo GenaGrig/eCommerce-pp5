@@ -45,21 +45,24 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item dropdown">
-                        <a class="logo-font font-weight-bold text-black nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false" id="all-products-link" aria-haspopup="true">
-                            <i class="fa-solid fa-filter" style="color: blueviolet;"></i> All Products
-                        </a>
+                        <li>
+                            <a class="logo-font font-weight-bold text-black nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" id="all-products-link" aria-haspopup="true">
+                                <i class="fa-solid fa-filter" style="color: blueviolet;"></i> All Products
+                            </a>
+                        <li>
                         <li class="dropdown-menu border-0" aria-labelledby="all-products-link">
                             <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                             <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
                             <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                             <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
                         </li>
-                        
-                        <a class="logo-font font-weight-bold text-black nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false" id="specials-link" aria-haspopup="true">
-                            <i class="fa-brands fa-ideal" style="color: blueviolet;"></i> Special Offers
-                        </a>
+                        <li>
+                            <a class="logo-font font-weight-bold text-black nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" id="specials-link" aria-haspopup="true">
+                                <i class="fa-brands fa-ideal" style="color: blueviolet;"></i> Special Offers
+                            </a>
+                        </li>
                         <li class="dropdown-menu border-0" aria-labelledby="specials-link">
                             <a href="{% url 'products' %}" class="dropdown-item">New Arrivals</a>
                             <a href="{% url 'products' %}" class="dropdown-item">Deals</a>
