@@ -6,7 +6,7 @@
 
 <!-- Wishlist -->
 {% if user.is_authenticated %}
-    <li class="list-inline-item dropdown d-block d-lg-none">
+    <ul class="list-inline-item dropdown d-block d-lg-none">
         <a class="nav-link d-block d-lg-none" href="{% url 'wishlist_test' %}">
             <div class="text-center">
                 <div>
@@ -15,7 +15,7 @@
                 <p class="my-0">Wishlist</p>
             </div>
         </a>
-    </li>
+    </ul>
 {% endif %}
 
 <ul class="list-inline-item basket">
