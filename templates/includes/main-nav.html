@@ -45,46 +45,44 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item dropdown">
-                        <li>
-                            <a class="logo-font font-weight-bold text-black nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false" id="all-products-link" aria-haspopup="true">
-                                <i class="fa-solid fa-filter" style="color: blueviolet;"></i> All Products
-                            </a>
-                        <li>
-                        <li class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                            <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                            <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
-                            <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
-                            <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-                        </li>
-                        <li>
-                            <a class="logo-font font-weight-bold text-black nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false" id="specials-link" aria-haspopup="true">
-                                <i class="fa-brands fa-ideal" style="color: blueviolet;"></i> Special Offers
-                            </a>
-                        </li>
-                        <li class="dropdown-menu border-0" aria-labelledby="specials-link">
-                            <a href="{% url 'products' %}" class="dropdown-item">New Arrivals</a>
-                            <a href="{% url 'products' %}" class="dropdown-item">Deals</a>
-                            <a href="{% url 'products' %}" class="dropdown-item">Clearance</a>
-                            <a href="{% url 'products' %}" class="dropdown-item">All Specials</a>
-                        <li>
+
+                        <a class="logo-font font-weight-bold text-black nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" id="all-products-link" aria-haspopup="true">
+                            <i class="fa-solid fa-filter" style="color: blueviolet;"></i> All Products
+                        </a>
+                            <li class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
+                                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                            </li>
+                            
+                        <a class="logo-font font-weight-bold text-black nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" id="specials-link" aria-haspopup="true">
+                            <i class="fa-brands fa-ideal" style="color: blueviolet;"></i> Special Offers
+                        </a>
+                            <li class="dropdown-menu border-0" aria-labelledby="specials-link">
+                                <a href="{% url 'products' %}" class="dropdown-item">New Arrivals</a>
+                                <a href="{% url 'products' %}" class="dropdown-item">Deals</a>
+                                <a href="{% url 'products' %}" class="dropdown-item">Clearance</a>
+                                <a href="{% url 'products' %}" class="dropdown-item">All Specials</a>
+                            <li>
 
                         <a class="logo-font font-weight-bold text-black nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false" id="guitars-and-basses" aria-haspopup="true">
                             <i class="fa-solid fa-guitar" style="color: blueviolet;"></i> Guitars & Basses
                         </a>
-                        <li class="dropdown-menu border-0" aria-labelledby="specials-link">
-                            <a href="{% url 'products_in_category' category_id=28 %}" class="dropdown-item">Acoustic Guitars</a>
-                            <a href="{% url 'products_in_category' category_id=29 %}" class="dropdown-item">Acoustic Amplifiers</a>
-                            <a href="{% url 'products_in_category' category_id=30 %}" class="dropdown-item">Acoustic Accessories</a>
-                            <a href="{% url 'products_in_category' category_id=31 %}" class="dropdown-item">Electric Guitars</a>
-                            <a href="{% url 'products_in_category' category_id=32 %}" class="dropdown-item">Electric Amplifiers</a>
-                            <a href="{% url 'products_in_category' category_id=33 %}" class="dropdown-item">Electric Pedals</a>
-                            <a href="{% url 'products_in_category' category_id=34 %}" class="dropdown-item">Electric Accessories</a>
-                            <a href="{% url 'products_in_category' category_id=35 %}" class="dropdown-item">Bass Guitars</a>
-                            <a href="{% url 'products_in_category' category_id=36 %}" class="dropdown-item">Bass Amplifiers</a>
-                        </li>
+                            <li class="dropdown-menu border-0" aria-labelledby="specials-link">
+                                <a href="{% url 'products_in_category' category_id=28 %}" class="dropdown-item">Acoustic Guitars</a>
+                                <a href="{% url 'products_in_category' category_id=29 %}" class="dropdown-item">Acoustic Amplifiers</a>
+                                <a href="{% url 'products_in_category' category_id=30 %}" class="dropdown-item">Acoustic Accessories</a>
+                                <a href="{% url 'products_in_category' category_id=31 %}" class="dropdown-item">Electric Guitars</a>
+                                <a href="{% url 'products_in_category' category_id=32 %}" class="dropdown-item">Electric Amplifiers</a>
+                                <a href="{% url 'products_in_category' category_id=33 %}" class="dropdown-item">Electric Pedals</a>
+                                <a href="{% url 'products_in_category' category_id=34 %}" class="dropdown-item">Electric Accessories</a>
+                                <a href="{% url 'products_in_category' category_id=35 %}" class="dropdown-item">Bass Guitars</a>
+                                <a href="{% url 'products_in_category' category_id=36 %}" class="dropdown-item">Bass Amplifiers</a>
+                            </li>
 
                         <a class="logo-font font-weight-bold text-black nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false" id="drums" aria-haspopup="true">
