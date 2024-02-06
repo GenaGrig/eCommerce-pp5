@@ -71,6 +71,7 @@
                 </div>
 
                 <div class="row">
+                    </dl>
                         <dt class="col-3">Type:</dt>
                         <dd class="col-9">{{ product.product_type }}</dd>
 
@@ -87,11 +88,12 @@
 
                         <dt class="col-3">Brand:</dt>
                         <dd class="col-9">{{ product.product_brand }}</dd>
+                    </dl>
                 </div>
                 <!-- Rating form -->
                 <form method="post" action="{% url 'submit_review' product_id=product.id %}">
                     {% csrf_token %}
-                    <label for="id_rating"><strong>Rate the product:</strong></label>
+                    <label><strong>Rate the product:</strong></label>
                     <div>
                         <input type="radio" id="id_rating_1" name="rating" value="1">
                         <label for="id_rating_1">1</label>

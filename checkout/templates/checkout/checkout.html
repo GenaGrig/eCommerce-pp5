@@ -195,9 +195,9 @@
                             <hr class="my-4">
 
                             <h6 class="mb-3 text-muted">You can read our Privacy Policy <a href="https://www.termsfeed.com/live/4b638e8a-0cd3-46b2-89fa-6fe5a9c0ca5c" 
-                                alt="Opens Privacy Policy on new page" target="_blank">here</a>,
+                                rel="Opens Privacy Policy on new page" target="_blank">here</a>,
                                 and our Billing Terms and Conditions <a href="https://www.termsandconditionsgenerator.com/live.php?token=QnmZHP00pP0fFt8W9ZtCBHpsnBh8n4T6" 
-                                alt="Opens Terms and Conditons on new page" target="_blank">here.</a>
+                                rel="Opens Terms and Conditons on new page" target="_blank">here.</a>
                             </h6>
 
 
@@ -269,13 +269,13 @@
                                         1
                                     </span>
                                     <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}"
-                                        style="height: 96px; width: 96x;" class="img-sm rounded border">
+                                        style="height: 96px; width: 96px;" class="img-sm rounded border">
                                 </div>
                                 <div class="">
                                     <a class="nav-link" href="{% url 'product_detail' item.item_id %}" style="text-decoration: none;">
                                         {{ item.product.name }}
                                     </a>
-                                    <text class="h6 total-price" data-row-id="{{ item.product.id }}">Total: {{ item.product.price|multiply:item.quantity }}</text> <i class="fa-solid fa-euro-sign fa-sm"></i>
+                                    <dl class="h6 total-price" data-row-id="{{ item.product.id }}">Total: {{ item.product.price|multiply:item.quantity }}</dl> <i class="fa-solid fa-euro-sign fa-sm"></i>
                                 </div>
                             </div>
                             {% endfor %}
