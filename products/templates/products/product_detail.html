@@ -65,13 +65,13 @@
                     <h6 class="title text-dark fw-bold">
                         Features:
                     </h6>
-                    <ul>
+                    <dl>
                         {{ product.short_description|safe }}
-                    </ul>
+                    </dl>
                 </div>
 
                 <div class="row">
-                    <ul>
+                    <dl>
                         <dt class="col-3">Type:</dt>
                         <dd class="col-9">{{ product.product_type }}</dd>
 
@@ -88,7 +88,7 @@
 
                         <dt class="col-3">Brand:</dt>
                         <dd class="col-9">{{ product.product_brand }}</dd>
-                    </ul>
+                    </dl>
                 </div>
                 <!-- Rating form -->
                 <form method="post" action="{% url 'submit_review' product_id=product.id %}">
