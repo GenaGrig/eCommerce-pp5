@@ -65,9 +65,9 @@
                     <h6 class="title text-dark fw-bold">
                         Features:
                     </h6>
-                    <p>
+                    <div>
                         {{ product.short_description|safe }}
-                    </p>
+                    </div>
                 </div>
 
                 <div class="row">
@@ -133,9 +133,10 @@
             </div>
         </div>
     </div>
+    <hr>
     <div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
         <div class="product-details-container mb-5 mt-md-5">
-            <p>{{ product.description|safe }}</p>
+            {{ product.description|safe }}
         </div>
     </div>
 </div>
