@@ -275,7 +275,7 @@
                                     <a class="nav-link" href="{% url 'product_detail' item.item_id %}" style="text-decoration: none;">
                                         {{ item.product.name }}
                                     </a>
-                                    <dl class="h6 total-price" data-row-id="{{ item.product.id }}">Total: {{ item.product.price|multiply:item.quantity }}</dl> <i class="fa-solid fa-euro-sign fa-sm"></i>
+                                    <h6 class="total-price" data-row-id="{{ item.product.id }}">Total: {{ item.product.price|multiply:item.quantity }}</h6> <i class="fa-solid fa-euro-sign fa-sm"></i>
                                 </div>
                             </div>
                             {% endfor %}
