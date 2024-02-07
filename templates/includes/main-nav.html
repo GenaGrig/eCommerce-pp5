@@ -51,10 +51,10 @@
                             <i class="fa-solid fa-filter" style="color: blueviolet;"></i> All Products
                         </a>
                         <ul class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                            <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                            <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
-                            <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
-                            <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                            <li><a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a></li>
+                            <li><a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a></li>
+                            <li><a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a></li>
+                            <li><a href="{% url 'products' %}" class="dropdown-item">All Products</a></li>
                         </ul>
                         
                         <a class="logo-font font-weight-bold text-black nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
