@@ -62,10 +62,10 @@
                             <i class="fa-brands fa-ideal" style="color: blueviolet;"></i> Special Offers
                         </a>
                         <ul class="dropdown-menu border-0" aria-labelledby="specials-link">
-                            <a href="{% url 'products' %}" class="dropdown-item">New Arrivals</a>
-                            <a href="{% url 'products' %}" class="dropdown-item">Deals</a>
-                            <a href="{% url 'products' %}" class="dropdown-item">Clearance</a>
-                            <a href="{% url 'products' %}" class="dropdown-item">All Specials</a>
+                            <li><a href="{% url 'products' %}" class="dropdown-item">New Arrivals</a></li>
+                            <li><a href="{% url 'products' %}" class="dropdown-item">Deals</a></li>
+                            <li><a href="{% url 'products' %}" class="dropdown-item">Clearance</a></li>
+                            <li><a href="{% url 'products' %}" class="dropdown-item">All Specials</a></li>
                         </ul>
 
                         <a class="logo-font font-weight-bold text-black nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -73,15 +73,15 @@
                             <i class="fa-solid fa-guitar" style="color: blueviolet;"></i> Guitars & Basses
                         </a>
                         <ul class="dropdown-menu border-0" aria-labelledby="guitars-and-basses">
-                            <a href="{% url 'products_in_category' category_id=28 %}" class="dropdown-item">Acoustic Guitars</a>
-                            <a href="{% url 'products_in_category' category_id=29 %}" class="dropdown-item">Acoustic Amplifiers</a>
-                            <a href="{% url 'products_in_category' category_id=30 %}" class="dropdown-item">Acoustic Accessories</a>
-                            <a href="{% url 'products_in_category' category_id=31 %}" class="dropdown-item">Electric Guitars</a>
-                            <a href="{% url 'products_in_category' category_id=32 %}" class="dropdown-item">Electric Amplifiers</a>
-                            <a href="{% url 'products_in_category' category_id=33 %}" class="dropdown-item">Electric Pedals</a>
-                            <a href="{% url 'products_in_category' category_id=34 %}" class="dropdown-item">Electric Accessories</a>
-                            <a href="{% url 'products_in_category' category_id=35 %}" class="dropdown-item">Bass Guitars</a>
-                            <a href="{% url 'products_in_category' category_id=36 %}" class="dropdown-item">Bass Amplifiers</a>
+                            <li><a href="{% url 'products_in_category' category_id=28 %}" class="dropdown-item">Acoustic Guitars</a></li>
+                            <li><a href="{% url 'products_in_category' category_id=29 %}" class="dropdown-item">Acoustic Amplifiers</a></li>
+                            <li><a href="{% url 'products_in_category' category_id=30 %}" class="dropdown-item">Acoustic Accessories</a></li>
+                            <li><a href="{% url 'products_in_category' category_id=31 %}" class="dropdown-item">Electric Guitars</a></li>
+                            <li><a href="{% url 'products_in_category' category_id=32 %}" class="dropdown-item">Electric Amplifiers</a></li>
+                            <li><a href="{% url 'products_in_category' category_id=33 %}" class="dropdown-item">Electric Pedals</a></li>
+                            <li><a href="{% url 'products_in_category' category_id=34 %}" class="dropdown-item">Electric Accessories</a></li>
+                            <li><a href="{% url 'products_in_category' category_id=35 %}" class="dropdown-item">Bass Guitars</a></li>
+                            <li><a href="{% url 'products_in_category' category_id=36 %}" class="dropdown-item">Bass Amplifiers</a></li>
                         </ul>
 
                         <a class="logo-font font-weight-bold text-black nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -89,9 +89,9 @@
                             <i class="fa-solid fa-drum" style="color: blueviolet;"></i> Drums & Percussion
                         </a>
                         <ul class="dropdown-menu border-0" aria-labelledby="drums">
-                            <a href="{% url 'products_in_category' category_id=39 %}" class="dropdown-item">Acoustic Drums</a>
-                            <a href="{% url 'products_in_category' category_id=43 %}" class="dropdown-item">Electronic Drums</a>
-                            <a href="{% url 'products_in_category' category_id=41 %}" class="dropdown-item">Percussion</a>
+                            <li><a href="{% url 'products_in_category' category_id=39 %}" class="dropdown-item">Acoustic Drums</a></li>
+                            <li><a href="{% url 'products_in_category' category_id=43 %}" class="dropdown-item">Electronic Drums</a></li>
+                            <li><a href="{% url 'products_in_category' category_id=41 %}" class="dropdown-item">Percussion</a></li>
                         </ul>
 
                         <a class="logo-font font-weight-bold text-black nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -99,9 +99,9 @@
                             <i class="fa-solid fa-music" style="color: blueviolet;"></i> Keyboards & Synths
                         </a>
                         <ul class="dropdown-menu border-0" aria-labelledby="pianos-and-keyboards">
-                            <a href="{% url 'products_in_category' category_id=13 %}" class="dropdown-item">Digital Pianos</a>
-                            <a href="{% url 'products_in_category' category_id=14 %}" class="dropdown-item">Keyboards</a>
-                            <a href="{% url 'products_in_category' category_id=15 %}" class="dropdown-item">Midi Keyboards</a>
+                            <li><a href="{% url 'products_in_category' category_id=13 %}" class="dropdown-item">Digital Pianos</a></li>
+                            <li><a href="{% url 'products_in_category' category_id=14 %}" class="dropdown-item">Keyboards</a></li>
+                            <li><a href="{% url 'products_in_category' category_id=15 %}" class="dropdown-item">Midi Keyboards</a></li>
                         </ul>
 
                         <a class="logo-font font-weight-bold text-black nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -109,10 +109,10 @@
                             <i class="fa-solid fa-music" style="color: blueviolet;"></i> Orchestral Instruments
                         </a>
                         <ul class="dropdown-menu border-0" aria-labelledby="orchestral">
-                            <a href="{% url 'products_in_category' category_id=16 %}" class="dropdown-item">Woodwinds</a>
-                            <a href="{% url 'products_in_category' category_id=17 %}" class="dropdown-item">Strings</a>
-                            <a href="{% url 'products_in_category' category_id=18 %}" class="dropdown-item">Brasses</a>
-                            <a href="{% url 'products_in_category' category_id=19 %}" class="dropdown-item">Orchestral Percussion</a>
+                            <li><a href="{% url 'products_in_category' category_id=16 %}" class="dropdown-item">Woodwinds</a></li>
+                            <li><a href="{% url 'products_in_category' category_id=17 %}" class="dropdown-item">Strings</a></li>
+                            <li><a href="{% url 'products_in_category' category_id=18 %}" class="dropdown-item">Brasses</a></li>
+                            <li><a href="{% url 'products_in_category' category_id=19 %}" class="dropdown-item">Orchestral Percussion</a></li>
                         </ul>
 
                         <a class="logo-font font-weight-bold text-black nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -120,10 +120,10 @@
                             <i class="fa-solid fa-volume-high" style="color: blueviolet;"></i> Live Sound & Lighting
                         </a>
                         <ul class="dropdown-menu border-0" aria-labelledby="live-sound">
-                            <a href="{% url 'products_in_category' category_id=20 %}" class="dropdown-item">PA Systems</a>
-                            <a href="{% url 'products_in_category' category_id=21 %}" class="dropdown-item">Mixers</a>
-                            <a href="{% url 'products_in_category' category_id=22 %}" class="dropdown-item">Microphones</a>
-                            <a href="{% url 'products_in_category' category_id=23 %}" class="dropdown-item">Lighting</a>
+                            <li><a href="{% url 'products_in_category' category_id=20 %}" class="dropdown-item">PA Systems</a></li>
+                            <li><a href="{% url 'products_in_category' category_id=21 %}" class="dropdown-item">Mixers</a></li>
+                            <li><a href="{% url 'products_in_category' category_id=22 %}" class="dropdown-item">Microphones</a></li>
+                            <li><a href="{% url 'products_in_category' category_id=23 %}" class="dropdown-item">Lighting</a></li>
                         </ul>
 
                         <a class="logo-font font-weight-bold text-black nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -131,10 +131,10 @@
                             <i class="fa-solid fa-microphone-lines" style="color: blueviolet;"></i> Studio & Recording
                         </a>
                         <ul class="dropdown-menu border-0" aria-labelledby="studio-rec">
-                            <a href="{% url 'products_in_category' category_id=24 %}" class="dropdown-item">Audio Interfaces</a>
-                            <a href="{% url 'products_in_category' category_id=26 %}" class="dropdown-item">Studio Monitors</a>
-                            <a href="{% url 'products_in_category' category_id=25 %}" class="dropdown-item">Studio Mixers</a>
-                            <a href="{% url 'products_in_category' category_id=27 %}" class="dropdown-item">Studio Microphones</a>
+                            <li><a href="{% url 'products_in_category' category_id=24 %}" class="dropdown-item">Audio Interfaces</a></li>
+                            <li><a href="{% url 'products_in_category' category_id=26 %}" class="dropdown-item">Studio Monitors</a></li>
+                            <li><a href="{% url 'products_in_category' category_id=25 %}" class="dropdown-item">Studio Mixers</a></li>
+                            <li><a href="{% url 'products_in_category' category_id=27 %}" class="dropdown-item">Studio Microphones</a></li>
                         </ul>
 
                         <!-- Login/Register links -->
@@ -146,18 +146,18 @@
                         </a>
                         <ul class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_superuser %}
-                            <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                            <li><a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a></li>
                             {% endif %}
-                            <a href="{% url 'view_profile' %}" class="dropdown-item">My Profile</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                            <li><a href="{% url 'view_profile' %}" class="dropdown-item">My Profile</a></li>
+                            <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
                             {% else %}
                             <a class="logo-font font-weight-bold text-black nav-link dropdown-toggle" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
                                 <i class="fas fa-user fa-lg"></i> Login / Register
                             </a>
                             <ul class="dropdown-menu border-0" aria-labelledby="user-options">
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
+                                <li><a href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
                             </ul>
                             {% endif %}
                         </ul>
