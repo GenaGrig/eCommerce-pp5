@@ -11,6 +11,7 @@
 3. [Accessibility](#accessibility)
 4. [Tools Testing](#tools-testing)
 5. [Manual Testing](#manual-testing)
+6. [Fixed Bugs](#fixed-bugs)
 
 # Testing User Stories
 
@@ -103,7 +104,7 @@ No errors
 
 * Products in category page errors
 
-Can not find exactly this code in my project, so can not fix the problem. On website everything works as planned.
+Can not find exactly this code in my project, so I can not fix the problem. On website everything works as planned.
 
 ![Products in category page errors](/media/code-validation/html/products_in_category_new.PNG)
 ![Products in category page errors](/media/code-validation/html/products_in_category_error_code.PNG)
@@ -143,11 +144,11 @@ No errors
 
 * Profile settings page errors
 
-![Profile settings page errors](/media/code-validation/html/profile_settings.html.png)
+No errors
 
 * Wishlist in profile page errors
 
-![Wishlist in profile page errors](/media/code-validation/html/wishlist_profile.html.png)
+No errors
 
 
 ### CSS
@@ -1323,5 +1324,21 @@ Xiaomi XT11 6.2" | Android |No appearance, responsiveness nor functionality issu
         <td><span style="color:green">Pass</span></td>
     </tr>
 </table>
+
+[Back to top ⇧](#genstar-music-store-testing)
+
+# Fixed and Known Bugs
+
+* HTML code validation failed because of wrong checking sequence. Got a lot of errors related to Django syntax, unappropriate symbols and different warnings. After correct checking way was found all errors disappeared and remaining errors was fixed. Now HTML pages are error free, the one with the error remaining is screened and posted above.
+
+* Email functionality is disabled because of Gmail email service error. When I enable emails and try to send them by doing different actions related to them I get the Server Error 500. Tried to read Gmail documentation, searched the internet and Slack channels for help to resolve the problem, but did not found anything. I discovered that I am not alone with this problem and other coders has the same problem and no solution found. More work on problem solving will be done in the future and full email functionality will be implemented.
+
+* Email authentication was disabled because of the problem described above. It was made exactly as in Boutique Ado tutorial, but somehow failed on the Gmail side and I got Server Error 500 each time user was created and email should be send. In Django Admin I could accept email and make user active, but no real email was send because of the error. No solution was found.
+
+* Site navigation fixed and now every link on website opens related page. Navigation bar links opens related category and footer bar links opens new page that says "Page under construction". 
+
+* Lighthouse performance is another story and mainly the slow load of pages consists of many factors such as Heroku service provider that is slow by itself, loading remote libraries like bootstrap, javascript and others, some image elements. Images are not big in sizes and should load quite fast. I tried to remove carousel block from the site to see changes in performance and the result was almost the same. I implemented pagination to load only 24 product cards on one page to improve performance, but this did not help. So there are some questions to some services about the performace on which I can not impact.
+
+* Checkout spinner never disappearing if empty or not complete form was submitted was fixed by removing it at this moment and will be re-done and implemented in future deployments. Idea is to make a checkout spinner like a little modal window that will appear only if form is complete and card details are correct. Right now it is a future feature.
 
 [Back to top ⇧](#genstar-music-store-testing)
