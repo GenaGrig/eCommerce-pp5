@@ -77,9 +77,9 @@
 
 [The W3C Markup Validator](https://validator.w3.org) was used to check HTML code of a webpage. 
 
-All errors on html pages are of the same type and mostly are related for using Django in HTML code. Because of each page is an extension of Base.html, there is no usual tags in the beginning of pages, and code validator marks it as both warning and error. Most of the errors are "Bad value" errors, that points to illegal characters. This is due to using of Django synthax in href links and other HTML tags. I went through every HTML page and fixed code problems related to invalid spaces, unclosed tags and other small synthax errors that has no impact on code and page functionality.
+After getting correct HTML code checking sequence in code validator I made validation of every HTML page and fixed errors displayed by code validator.  
 
-Following errors were found on each html page:
+Following screenshots of each html page without errors:
 
 * Base page errors
 
