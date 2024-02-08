@@ -139,7 +139,7 @@ No errors
 
 * Orders history page errors
 
-![Orders history page errors](/media/code-validation/html/orders_history.html.png)
+No errors
 
 * Profile settings page errors
 
