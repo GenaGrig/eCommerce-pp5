@@ -81,61 +81,61 @@ After getting correct HTML code checking sequence in code validator I made valid
 
 Following screenshots of each html page without errors:
 
-* Base page errors
+* Base page
 
-![HTML Validator index page check errors](/media/code-validation/html/base.html.png)
+![HTML Validator index page check errors](/media/code-validation/html/base-html-screenshot.PNG)
 
-* Products page errors
+* Products page
 
-![Products page errors](/media/code-validation/html/products.html.png)
+No errors
 
-* Product details page errors
+* Product details page
 
-![Product details page errors](/media/code-validation/html/product_detail.png)
+No errors
 
-* Add product page errors
+* Add product page
 
-![Add Product page errors](/media/code-validation/html/add_product.html.png)
+No errors
 
-* Edit product page errors
+* Edit product page
 
-![Edit products page errors](/media/code-validation/html/edit_product.html.png)
+No errors
 
 * Products in category page errors
 
-![Products in category page errors](/media/code-validation/html/products_in_category.html.png)
+Can not find exactly this code in my project, so can not fix the problem. On website everything works as planned.
 
-* Quantity form page errors
-
-![Quantity form page errors](/media/code-validation/html/quantity_form_products.html.png)
+![Products in category page errors](/media/code-validation/html/products_in_category_new.PNG)
+![Products in category page errors](/media/code-validation/html/products_in_category_error_code.PNG)
+![Products in category page errors](/media/code-validation/html/products_in_category_error_code_validator.PNG)
 
 * Subscribe page errors
 
-![Subscribe page errors](/media/code-validation/html/subscribe.html.png)
+No errors
 
 * Unsubscribe page errors
 
-![Unsubscribe page errors](/media/code-validation/html/unsubscribe.html.png)
+No errors
 
 * Wishlist page errors
 
-![Wishlist page errors](/media/code-validation/html/wishlist.html.png)
+No errors
 
 * Shopping cart page errors
 
-![Shopping cart page errors](/media/code-validation/html/cart.html.png)
+No errors
 
 * Checkout page errors
 
-![Checkout page errors](/media/code-validation/html/checkout.html.png)
+No errors
 
 * Checkout success page errors
 
-![Checkout success page errors](/media/code-validation/html/checkout_success.html.png)
+No errors
 
 * Profiles page errors
 
-![Profiles page errors](/media/code-validation/html/profiles.html.png)
+No errors
 
 * Orders history page errors
 
